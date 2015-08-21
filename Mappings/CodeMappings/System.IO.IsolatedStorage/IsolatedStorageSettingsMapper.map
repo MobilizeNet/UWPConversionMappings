@@ -1,0 +1,120 @@
+﻿
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.IO.IsolatedStorage.IsolatedStorageSettings">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewClassName="ApplicationDataContainer" NewNamespace="Windows.Storage" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="LocalSettings" NewPropertyOwner="Windows.Storage.ApplicationData.Current" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="ApplicationSettings">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="LocalSettings" NewPropertyOwner="Windows.Storage.ApplicationData.Current" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+
+        <map:CodeMap Kind="Call" MemberName="TryGetValue">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$key</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$out</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMethodExpression>
+                    <map:AssignName>$fowner</map:AssignName>
+                  </map:WithCalledMethodExpression>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\IsolatedStorageExtensionsHelper.cs"/>
+                  <map:AddNamespaceImport>WindowsPhoneUWP.UpgradeHelpers</map:AddNamespaceImport>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+
+
+        <map:CodeMap Kind="Call" MemberName="Remove">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$key</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMethodExpression>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithCalledMethodExpression>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $owner.Values.Remove($key)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Contains">
+			<map:CodeMap.Action>				
+				<map:RedirectCallToInnerMember NewMethod="ContainsKey" NewMethodOwner="Values" />
+			</map:CodeMap.Action>
+		</map:CodeMap>
+        
+
+        <map:CodeMap Kind="Call" MemberName="Save">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:CommentOut/>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="Call" MemberName="Add">
+         <map:CodeMap.Action>
+        <map:RedirectCallToInnerMember NewMethod="Add" NewMethodOwner="Values" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Count">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Count" NewPropertyOwner="Values" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="ElementAccess">
+          <map:CodeMap.Action>
+            <map:RedirectIndexer ToProperty="Values" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

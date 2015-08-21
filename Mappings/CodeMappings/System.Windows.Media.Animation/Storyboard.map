@@ -1,0 +1,85 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Media.Animation.Storyboard">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation"
+                                   NewClassName="Storyboard" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SetTargetProperty">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$property</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$obj</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$sbReference</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $sbReference.SetTargetProperty($obj, $property.Path)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep></map:Keep>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="Completed">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              object
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Children">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Begin">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetCurrentState">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Pause">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SeekAlignedToLastTick">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SetTarget">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SkipToFill">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Stop">
+          <map:Keep/>
+        </map:CodeMap>        
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

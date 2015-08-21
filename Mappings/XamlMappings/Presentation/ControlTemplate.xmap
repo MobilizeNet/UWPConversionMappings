@@ -1,0 +1,18 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>        
+        <xmap:XamlElementMapper ElementName="ControlTemplate" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Property" PropertyName="TargetType" >
+                    <xmap:XamlMap.Action>
+                        <xmap:ReplaceAttributeValue>
+                            <xmap:RegexReplacementPair ReplacementString="TextBox" ValueRegex="toolkit:PhoneTextBox" />
+                        </xmap:ReplaceAttributeValue>
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

@@ -1,0 +1,69 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Tasks.MarketplaceDetailTask">
+      <map:CodeMapPackage.Maps>
+
+        <!--<map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>-->
+
+        <!--<map:CodeMap Kind="Call" MemberName="Show">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              await Windows.ApplicationModel.Store.CurrentApp.RequestAppPurchaseAsync(true)
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>-->
+        
+        <map:CodeMap Kind="Call" MemberName="Show">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:WithConstructorCall>
+                    <map:WithMemberInitValue MemberName="ContentIdentifier">
+                      <map:AssignName>$appId</map:AssignName>
+                    </map:WithMemberInitValue>
+                    <map:WithMemberInitValue MemberName="ContentType">
+                      <map:AssignName>$type</map:AssignName>
+                    </map:WithMemberInitValue>
+                  </map:WithConstructorCall>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[
+                    await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:navigate?appid=" + $appId + "&contenttype=" + $type))
+                     ]]>
+                  </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <!--<map:CodeMap Kind="MemberAccess" MemberName="ContentIdentifier">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ContentType">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>-->
+
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Show"/>
+        <map:PackageMetadata Key="GROUP_INIT_STATEMENTS" Value="true"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

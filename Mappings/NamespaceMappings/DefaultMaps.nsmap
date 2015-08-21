@@ -1,0 +1,37 @@
+﻿<NamespaceMappings xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Namespaces;assembly=ExtensibleMappers">
+  <Replace Old="System.Windows.Controls" New="Windows.UI.Xaml.Controls"/>
+  <Replace Old="System.Windows.Navigation" New="Windows.UI.Xaml.Navigation"/>
+  <Replace Old="System.Windows.Data" New="Windows.UI.Xaml.Data"/>
+  <Replace Old="System.Windows.Documents" New="Windows.UI.Xaml.Documents"/>
+  <Remove>System.Windows.Threading</Remove>
+  <Remove>Microsoft.Phone.Controls</Remove>
+  <Remove>Microsoft.Phone.Shell</Remove>
+  <Remove>Microsoft.Phone.Tasks</Remove>
+  <Remove>Microsoft.Phone.Globalization</Remove>
+  <Replace Old="System.Windows" New="Windows.UI.Xaml"/>
+  <Replace Old="System.Windows.Media.Imaging" New="Windows.UI.Xaml.Media.Imaging"/>
+  <Replace Old="System.Windows.Media.Animation" New="Windows.UI.Xaml.Media.Animation"/>
+  <Replace Old="System.Windows.Interactivity" New="Microsoft.Xaml.Interactivity"/>
+  <Replace Old="System.Windows.Media" New="Windows.UI.Xaml.Media"/>
+  <Replace Old="Microsoft.Phone.Net.NetworkInformation" New="System.Net.NetworkInformation"/>
+  <Replace Old="Microsoft.Phone.Maps.Controls" New="Windows.UI.Xaml.Controls.Maps"/>
+  <Remove>System.Device.Location</Remove>
+  <Remove>System.Windows.Controls.Primitives</Remove>
+  <Remove>System.Windows.Shapes</Remove>
+  <Remove>Windows.Phone.Speech.Synthesis</Remove>
+  <Remove>Windows.Phone.Speech.Recognition</Remove>
+  <Remove>Windows.Phone.Speech.VoiceCommands</Remove>
+  <Remove>Microsoft.Phone.UserData</Remove>
+  <Remove>System.Windows.Ink</Remove>
+  <Remove>System.Windows.Resources</Remove>
+  <Remove>Microsoft.Phone.Controls.Maps</Remove>
+  <Remove>Microsoft.Phone.Info</Remove>
+  <Remove>System.Security.Cryptography</Remove>
+  <Remove>System.Windows.Markup</Remove>
+  <Remove>Windows.Phone.Storage.SharedAccess</Remove>
+  <Remove>NavigationListControl</Remove>
+  <Remove>Microsoft.Devices</Remove>
+  <Remove>Microsoft.Phone.Maps.Toolkit</Remove>
+  <Remove>Microsoft.Phone.Maps</Remove>
+</NamespaceMappings>
+

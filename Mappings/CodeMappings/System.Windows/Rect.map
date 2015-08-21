@@ -1,0 +1,45 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Rect">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Foundation"
+                                   NewClassName="Rect" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Bottom">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Top">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Height">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Width">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="X">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Y">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Contains">
+          <map:Keep/>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

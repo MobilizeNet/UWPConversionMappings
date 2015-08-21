@@ -1,0 +1,26 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Data.IValueConverter">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Data"  NewClassName="IValueConverter" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="InterfaceImplementation">
+          <map:ActionSequence>
+            <map:ApplyToMethodDeclaration MethodName="Convert">
+              <map:ReplaceParameterDeclarationType Position="3">System.String</map:ReplaceParameterDeclarationType>
+            </map:ApplyToMethodDeclaration>
+            <map:ApplyToMethodDeclaration MethodName="ConvertBack">
+              <map:ReplaceParameterDeclarationType Position="3">System.String</map:ReplaceParameterDeclarationType>
+            </map:ApplyToMethodDeclaration>
+          </map:ActionSequence>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

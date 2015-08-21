@@ -1,0 +1,121 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Shell.ShellTile">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ActiveTiles">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[ 
+              ((System.Collections.Generic.IEnumerable<Windows.UI.StartScreen.SecondaryTile>) await Windows.UI.StartScreen.SecondaryTile.FindAllForPackageAsync())
+              ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Call" MemberName="Delete">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>await $owner.RequestDeleteAsync()</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+
+        <map:CodeMap Kind="Call" MemberName="Create">
+          <map:Conditional>
+            <!-- Case for two arguments -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await $owner.RequestCreateAsync();
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:AssignName>$bool</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                  $owner.VisualElements.ShowNameOnWide310x150Logo = $bool ? true : false;
+                  ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    await $owner.RequestCreateAsync();
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+      <map:CodeMap Kind="Call" MemberName="Update">
+        <map:Conditional>
+          <!-- Case for two arguments -->
+          <map:Case>
+            <map:Case.Condition>
+              <map:WithMethodCall>
+                <map:ArgumentCount>1</map:ArgumentCount>
+                <map:WithArgument Position="0">
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithArgument>
+              </map:WithMethodCall>
+            </map:Case.Condition>
+            <map:Case.Action>
+              <map:ReplaceWithTemplate>
+                await $owner.UpdateAsync();
+              </map:ReplaceWithTemplate>
+            </map:Case.Action>
+          </map:Case>
+          <map:Default>
+            <map:Keep/>
+          </map:Default>
+        </map:Conditional>
+      </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>
+
+      
+      
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Create; Delete; Update"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

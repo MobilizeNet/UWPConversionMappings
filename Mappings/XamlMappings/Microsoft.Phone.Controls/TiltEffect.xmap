@@ -1,0 +1,17 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="TiltEffect"
+                            ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="IsTiltEnabled" >
+          <xmap:XamlMap.Action>
+              <xmap:MarkAsNotMapped />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMapper.Maps>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

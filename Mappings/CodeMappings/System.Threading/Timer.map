@@ -1,0 +1,66 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Threading.Timer">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+              <map:Keep/>
+            </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithConstructorCall>
+                    <map:ArgumentCount>1</map:ArgumentCount>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$callback</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithConstructorCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>new System.Threading.Timer($callback, null, int.MaxValue, int.MaxValue)</map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithConstructorCall>
+                    <map:ArgumentCount>4</map:ArgumentCount>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$callback</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="1">
+                      <map:AssignName>$object</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="2">
+                      <map:AssignName>$dueTime</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="3">
+                      <map:AssignName>$period</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithConstructorCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>new System.Threading.Timer($callback, $object, (int)$dueTime, (int)$period)</map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Change">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Dispose">
+          <map:Keep/>
+        </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

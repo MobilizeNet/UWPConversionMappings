@@ -1,0 +1,87 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Tasks.ShareLinkTask">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:DoesNotContainAnnotation>GROUP_INIT_STATEMENTS</map:DoesNotContainAnnotation>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\ShareLinkTaskHelper.cs" />
+                  <map:ReplaceClassUsage NewNamespace="WindowsPhoneUWP.UpgradeHelpers" NewClassName="ShareLinkTaskHelper" />
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+        
+        <map:CodeMap Kind="Call" MemberName="Show">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:WithConstructorCall>
+                    <map:WithMemberInitValue MemberName="Title">
+                      <map:AssignName>$title</map:AssignName>
+                    </map:WithMemberInitValue>
+                    <map:WithMemberInitValue MemberName="LinkUri">
+                      <map:AssignName>$uri</map:AssignName>
+                    </map:WithMemberInitValue>
+                    <map:WithMemberInitValue MemberName="Message">
+                      <map:AssignName>$message</map:AssignName>
+                    </map:WithMemberInitValue>
+                  </map:WithConstructorCall>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager, Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs> handler = null;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         handler =  (Windows.ApplicationModel.DataTransfer.DataTransferManager s, Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs arg) =>
+            {
+               arg.Request.Data.Properties.Title = $title;
+               arg.Request.Data.Properties.Description = $message;
+               arg.Request.Data.SetWebLink($uri);
+               s.DataRequested -= handler;               
+               
+            };
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        Windows.ApplicationModel.DataTransfer.DataTransferManager.GetForCurrentView().DataRequested += handler;
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI();
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="GROUP_INIT_STATEMENTS" Value="true"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

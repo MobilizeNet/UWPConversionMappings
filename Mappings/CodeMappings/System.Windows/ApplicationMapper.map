@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers" xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+	<MapUnit.Elements>
+		<map:CodeMapPackage Type="System.Windows.Application">
+			<map:CodeMapPackage.Maps>
+				<map:CodeMap Kind="Type">
+					<map:CodeMap.Action>
+						<map:ReplaceClassUsage NewClassName="Application" NewNamespace="Windows.UI.Xaml" />
+					</map:CodeMap.Action>
+				</map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetResourceStream">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$url</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(System.Text.RegularExpressions.Regex.Replace($url.OriginalString, "^.*;component/","").Replace('/','\\'))
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>                
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Terminate">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Exit" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="GetResourceStream"/>
+      </map:CodeMapPackage.Metadata>
+		</map:CodeMapPackage>
+	</MapUnit.Elements>
+</MapUnit>

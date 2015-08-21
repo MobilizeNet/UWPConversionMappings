@@ -1,0 +1,79 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.UserData.Contacts">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.ApplicationModel.Contacts"
+                                   NewClassName="ContactStore" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              await Windows.ApplicationModel.Contacts.ContactManager.RequestStoreAsync()
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SearchAsync">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$queryContents</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$queryKind</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$contacts</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[ ($contacts.GetContactReader(new Windows.ApplicationModel.Contacts.ContactQueryOptions($queryContents, $queryKind))
+                .ReadBatchAsync())
+ ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SearchCompleted">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="SearchCompleted">
+          <map:ActionSequence>
+            <map:ReplaceParameterDeclarationType Position="0">
+              <![CDATA[System.Threading.Tasks.Task<Windows.ApplicationModel.Contacts.ContactBatch>]]>
+            </map:ReplaceParameterDeclarationType>
+            <map:ReplaceParameterValue Position="1">
+              $parameter0Name.Result
+            </map:ReplaceParameterValue>
+            <map:RemoveParameter Position="1"/>
+          </map:ActionSequence>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="COMPLETED_PATTERN_EVENTS" Value="SearchCompleted"/>
+        <map:PackageMetadata Key="COMPLETED_PATTERN_METHODS" Value="SearchAsync"/>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Contacts"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

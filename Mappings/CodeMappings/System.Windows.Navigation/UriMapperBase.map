@@ -1,0 +1,19 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Navigation.UriMapperBase">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+			      <map:ActionSequence>
+                    <map:AddHelper Path="..\Helpers\UriMapperBaseHelper.cs" />
+			        <map:ReplaceClassUsage NewNamespace="WindowsPhoneUWP.UpgradeHelpers" NewClassName="UriMapperBaseHelper" />
+			      </map:ActionSequence>
+		      </map:CodeMap.Action>
+        </map:CodeMap>
+ 
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

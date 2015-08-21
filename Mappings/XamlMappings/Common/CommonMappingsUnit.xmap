@@ -1,0 +1,377 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMappingActions Name="CommonAttributesToRemove" >
+      <xmap:XamlElementMappingActions.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="FontFamily" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:RemoveAttribute>
+                <xmap:RemoveAttribute.Condition>
+                  <xmap:PropertyUsesStaticResource PropertyName="FontFamily" StaticResourceName="PhoneFontFamilyNormal" />
+                </xmap:RemoveAttribute.Condition>
+              </xmap:RemoveAttribute>
+              <xmap:CommentOutProperty>
+                <xmap:CommentOutProperty.Condition>
+                  <xmap:AnyConditionApplies>
+                    <xmap:PropertyUsesStaticResource
+                        PropertyName="FontFamily"
+                        StaticResourceName="PhoneFontFamilySemiBold" />
+                    <xmap:PropertyUsesStaticResource
+                        PropertyName="FontFamily"
+                        StaticResourceName="PhoneFontFamilyLight" />
+                    <xmap:PropertyUsesStaticResource
+                        PropertyName="FontFamily"
+                        StaticResourceName="PhoneFontFamilySemiLight" />
+                  </xmap:AnyConditionApplies>
+                </xmap:CommentOutProperty.Condition>
+              </xmap:CommentOutProperty>
+            </xmap:ActionSequence>
+
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="FontSize" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:AnyConditionApplies>
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeNormal" />
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeSmall" />
+                </xmap:AnyConditionApplies>
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:PropertyUsesStaticResource PropertyName="Foreground" StaticResourceName="PhoneForegroundBrush" />
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Background" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:AnyConditionApplies>
+                  <xmap:PropertyUsesStaticResource
+                      PropertyName="Background"
+                      StaticResourceName="PhoneChromeBrush" />
+                  <xmap:PropertyUsesStaticResource
+                      PropertyName="Background"
+                      StaticResourceName="PhoneBackgroundBrush" />
+                </xmap:AnyConditionApplies>
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="FontFamily" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:PropertyUsesStaticResource PropertyName="FontFamily" StaticResourceName="PhoneFontFamilyNormal" />
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="FontSize" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeNormal" />
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:PropertyUsesStaticResource PropertyName="Foreground" StaticResourceName="PhoneForegroundBrush" />
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Background" >
+          <xmap:XamlMap.Action>
+            <xmap:RemoveAttribute>
+              <xmap:RemoveAttribute.Condition>
+                <xmap:PropertyUsesStaticResource PropertyName="Background" StaticResourceName="PhoneChromeBrush" />
+              </xmap:RemoveAttribute.Condition>
+            </xmap:RemoveAttribute>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+      </xmap:XamlElementMappingActions.Maps>
+    </xmap:XamlElementMappingActions>
+    <xmap:XamlElementMappingActions Name="CommonControlProperties" >
+      <xmap:XamlElementMappingActions.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="IsVisible" >
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceAttributeValue>
+              <xmap:RegexReplacementPair ReplacementString="Visible" ValueRegex="True" />
+              <xmap:RegexReplacementPair ReplacementString="Collapsed" ValueRegex="False" />
+            </xmap:ReplaceAttributeValue>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="IsVisible" >
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Visibility" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMappingActions.Maps>
+    </xmap:XamlElementMappingActions>
+    <xmap:XamlElementMappingActions Name="CommonColor" >
+      <xmap:XamlElementMappingActions.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentColor" OldStaticResourceName="PhoneAccentColor" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="DefaultTextForegroundThemeBrush" OldStaticResourceName="PhoneSubtleBrush" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Background" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentColor" OldStaticResourceName="PhoneAccentColor" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Fill" >
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="BorderBrush" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResourceWithThemeResource
+                  NewThemeResourceName="SystemColorControlAccentBrush"
+                  OldStaticResourceName="PhoneAccentBrush" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="DefaultTextForegroundThemeBrush" OldStaticResourceName="PhoneSubtleBrush" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentColor" OldStaticResourceName="PhoneAccentColor" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Background" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentColor" OldStaticResourceName="PhoneAccentColor" />
+              <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Fill" >
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="BorderBrush" >
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="SystemColorControlAccentBrush" OldStaticResourceName="PhoneAccentBrush" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMappingActions.Maps>
+    </xmap:XamlElementMappingActions>
+    <xmap:XamlElementMappingActions Name="CommonPostMappingActions" >
+      <xmap:XamlElementMappingActions.Maps>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace: Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceNamespaceDeclaration AttributeValueRegex="clr-namespace:[ ]*([^;]*)(;.*)?$" Replacement="using:$1" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace: Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:ReplaceNamespaceDeclaration AttributeValueRegex="clr-namespace:[ ]*([^;]*)(;.*)?$" Replacement="using:$1" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMappingActions.Maps>
+    </xmap:XamlElementMappingActions>
+    <xmap:XamlElementMappingActions Name="CommonEventsToChange" >
+      <xmap:XamlElementMappingActions.Maps>
+
+        <xmap:XamlMap Kind="Property" PropertyName="Tap">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.TappedRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="Tapped" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <!--<xmap:XamlMap Kind="Property" PropertyName="Click" >
+                    <xmap:XamlMap.Action>
+                        <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.RoutedEventArgs" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Tap" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="Tapped" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>-->
+
+        <xmap:XamlMap Kind="Property" PropertyName="Click">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.RoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ManipulationCompleted">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ManipulationStarted">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ManipulationDelta">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="LostMouseCapture">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerCaptureLost" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseMove">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerMoved" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseLeftButtonDown">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerPressed" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseLeftButtonUp">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerReleased" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseEnter">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerEntered" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseLeave">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerExited" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="KeyUp">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.KeyRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="KeyDown">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.KeyRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+      </xmap:XamlElementMappingActions.Maps>
+    </xmap:XamlElementMappingActions>
+  </MapUnit.Elements>
+</MapUnit>
+
+

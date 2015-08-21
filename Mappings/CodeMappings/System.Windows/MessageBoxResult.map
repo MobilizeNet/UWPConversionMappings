@@ -1,0 +1,20 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.MessageBoxResult">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap  Kind="Type">
+          <map:ReplaceClassUsage NewNamespace="System" NewClassName="Int32"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="OK">
+          <!-- See the mapping for System.Windows.MessageBox.Show -->
+          <map:ReplaceWithTemplate>10</map:ReplaceWithTemplate>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Cancel">
+          <!-- See the mapping for System.Windows.MessageBox.Show -->
+          <map:ReplaceWithTemplate>20</map:ReplaceWithTemplate>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

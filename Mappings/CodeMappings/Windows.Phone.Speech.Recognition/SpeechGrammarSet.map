@@ -1,0 +1,152 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechGrammarSet">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Call" MemberName="AddGrammarFromList">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$tag</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$phrases</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <!-- Where are located here: _recognizerOBJ.Recognizer.Grammars -->
+                    <map:WithLeftSideOfDottedAccess>
+                      <!-- Where are located here: _recognizerOBJ.Recognizer -->
+                      <map:WithLeftSideOfDottedAccess>
+                        <!-- Where are located here: _recognizerOBJ -->
+                        <map:AssignName>$speechRecognizer</map:AssignName>
+                      </map:WithLeftSideOfDottedAccess>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                    $speechRecognizer
+                      .Constraints
+                      .Add(new Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint(
+                                  $phrases,
+                                  $tag))
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$tag</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$phrases</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <!-- Where are located here: _recognizerOBJ.Recognizer -->
+                    <map:WithLeftSideOfDottedAccess>
+                      <!-- Where are located here: _recognizerOBJ -->
+                      <map:AssignName>$speechRecognizer</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                    $speechRecognizer
+                      .Constraints
+                      .Add(new Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint(
+                                  $phrases,
+                                  $tag))
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Call" MemberName="AddGrammarFromPredefinedType">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$tag</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:Equals>SpeechPredefinedGrammar.WebSearch</map:Equals>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <!-- Where are located here: _recognizerOBJ.Recognizer.Grammars -->
+                    <map:WithLeftSideOfDottedAccess>
+                      <!-- Where are located here: _recognizerOBJ.Recognizer -->
+                      <map:WithLeftSideOfDottedAccess>
+                        <!-- Where are located here: _recognizerOBJ -->
+                        <map:AssignName>$speechRecognizer</map:AssignName>
+                      </map:WithLeftSideOfDottedAccess>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                    $speechRecognizer
+                      .Constraints
+                      .Add(new Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint(
+                                  Windows.Media.SpeechRecognition.SpeechRecognitionScenario.WebSearch,
+                                  $tag))
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$tag</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:Equals>SpeechPredefinedGrammar.WebSearch</map:Equals>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <!-- Where are located here: _recognizerOBJ.Recognizer -->
+                    <map:WithLeftSideOfDottedAccess>
+                      <!-- Where are located here: _recognizerOBJ -->
+                      <map:AssignName>$speechRecognizer</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                    $speechRecognizer
+                      .Constraints
+                      .Add(new Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint(
+                                  Windows.Media.SpeechRecognition.SpeechRecognitionScenario.WebSearch,
+                                  $tag))
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

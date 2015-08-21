@@ -1,0 +1,280 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.UIElement" Name="System.Windows.UIElement">
+      <map:CodeMapPackage.Maps>
+        
+        <map:CodeMap Kind="Type">          
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml" NewClassName="UIElement" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseMove">
+          <map:ReplaceWithProperty NewProperty="PointerMoved" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseMove">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseLeftButtonDown">
+          <map:ReplaceWithProperty NewProperty="PointerPressed" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseLeftButtonDown">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>                
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseLeftButtonUp">
+          <map:ReplaceWithProperty NewProperty="PointerReleased" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseLeftButtonUp">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseEnter">
+          <map:ReplaceWithProperty NewProperty="PointerEntered" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseEnter">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>           
+
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseLeave">
+          <map:ReplaceWithProperty NewProperty="PointerExited" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseLeave">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="LostMouseCapture">
+          <map:ReplaceWithProperty NewProperty="PointerCaptureLost" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="LostMouseCapture">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.PointerRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Tap">
+					<map:Rename NewName="Tapped" />
+				</map:CodeMap>        
+				<map:CodeMap Kind="EventDecl" MemberName="Tap">
+						<map:ReplaceParameterDeclarationType Position="1">
+							<![CDATA[Windows.UI.Xaml.RoutedEventArgs]]>
+						</map:ReplaceParameterDeclarationType>
+				</map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="KeyDown">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="KeyDown">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.KeyRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="KeyUp">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="KeyUp">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.KeyRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>    
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationCompleted">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationCompleted">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationStarted">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationStarted">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationDelta">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationDelta">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsHitTestVisible">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DesiredSize">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Clip">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Opacity">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Projection">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="RenderTransform">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CacheMode">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="UseLayoutRounding">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="RenderTransformOrigin">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Visibility">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="RenderSize">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OpacityProperty">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="GotFocus">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="LostFocus">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Measure">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Arrange">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="TransformToVisual">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="InvalidateMeasure">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="InvalidateArrange">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="UpdateLayout">
+          <map:Keep/>
+        </map:CodeMap>
+        
+        <!--Verificar luego-->
+        
+        <map:CodeMap Kind="Call" MemberName="CaptureMouse">
+          <map:ReplaceWithProperty NewProperty="CapturePointer" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ReleaseMouseCapture">
+          <map:ReplaceWithProperty NewProperty="ReleasePointerCapture" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="KeyDownEvent">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="KeyDownEvent">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.KeyRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationCompletedEvent">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationCompletedEvent">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationStartedEvent">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationStartedEvent">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationDeltaEvent">
+          <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="ManipulationDeltaEvent">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

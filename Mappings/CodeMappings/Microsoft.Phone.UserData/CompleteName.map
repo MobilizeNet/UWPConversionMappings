@@ -1,0 +1,98 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.UserData.CompleteName">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FirstName">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>                                
+                <map:WithLeftSideOfDottedAccess>                    
+                  <map:WithLeftSideOfDottedAccess>                     
+                    <map:AssignName>$contact</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:WithLeftSideOfDottedAccess>         
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $contact.FirstName
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="LastName">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>                                
+                <map:WithLeftSideOfDottedAccess>                    
+                  <map:WithLeftSideOfDottedAccess>                     
+                    <map:AssignName>$contact</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:WithLeftSideOfDottedAccess>         
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $contact.LastName
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="LastName2">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:WithLeftSideOfDottedAccess>
+                    <map:AssignName>$contact</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $contact.LastName2
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="MiddleName">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:WithLeftSideOfDottedAccess>
+                    <map:AssignName>$contact</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $contact.MiddleName
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

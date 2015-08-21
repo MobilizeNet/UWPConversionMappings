@@ -1,0 +1,31 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Media.Animation.KeyTime">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation"
+                                   NewClassName="KeyTime" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="FromTimeSpan">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="TimeSpan">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Uniform">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>        
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

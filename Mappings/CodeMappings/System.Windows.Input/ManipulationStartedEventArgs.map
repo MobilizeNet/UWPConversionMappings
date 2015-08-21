@@ -1,0 +1,29 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Input.ManipulationStartedEventArgs">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Input"
+                                   NewClassName="ManipulationStartedRoutedEventArgs" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationContainer">
+          <map:ReplaceWithProperty NewProperty="Container" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Handled">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManipulationOrigin">
+          <map:ReplaceWithProperty NewProperty="Position" />
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

@@ -1,0 +1,45 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Reflection.Assembly">
+      <map:CodeMapPackage.Maps>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FullName">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetExecutingAssembly">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>this.GetType().GetTypeInfo().Assembly</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetManifestResourceStream">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="GetType">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="Load">
+         <map:Keep/>
+        </map:CodeMap>
+   
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

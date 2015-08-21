@@ -1,0 +1,123 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.IO.Stream">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Close">
+          <map:CodeMap.Action>
+             <map:RedirectCall NewMethod="Dispose" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CopyTo">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CopyToAsync">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Dispose">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Flush">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Read">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ReadByte">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Seek">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SetLength">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ReadByte">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Write">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="WriteByte">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CanRead">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CanSeek">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CanWrite">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Length">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Position">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

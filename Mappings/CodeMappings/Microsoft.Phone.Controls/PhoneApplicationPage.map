@@ -1,0 +1,93 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.PhoneApplicationPage">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls"
+                                   NewClassName="Page" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="State">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>Windows.Storage.ApplicationData.Current.LocalSettings.Values</map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ApplicationBar">
+          <map:ReplaceWithTemplate>((Windows.UI.Xaml.Controls.CommandBar)BottomAppBar)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Assign" MemberName="ApplicationBar">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>$owner.jg.BottomAppBar = $right</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>BottomAppBar = $right </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep></map:Keep>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Orientation">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>Windows.Graphics.Display.DisplayInformation.GetForCurrentView().CurrentOrientation</map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SupportedOrientations">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>DisplayInformation.AutoRotationPreferences</map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="BackKeyPress">
+          <map:ReplaceWithTemplate>Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested</map:ReplaceWithTemplate>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="BackKeyPress">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterMember Position="1">
+                <map:ParameterMemberReplacement From="Cancel" To="Handled"/>
+              </map:ReplaceParameterMember>
+
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Core.BackRequestedEventArgs
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

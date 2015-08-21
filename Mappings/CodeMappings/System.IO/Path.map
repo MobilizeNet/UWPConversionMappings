@@ -1,0 +1,40 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.IO.Path">
+      <map:CodeMapPackage.Maps>
+        
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Combine">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetDirectoryName">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetFileName">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetTempFileName">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

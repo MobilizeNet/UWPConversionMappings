@@ -1,0 +1,34 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Info.DeviceStatus">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ApplicationCurrentMemoryUsage">
+          <map:ReplaceWithTemplate>((long)Windows.System.MemoryManager.AppMemoryUsage)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceFirmwareVersion">
+          <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemFirmwareVersion)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceHardwareVersion">
+          <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemHardwareVersion)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceManufacturer">
+          <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemManufacturer)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceName">
+          <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemProductName)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceName">
+          <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemProductName)</map:ReplaceWithTemplate>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

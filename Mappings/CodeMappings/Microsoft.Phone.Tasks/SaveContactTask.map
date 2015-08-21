@@ -1,0 +1,45 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Tasks.SaveContactTask">
+      <map:CodeMapPackage.Maps>
+
+       <map:CodeMap Kind="Call" MemberName="Show">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:WithConstructorCall>
+                    <map:WithMemberInitValue MemberName="FirstName">
+                      <map:AssignName>$name</map:AssignName>
+                    </map:WithMemberInitValue>
+                    <map:WithMemberInitValue MemberName="LastName">
+                      <map:AssignName>$lastName</map:AssignName>
+                    </map:WithMemberInitValue>
+                    <map:WithMemberInitValue MemberName="MobilePhone">
+                      <map:AssignName>$phone</map:AssignName>
+                    </map:WithMemberInitValue>
+                  </map:WithConstructorCall>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\SaveContactTask.cs" />
+                  <map:ReplaceWithTemplate>WindowsPhoneUWP.UpgradeHelpers.SaveContactTask.Save($name, $lastName, $phone)</map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Show"/>
+        <map:PackageMetadata Key="GROUP_INIT_STATEMENTS" Value="true"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

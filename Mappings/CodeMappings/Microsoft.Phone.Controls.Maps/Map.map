@@ -1,0 +1,98 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.Maps.Map">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls.Maps" NewClassName="MapControl" />
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="CredentialsProvider">
+           <map:ReplaceWithProperty NewProperty="MapServiceToken"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Mode">
+           <map:ReplaceWithProperty NewProperty="Style"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Children">
+           <map:ReplaceWithProperty NewProperty="MapElements"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="Call" MemberName="SetView">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$mapInstance</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$arg0</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$arg1</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await $mapInstance.TrySetViewAsync($arg0, $arg1)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>  
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SetView"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.Maps.RoadMode">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="New" >
+           <map:ReplaceWithTemplate>Windows.UI.Xaml.Controls.Maps.MapStyle.Road</map:ReplaceWithTemplate>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.Maps.Pushpin">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type"> 
+          <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls.Maps" NewClassName="MapIcon"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Content" >
+           <map:ReplaceWithProperty NewProperty="Title" /> 
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="GeoCoordinate" >
+           <map:ReplaceWithProperty NewProperty="Location" /> 
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.Maps.ApplicationIdCredentialsProvider">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="New" >
+           <map:Conditional>
+              <map:Case>
+                 <map:Case.Condition>
+                    <map:WithConstructorCall>
+                       <map:WithArgument Position="0">
+                          <map:AssignName>$arg0</map:AssignName>
+                       </map:WithArgument>
+                    </map:WithConstructorCall>
+                 </map:Case.Condition>
+                 <map:Case.Action>
+                    <map:ReplaceWithTemplate>$arg0</map:ReplaceWithTemplate>
+                 </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                 <map:Keep/>
+              </map:Default>
+           </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+  </MapUnit.Elements>
+</MapUnit>
+

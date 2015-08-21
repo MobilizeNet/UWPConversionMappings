@@ -1,0 +1,132 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Info.DeviceExtendedProperties">
+      <map:CodeMapPackage.Maps>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Tick">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsEnabled">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Interval">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetValue">
+         <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:Equals>"ApplicationCurrentMemoryUsage"</map:Equals>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>(Object)Windows.System.MemoryManager.AppMemoryUsage</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+           <map:Case>
+             <map:Case.Condition>
+               <map:WithMethodCall>
+                 <map:WithArgument Position="0">
+                   <map:Equals>"DeviceFirmwareVersion"</map:Equals>
+                 </map:WithArgument>
+               </map:WithMethodCall>
+             </map:Case.Condition>
+             <map:Case.Action>
+               <map:ReplaceWithTemplate>((Object)(new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemFirmwareVersion)</map:ReplaceWithTemplate>
+             </map:Case.Action>
+           </map:Case>
+           <map:Case>
+             <map:Case.Condition>
+               <map:WithMethodCall>
+                 <map:WithArgument Position="0">
+                   <map:Equals>"DeviceHardwareVersion"</map:Equals>
+                 </map:WithArgument>
+               </map:WithMethodCall>
+             </map:Case.Condition>
+             <map:Case.Action>
+               <map:ReplaceWithTemplate>((Object)(new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemHardwareVersion)</map:ReplaceWithTemplate>
+             </map:Case.Action>
+           </map:Case>
+           <map:Case>
+             <map:Case.Condition>
+               <map:WithMethodCall>
+                 <map:WithArgument Position="0">
+                   <map:Equals>"DeviceManufacturer"</map:Equals>
+                 </map:WithArgument>
+               </map:WithMethodCall>
+             </map:Case.Condition>
+             <map:Case.Action>
+               <map:ReplaceWithTemplate>((Object)(new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemManufacturer)</map:ReplaceWithTemplate>
+             </map:Case.Action>
+           </map:Case>
+           <map:Case>
+             <map:Case.Condition>
+               <map:WithMethodCall>
+                 <map:WithArgument Position="0">
+                   <map:Equals>"DeviceName"</map:Equals>
+                 </map:WithArgument>
+               </map:WithMethodCall>
+             </map:Case.Condition>
+             <map:Case.Action>
+               <map:ReplaceWithTemplate>((Object)(new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemProductName)</map:ReplaceWithTemplate>
+             </map:Case.Action>
+           </map:Case>
+           <map:Case>
+             <map:Case.Condition>
+               <map:WithMethodCall>
+                 <map:WithArgument Position="0">
+                   <map:AssignName>$Argument</map:AssignName>
+                 </map:WithArgument>
+               </map:WithMethodCall>
+             </map:Case.Condition>
+             <map:Case.Action>
+               <map:ActionSequence>
+                 <map:AddHelper Path="..\Helpers\DeviceExtendedPropertiesHelper.cs" />
+                 <map:ReplaceWithTemplate>WindowsPhoneUWP.UpgradeHelpers.DeviceExtendedPropertiesHelper.GetValue($Argument)</map:ReplaceWithTemplate>
+               </map:ActionSequence>
+             </map:Case.Action>
+           </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="TryGetValue">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$Argument</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$Result</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\DeviceExtendedPropertiesHelper.cs" />
+                  <map:ReplaceWithTemplate>WindowsPhoneUWP.UpgradeHelpers.DeviceExtendedPropertiesHelper.TryGetValue($Argument, out $Result)</map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+   
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

@@ -1,0 +1,36 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechRecognizer">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechRecognition"
+                                 NewClassName="SpeechRecognizer" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Settings">
+          <map:ReplaceWithProperty NewProperty="UIOptions" />
+        </map:CodeMap>
+        <map:CodeMap Kind="Call" MemberName="RecognizeAsync">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:AddPreStatementFromTemplate>
+                 await $owner.CompileConstraintsAsync();
+                </map:AddPreStatementFromTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

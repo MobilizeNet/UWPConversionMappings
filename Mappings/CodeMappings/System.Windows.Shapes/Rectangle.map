@@ -1,0 +1,21 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers"
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'>
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Shapes.Rectangle">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Shapes"
+                                   NewClassName="Rectangle" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.ReferencedPackages>
+        <x:String>System.Windows.UIElement</x:String>
+      </map:CodeMapPackage.ReferencedPackages>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

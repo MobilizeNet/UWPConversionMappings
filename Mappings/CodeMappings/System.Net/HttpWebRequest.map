@@ -1,0 +1,44 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers"
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'>
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Net.HttpWebRequest">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="UserAgent">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$requestObj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $requestObj.Headers["user-agent"]
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        
+
+        
+      </map:CodeMapPackage.Maps>
+      
+      <map:CodeMapPackage.ReferencedPackages>
+        <x:String>System.Net.WebRequest</x:String>
+      </map:CodeMapPackage.ReferencedPackages>
+      
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

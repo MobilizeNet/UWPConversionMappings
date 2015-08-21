@@ -1,0 +1,46 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Reflection.PropertyInfo">
+      <map:CodeMapPackage.Maps>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CanRead">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CanWrite">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="PropertyType">
+          <map:Keep/>
+        </map:CodeMap>
+		
+        <map:CodeMap Kind="Call" MemberName="GetGetMethod">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="GetIndexParameters">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="GetSetMethod">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="GetValue">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		<map:CodeMap Kind="Call" MemberName="SetValue">
+         <map:Keep/>
+        </map:CodeMap>
+		
+		
+
+   
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

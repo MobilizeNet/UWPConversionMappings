@@ -1,0 +1,33 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="TextBlock" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="Style" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceStaticResource NewStaticResourceName="HeaderTextBlockStyle" OldStaticResourceName="PhoneTextTitle1Style" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="TitleTextBlockStyle" OldStaticResourceName="PhoneTextExtraLargeStyle" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="CaptionTextBlockStyle" OldStaticResourceName="PhoneTextNormalStyle" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="CaptionTextBlockStyle" OldStaticResourceName="PhoneTextNormalStyle" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="TitleTextBlockStyle" OldStaticResourceName="PhoneTextLargeStyle" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="TitleTextBlockStyle" OldStaticResourceName="PhoneTextExtraLargeStyle" />
+              <xmap:ReplaceStaticResource NewStaticResourceName="SubtitleTextBlockStyle" OldStaticResourceName="PhoneTextSubtleStyle" />
+
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="TextDecorations">
+            <xmap:MarkAsNotMapped/>
+        </xmap:XamlMap>
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <x:String>CommonAttributesToRemove</x:String>
+        <x:String>CommonEventsToChange</x:String>
+        <x:String>CommonColor</x:String>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

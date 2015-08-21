@@ -1,0 +1,55 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Net.DownloadStringCompletedEventArgs">
+      <map:CodeMapPackage.Maps>
+        <!--<map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Input" NewClassName="PointerRoutedEventArgs" />
+          </map:CodeMap.Action>
+        </map:CodeMap>-->
+        <map:CodeMap Kind="MemberAccess" MemberName="Error">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  ($obj.StatusCode != Windows.Web.Http.HttpStatusCode.Ok ? new System.Exception($obj.ReasonPhrase) : null)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Result">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await $obj.Content.ReadAsStringAsync();
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Result"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

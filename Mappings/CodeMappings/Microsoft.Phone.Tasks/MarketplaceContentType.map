@@ -1,0 +1,26 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Tasks.MarketplaceContentType">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Applications">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              "app"
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Music">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              "music"
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

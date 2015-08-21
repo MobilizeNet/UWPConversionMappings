@@ -1,0 +1,87 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Net.WebClient">
+
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Web.Http"
+                                   NewClassName="HttpClient" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DownloadStringCompleted">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="OpenReadCompleted">
+          <map:CodeMap.Action>
+            <map:CommentOut/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Headers">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="DefaultRequestHeaders"/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsBusy">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>false</map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="DownloadStringAsync">
+          <map:CodeMap.Action>
+            <map:RedirectCall NewMethod="GetAsync" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="OpenReadAsync">
+          <map:CodeMap.Action>
+            <map:RedirectCall NewMethod="GetAsync" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="DownloadStringCompleted">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="0">
+                <![CDATA[System.Threading.Tasks.Task<Windows.Web.Http.HttpResponseMessage>]]>
+              </map:ReplaceParameterDeclarationType>              
+              <map:ReplaceParameterValue Position="1">
+                $parameter0Name.Result;
+              </map:ReplaceParameterValue>
+              <map:RemoveParameter Position="1"/>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="EventDecl" MemberName="OpenReadCompleted">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="0">
+                <![CDATA[System.Threading.Tasks.Task<Windows.Web.Http.HttpResponseMessage>]]>
+              </map:ReplaceParameterDeclarationType>
+              <map:ReplaceParameterValue Position="1">
+                $parameter0Name.Result;
+              </map:ReplaceParameterValue>
+              <map:RemoveParameter Position="1"/>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+
+      
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="COMPLETED_PATTERN_EVENTS" Value="OpenReadCompleted; DownloadStringCompleted"/>
+        <map:PackageMetadata Key="COMPLETED_PATTERN_METHODS" Value="OpenReadAsync; DownloadStringAsync"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

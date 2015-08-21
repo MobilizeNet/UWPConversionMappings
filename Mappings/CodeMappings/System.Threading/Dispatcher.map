@@ -1,0 +1,45 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Threading.Dispatcher">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage
+                 NewNamespace="System.Threading.Tasks"
+                 NewClassName="Task" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <!--<map:CodeMap Kind="New">
+            <map:CodeMap.Action>
+              <map:Keep/>
+            </map:CodeMap.Action>
+          </map:CodeMap>-->
+
+        <map:CodeMap Kind="Call" MemberName="QueueUserWorkItem">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$method</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>(new System.Threading.Tasks.Task($method, null)).Start()</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

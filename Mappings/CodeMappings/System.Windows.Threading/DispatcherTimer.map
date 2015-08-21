@@ -1,0 +1,45 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Threading.DispatcherTimer">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage
+                 NewNamespace="Windows.UI.Xaml"
+                 NewClassName="DispatcherTimer" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              new Windows.UI.Xaml.DispatcherTimer()
+            </map:ReplaceWithTemplate>
+            </map:CodeMap.Action>
+          </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Tick">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsEnabled">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Interval">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Start">
+         <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Stop">
+         <map:Keep/>
+        </map:CodeMap>
+   
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

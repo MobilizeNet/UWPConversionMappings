@@ -1,0 +1,59 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>                
+        <xmap:XamlElementMapper ElementName="PhoneApplicationPage" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="Page" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="ApplicationBar" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="BottomAppBar" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="SupportedOrientations" >
+                    <xmap:XamlMap.Action>
+                        <xmap:MarkAsNotMapped ElementName="PhoneApplicationPage" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="SupportedOrientations" >
+                    <xmap:XamlMap.Action>
+                      <xmap:MarkAsNotMapped ElementName="PhoneApplicationPage" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Orientation" >
+                    <xmap:XamlMap.Action>
+                      <xmap:MarkAsNotMapped ElementName="PhoneApplicationPage" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+              
+              <xmap:XamlMap Kind="Property" PropertyName="BackKeyPress" >
+                <xmap:XamlMap.Action>
+                  <xmap:ActionSequence>
+                    <xmap:AddStatementToConstructorFromTemplate>
+                      <![CDATA[ this.Loaded += (object sender, Windows.UI.Xaml.RoutedEventArgs args) => Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += $propertyValue;  ]]>                      
+                    </xmap:AddStatementToConstructorFromTemplate>
+                    <xmap:AddStatementToConstructorFromTemplate>
+                      <![CDATA[ this.Unloaded += (object sender, Windows.UI.Xaml.RoutedEventArgs args) => Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested -= $propertyValue;  ]]>
+                    </xmap:AddStatementToConstructorFromTemplate>
+                  <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Core.BackRequestedEventArgs" />
+                  <xmap:ReplaceEventHandlerParameterMember Position="1">
+                    <xmap:ParameterMemberReplacement From="Cancel" To="Handled" />
+                  </xmap:ReplaceEventHandlerParameterMember>
+                    <xmap:RemoveAttribute/>
+                  </xmap:ActionSequence>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+              
+            </xmap:XamlElementMapper.Maps>
+            <xmap:XamlElementMapper.ReferencedPackages>
+                <x:String>CommonAttributesToRemove</x:String>
+                <x:String>CommonPostMappingActions</x:String>
+            </xmap:XamlElementMapper.ReferencedPackages>
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

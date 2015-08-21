@@ -1,0 +1,23 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Media.BitmapCache">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media"
+                                   NewClassName="BitmapCache" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+				<map:CodeMap Kind="MemberAccess" MemberName="RenderAtScale">
+					<map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+					</map:CodeMap.Action>
+				</map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

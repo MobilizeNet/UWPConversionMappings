@@ -1,0 +1,764 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Security.Cryptography.SHA1Managed">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type" >
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage
+                  NewNamespace="Windows.Security.Cryptography.Core"
+                  NewClassName="HashAlgorithmProvider" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.Security.Cryptography.Core.HashAlgorithmProvider.OpenAlgorithm(Windows.Security.Cryptography.Core.HashAlgorithmNames.Sha1)
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ComputeHash">
+          <map:Conditional>
+            
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>Microsoft.JScript.COMCharStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Data.OracleClient.OracleBFile</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Data.OracleClient.OracleLob</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Data.SqlTypes.SqlFileStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.BufferedStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.Compression.DeflateStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.Compression.GZipStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.MemoryStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.Pipes.PipeStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.UnmanagedMemoryStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Net.Security.AuthenticatedStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Net.Sockets.NetworkStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Printing.PrintQueueStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.Security.Cryptography.CryptoStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.FileStream</map:IsExpressionOfType>
+                    <map:AssignName>$Stream</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBufferAux = new byte [($Stream).Length];
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         $Stream.Read(tempBufferAux, 0, (int)($Stream).Length);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray(g.HashData(tempBufferAux.AsBuffer()), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$byteArray</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray($owner.HashData(Windows.Security.Cryptography.CryptographicBuffer.CreateFromByteArray($byteArray)), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$byteArray</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$index</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:AssignName>$count</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+        byte[] tempBuffer;
+
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray($owner.HashData(Windows.Security.Cryptography.CryptographicBuffer.CreateFromByteArray(($byteArray.Skip($index).Take($count).ToArray()))), out tempBuffer);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    tempBuffer
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+        
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

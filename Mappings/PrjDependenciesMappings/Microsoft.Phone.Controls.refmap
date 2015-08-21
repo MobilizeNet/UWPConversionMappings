@@ -1,0 +1,6 @@
+﻿<ReferenceMap Id="Microsoft.Phone.Controls"
+              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Projects;assembly=ExtensibleMappers">
+	<ReferenceMap.Obsolete>
+		<Assembly Name="Microsoft.Phone.Controls" />
+	</ReferenceMap.Obsolete>
+</ReferenceMap>

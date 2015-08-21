@@ -1,0 +1,53 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers" 
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Globalization.CultureInfo">
+      <map:CodeMapPackage.Maps>
+        
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <!--<map:ReplaceClassUsage NewNamespace="System" NewClassName="String" />-->
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Name">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DateTimeFormat">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="TwoLetterISOLanguageName">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CurrentCulture">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CurrentUICulture">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="InvariantCulture">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

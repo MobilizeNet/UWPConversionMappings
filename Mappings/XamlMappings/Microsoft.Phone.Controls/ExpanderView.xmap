@@ -1,0 +1,39 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>                
+        <xmap:XamlElementMapper ElementName="ExpanderView" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+            <xmap:XamlElementMapper.Maps>
+              <xmap:XamlMap Kind="Property" PropertyName="Header" >
+                <xmap:XamlMap.Action>
+                  <xmap:ActionSequence>
+                    <xmap:WrapContent WrappingElementName="StackPanel"
+                                      WrappingElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    <xmap:MoveValueToContentProperty  />
+                  </xmap:ActionSequence>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>                
+                <xmap:XamlMap Kind="Property" PropertyName="Items" >
+                    <xmap:XamlMap.Action>
+                      <xmap:ActionSequence>
+                        <xmap:WrapContent WrappingElementName="StackPanel" 
+                                          WrappingElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                        <xmap:MoveValueToContentProperty AtTheEnd="true" />
+                      </xmap:ActionSequence>
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+              <xmap:XamlMap Kind="Property" PropertyName="IsExpanded" >
+                <xmap:XamlMap.Action>
+                  <xmap:MarkAsNotMapped ElementName="ExpanderView"/>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+              <xmap:XamlMap Kind="Element">
+                <xmap:XamlMap.Action>
+                  <xmap:RenameElement NewName="StackPanel" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

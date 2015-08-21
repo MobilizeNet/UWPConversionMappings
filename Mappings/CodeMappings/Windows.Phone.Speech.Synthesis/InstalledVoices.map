@@ -1,0 +1,21 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Synthesis.InstalledVoices">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="MemberAccess" MemberName="All">
+          <map:ReplaceWithProperty
+            NewProperty="AllVoices"
+            NewPropertyOwner="Windows.Media.SpeechSynthesis.SpeechSynthesizer"
+            />
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Default">
+          <map:ReplaceWithProperty
+            NewProperty="DefaultVoice"
+            NewPropertyOwner="Windows.Media.SpeechSynthesis.SpeechSynthesizer"
+            />
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

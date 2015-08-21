@@ -1,0 +1,77 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>        
+        <xmap:XamlElementMapper ElementName="Panorama" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="Hub" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Title" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="Header" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+            <xmap:XamlElementMapper.ReferencedPackages>
+                <x:String>CommonAttributesToRemove</x:String>
+            </xmap:XamlElementMapper.ReferencedPackages>
+        </xmap:XamlElementMapper>
+        <xmap:XamlElementMapper ElementName="PanoramaItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="HubSection" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:WrapContent WrappingElementName="DataTemplate" WrappingElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+            <xmap:XamlElementMapper.ReferencedPackages>
+                <x:String>CommonAttributesToRemove</x:String>
+            </xmap:XamlElementMapper.ReferencedPackages>
+        </xmap:XamlElementMapper>
+
+
+      <xmap:XamlElementMapper ElementName="Panorama" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
+        <xmap:XamlElementMapper.Maps>
+          <xmap:XamlMap Kind="Element">
+            <xmap:XamlMap.Action>
+              <xmap:RenameElement NewName="Hub" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            </xmap:XamlMap.Action>
+          </xmap:XamlMap>
+          <xmap:XamlMap Kind="Property" PropertyName="Title" >
+            <xmap:XamlMap.Action>
+              <xmap:RenameProperty NewPropertyLocalName="Header" />
+            </xmap:XamlMap.Action>
+          </xmap:XamlMap>
+        </xmap:XamlElementMapper.Maps>
+        <xmap:XamlElementMapper.ReferencedPackages>
+          <x:String>CommonAttributesToRemove</x:String>
+        </xmap:XamlElementMapper.ReferencedPackages>
+      </xmap:XamlElementMapper>
+      <xmap:XamlElementMapper ElementName="PanoramaItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
+        <xmap:XamlElementMapper.Maps>
+          <xmap:XamlMap Kind="Element">
+            <xmap:XamlMap.Action>
+              <xmap:RenameElement NewName="HubSection" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            </xmap:XamlMap.Action>
+          </xmap:XamlMap>
+          <xmap:XamlMap Kind="Element">
+            <xmap:XamlMap.Action>
+              <xmap:WrapContent WrappingElementName="DataTemplate" WrappingElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            </xmap:XamlMap.Action>
+          </xmap:XamlMap>
+        </xmap:XamlElementMapper.Maps>
+        <xmap:XamlElementMapper.ReferencedPackages>
+          <x:String>CommonAttributesToRemove</x:String>
+        </xmap:XamlElementMapper.ReferencedPackages>
+      </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

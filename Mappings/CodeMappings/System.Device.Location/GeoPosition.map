@@ -1,0 +1,35 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Device.Location.GeoPosition">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Devices.Geolocation" NewClassName="Geoposition" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Location">
+          <map:RedirectProperty  NewPropertyOwner="Coordinate" NewProperty="Point"/>
+          <!--<map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $obj
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:MarkAsNotMapped/>
+            </map:Default>
+          </map:Conditional>-->
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

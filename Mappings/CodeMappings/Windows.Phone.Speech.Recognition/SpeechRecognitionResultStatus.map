@@ -1,0 +1,27 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechRecognitionUIStatus">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechRecognition" 
+                                   NewClassName="SpeechRecognitionResultStatus" />
+          </map:CodeMap.Action>          
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Succeeded">
+          <map:ReplaceWithProperty NewProperty="Success"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Preempted">
+          <map:ReplaceWithProperty NewProperty="PauseLimitExceeded"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Busy">
+          <map:ReplaceWithProperty NewProperty="TimeoutExceeded"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="PrivacyPolicyDeclined">
+          <map:ReplaceWithProperty NewProperty="UserCanceled"/>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

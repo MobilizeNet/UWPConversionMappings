@@ -1,0 +1,18 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechRecognitionResult">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechRecognition" 
+                                   NewClassName="SpeechRecognitionResult" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="TextConfidence">
+          <map:ReplaceWithProperty NewProperty="Confidence"/>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

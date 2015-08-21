@@ -1,0 +1,66 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Threading.Thread">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage
+                 NewNamespace="System.Threading.Tasks"
+                 NewClassName="Task" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <!--<map:CodeMap Kind="New">
+            <map:CodeMap.Action>
+              <map:Keep/>
+            </map:CodeMap.Action>
+          </map:CodeMap>-->
+
+        <map:CodeMap Kind="Call" MemberName="Start">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Sleep">
+          <map:Conditional>
+            <!-- Case for one argument -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$time</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  System.Threading.Tasks.Task.Delay($time).Wait();
+                </map:ReplaceWithTemplate>                  
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>        
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CurrentCulture">
+          <map:ReplaceWithProperty
+              NewProperty="CurrentCulture"
+              NewPropertyOwner="System.Globalization.CultureInfo" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Assign" MemberName="CurrentCulture">
+          <map:ReplaceWithProperty
+              NewProperty="DefaultThreadCurrentCulture"
+              NewPropertyOwner="System.Globalization.CultureInfo" />
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      
+      
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

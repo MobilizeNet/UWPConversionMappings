@@ -1,0 +1,61 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Synthesis.SpeechSynthesizer">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechSynthesis"
+                                   NewClassName="SpeechSynthesizer" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="Call" MemberName="SpeakTextAsync">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$text</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                  var speechStream = await $owner.SynthesizeTextToStreamAsync($text);
+                  ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[ var localMediaElement = new Windows.UI.Xaml.Controls.MediaElement() {
+                                 AutoPlay = true
+                            };]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                  localMediaElement.SetSource(speechStream, speechStream.ContentType);
+                  ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    localMediaElement.Play();
+                  </map:AddPreStatementFromTemplate>
+                  <map:RemoveCurrentStatement/>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SpeakTextAsync"/>
+      </map:CodeMapPackage.Metadata>
+
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

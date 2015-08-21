@@ -1,0 +1,87 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.MessageBox">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Call" MemberName="Show">
+          <map:Conditional>
+            <!-- Case for one argument -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$message</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await (new Windows.UI.Popups.MessageDialog($message)).ShowAsync()
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <!-- Case for three arguments with OK -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$message</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$title</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:Equals>MessageBoxButton.OK</map:Equals>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await (new Windows.UI.Popups.MessageDialog($message, $title)).ShowAsync()
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <!-- Case for three arguments with OKCancel -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$message</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:AssignName>$title</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:Equals>MessageBoxButton.OKCancel</map:Equals>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                  ((int)(await (new Windows.UI.Popups.MessageDialog($message, $title){
+                      Commands =
+                      {
+                        new Windows.UI.Popups.UICommand() { Id = 10, Label = "OK" },
+                        new Windows.UI.Popups.UICommand() { Id = 20, Label = "Cancel" }
+                      }
+                  }).ShowAsync()).Id)
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Show"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

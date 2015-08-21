@@ -1,0 +1,21 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="SystemTray" ElementNamespace="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Property" PropertyName="IsVisible" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneApplicationPage" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Opacity" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneApplicationPage" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMapper.Maps>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

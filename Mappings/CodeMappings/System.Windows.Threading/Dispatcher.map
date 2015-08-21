@@ -1,0 +1,59 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Threading.Dispatcher">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:ReplaceClassUsage NewNamespace="Windows.UI.Core"
+                                 NewClassName="CoreDispatcher" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="BeginInvoke">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$lambda</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>$owner.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, $lambda)</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CheckAccess">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithCalledMemberOwner>
+                  <map:AssignName>$emailObj</map:AssignName>
+                </map:WithCalledMemberOwner>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $emailObj.HasThreadAccess
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

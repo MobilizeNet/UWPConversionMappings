@@ -1,0 +1,20 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>                
+        <xmap:XamlElementMapper ElementName="Setter" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:CommentOutElement>
+                            <xmap:CommentOutElement.Condition>
+                                <xmap:ElementContainsAttribute PropertyLocalName="Value" PropertyValueRegex="^.StaticResource Phone.*" />
+                            </xmap:CommentOutElement.Condition>
+                        </xmap:CommentOutElement>
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

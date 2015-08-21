@@ -1,0 +1,69 @@
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Device.Location.GeoCoordinateWatcher">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.Devices.Geolocation" 
+                                   NewClassName="Geolocator" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithConstructorCall>
+                    <map:ArgumentCount>1</map:ArgumentCount>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$accurarcy</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithConstructorCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Devices.Geolocation.Geolocator()
+                    {
+                      DesiredAccuracy = $accurarcy
+                    }
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="Call" MemberName="Start">
+          <map:CommentOut/>
+        </map:CodeMap>
+        <map:CodeMap Kind="Call" MemberName="Stop">
+          <map:CommentOut/>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Position">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>                
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>await $obj.GetGeopositionAsync()</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Position"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

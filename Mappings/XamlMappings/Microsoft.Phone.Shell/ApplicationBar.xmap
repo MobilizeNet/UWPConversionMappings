@@ -1,0 +1,73 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>                        
+        <xmap:XamlElementMapper ElementName="ApplicationBar" ElementNamespace="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="CommandBar" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="ApplicationBar" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="BottomAppBar" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Mode" >
+                    <xmap:XamlMap.Action>
+                        <xmap:ReplaceAttributeValue>
+                            <xmap:RegexReplacementPair ReplacementString="True" ValueRegex="Default" />
+                        </xmap:ReplaceAttributeValue>
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Mode" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="IsOpen" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="BackgroundColor" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="Background" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="MenuItems" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="SecondaryCommands" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Buttons" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="PrimaryCommands" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="IsMenuEnabled" >
+                    <xmap:XamlMap.Action>
+                        <xmap:CommentOutProperty />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+            <xmap:XamlElementMapper.ReferencedPackages>
+                <x:String>CommonControlProperties</x:String>
+            </xmap:XamlElementMapper.ReferencedPackages>
+        </xmap:XamlElementMapper>
+        <xmap:XamlElementMapper ElementName="ApplicationBarMenuItem" ElementNamespace="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+            <xmap:XamlElementMapper.Maps>
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="AppBarButton" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+                <xmap:XamlMap Kind="Property" PropertyName="Text" >
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameProperty NewPropertyLocalName="Label" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+            </xmap:XamlElementMapper.Maps>
+          <xmap:XamlElementMapper.ReferencedPackages>
+            <x:String>CommonEventsToChange</x:String>
+          </xmap:XamlElementMapper.ReferencedPackages>
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

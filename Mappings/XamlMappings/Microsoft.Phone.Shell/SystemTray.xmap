@@ -1,5 +1,5 @@
-<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers'
-         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=XamlMapper'
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
     <xmap:XamlElementMapper ElementName="SystemTray" ElementNamespace="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">

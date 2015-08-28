@@ -1,5 +1,5 @@
-﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=ExtensibleMappers"
-         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=ExtensibleMappers">
+﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
     <map:CodeMapPackage Type="Microsoft.Phone.Tasks.PhotoResult">
       <map:CodeMapPackage.Maps>
@@ -20,7 +20,24 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="ChosenPhoto">
-          <map:ReplaceWithMethodCall MethodName="OpenStreamForReadAsync" />
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddNamespaceImport>System.IO</map:AddNamespaceImport>
+                  <map:ReplaceWithTemplate>(await $owner.OpenStreamForReadAsync())</map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
         </map:CodeMap>
         
         <map:CodeMap Kind="MemberAccess" MemberName="TaskResult">

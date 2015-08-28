@@ -1,4 +1,4 @@
-﻿<NamespaceMappings xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Namespaces;assembly=ExtensibleMappers">
+﻿<NamespaceMappings xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Namespaces;assembly=Mobilize.ExtensibleMappers">
   <Replace Old="System.Windows.Controls" New="Windows.UI.Xaml.Controls"/>
   <Replace Old="System.Windows.Navigation" New="Windows.UI.Xaml.Navigation"/>
   <Replace Old="System.Windows.Data" New="Windows.UI.Xaml.Data"/>
@@ -33,5 +33,6 @@
   <Remove>Microsoft.Devices</Remove>
   <Remove>Microsoft.Phone.Maps.Toolkit</Remove>
   <Remove>Microsoft.Phone.Maps</Remove>
+  <Remove>Coding4Fun.Phone.Controls</Remove>
 </NamespaceMappings>
 

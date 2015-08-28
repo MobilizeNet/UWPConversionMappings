@@ -1,5 +1,5 @@
 ﻿<ReferenceMap Id="Microsoft.Phone.Controls"
-              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Projects;assembly=ExtensibleMappers">
+              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.References;assembly=Mobilize.ExtensibleMappers">
 	<ReferenceMap.Obsolete>
 		<SDKReference Name="MSTestFramework" />
 		<SDKReference Name="TestPlatform" />

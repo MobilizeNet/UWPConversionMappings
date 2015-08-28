@@ -1,0 +1,116 @@
+
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Shell.PhoneApplicationService">
+      <map:CodeMapPackage.Maps>
+	  
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewClassName="DisplayRequest" NewNamespace="Windows.System.Display" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Assign" MemberName="UserIdleDetectionMode">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\PhoneApplicationServiceHelper.cs" />
+                  <map:ReplaceWithTemplate>
+                    WindowsPhoneUWP.UpgradeHelpers.PhoneApplicationServiceHelper.UserIdleDetectionMode($right)
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep></map:Keep>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Activated">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.ApplicationModel.Core.CoreApplication.Resuming
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Activated">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.ApplicationModel.Core.CoreApplication.Resuming
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Current">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.ApplicationModel.Core.CoreApplication.GetCurrentView()
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Closing">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.ApplicationModel.Core.CoreApplication.Exiting
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Deactivated">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.ApplicationModel.Core.CoreApplication.Suspending
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="Activated">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Object
+              </map:ReplaceParameterDeclarationType>
+              <!--<map:RemoveParameter Position="1"/>-->
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="Closing">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Object
+              </map:ReplaceParameterDeclarationType>
+              <!--<map:RemoveParameter Position="1"/>-->
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="EventDecl" MemberName="Deactivated">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.ApplicationModel.SuspendingEventArgs
+              </map:ReplaceParameterDeclarationType>
+              <!--<map:RemoveParameter Position="1"/>-->
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+		
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

@@ -19,25 +19,56 @@
                   <map:ArgumentCount>1</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
                   </map:WithArgument>
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:MarkAsNotMapped/>
+                <map:ReplaceWithTemplate>
+                  new StreamReader(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open))
+                </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
-            <!-- Case for two arguments and first parameter of type string -->
+            <!-- Case for two arguments, first parameter of type string and second parameter type boolean -->
             <map:Case>
               <map:Case.Condition>
                 <map:WithConstructorCall>
                   <map:ArgumentCount>2</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Boolean</map:IsExpressionOfType>
+                    <map:AssignName>$detect</map:AssignName>
                   </map:WithArgument>
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:MarkAsNotMapped/>
+                <map:ReplaceWithTemplate>
+                  new StreamReader(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $detect)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <!-- Case for two arguments, first parameter of type string and second parameter type Enconding -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Text.Encoding</map:IsExpressionOfType>
+                    <map:AssignName>$encoding</map:AssignName>
+                  </map:WithArgument>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  new StreamReader(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding)
+                </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <!-- Case for three arguments and first parameter of type string -->
@@ -47,11 +78,22 @@
                   <map:ArgumentCount>3</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Text.Encoding</map:IsExpressionOfType>
+                    <map:AssignName>$encoding</map:AssignName>
+                  </map:WithArgument>                  
+                  <map:WithArgument Position="2">
+                    <map:IsExpressionOfType>System.Boolean</map:IsExpressionOfType>
+                    <map:AssignName>$detect</map:AssignName>                  
                   </map:WithArgument>
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:MarkAsNotMapped/>
+                <map:ReplaceWithTemplate>
+                  new StreamReader(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding, $detect)
+                </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <!-- Case for four arguments and first parameter of type string -->
@@ -61,11 +103,26 @@
                   <map:ArgumentCount>4</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Text.Encoding</map:IsExpressionOfType>
+                    <map:AssignName>$encoding</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:IsExpressionOfType>System.Boolean</map:IsExpressionOfType>
+                    <map:AssignName>$detect</map:AssignName>
+                  </map:WithArgument>
+                  <map:WithArgument Position="3">
+                    <map:IsExpressionOfType>System.Int32</map:IsExpressionOfType>
+                    <map:AssignName>$buffer</map:AssignName>
                   </map:WithArgument>
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:MarkAsNotMapped/>
+                <map:ReplaceWithTemplate>
+                  new StreamReader(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding, $detect, $buffer)
+                </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <map:Default>

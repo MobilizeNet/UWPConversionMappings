@@ -11,8 +11,8 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
-                <x:String>CommonPostMappingActions</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
+                <Reference>CommonPostMappingActions</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
         <xmap:XamlElementMapper ElementName="PivotItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
@@ -24,8 +24,8 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
-                <x:String>CommonPostMappingActions</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
+                <Reference>CommonPostMappingActions</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
         <xmap:XamlElementMapper ElementName="Pivot" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
@@ -37,8 +37,8 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
-                <x:String>CommonPostMappingActions</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
+                <Reference>CommonPostMappingActions</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
         <xmap:XamlElementMapper ElementName="PivotItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
@@ -50,8 +50,8 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
-                <x:String>CommonPostMappingActions</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
+                <Reference>CommonPostMappingActions</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

@@ -31,7 +31,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

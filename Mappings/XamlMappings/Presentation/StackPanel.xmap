@@ -4,7 +4,7 @@
   <MapUnit.Elements>
     <xmap:XamlElementMapper ElementName="StackPanel" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
       <xmap:XamlElementMapper.ReferencedPackages>
-        <x:String>CommonAttributesToRemove</x:String>
+        <Reference>CommonAttributesToRemove</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>

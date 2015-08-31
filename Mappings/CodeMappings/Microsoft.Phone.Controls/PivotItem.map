@@ -17,7 +17,7 @@
         </map:CodeMap>
 			</map:CodeMapPackage.Maps>
 			<map:CodeMapPackage.ReferencedPackages>
-				<x:String>System.Windows.UIElement</x:String>
+				<Reference>System.Windows.UIElement</Reference>
 			</map:CodeMapPackage.ReferencedPackages>
 		</map:CodeMapPackage>	
 	</MapUnit.Elements>

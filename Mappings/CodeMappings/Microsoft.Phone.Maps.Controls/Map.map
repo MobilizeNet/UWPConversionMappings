@@ -8,10 +8,6 @@
           <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls.Maps" NewClassName="MapControl" />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="LandmarksEnabled">
-          <map:ReplaceWithProperty NewProperty="LandmarksVisible" />
-        </map:CodeMap>
-
         <map:CodeMap Kind="MemberAccess" MemberName="CartographicMode">
           <map:ReplaceWithProperty NewProperty="Style" />
         </map:CodeMap>
@@ -103,7 +99,6 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
-
 
         <map:CodeMap Kind="MemberAccess" MemberName="ColorMode">
           <map:ReplaceWithProperty NewProperty="ColorScheme" />

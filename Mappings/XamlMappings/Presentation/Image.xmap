@@ -13,9 +13,9 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
           <xmap:XamlElementMapper.ReferencedPackages>
-            <x:String>CommonAttributesToRemove</x:String>
-            <x:String>CommonPostMappingActions</x:String>
-            <x:String>CommonEventsToChange</x:String>
+            <Reference>CommonAttributesToRemove</Reference>
+            <Reference>CommonPostMappingActions</Reference>
+            <Reference>CommonEventsToChange</Reference>
           </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

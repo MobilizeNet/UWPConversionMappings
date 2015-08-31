@@ -13,7 +13,7 @@
       </map:CodeMapPackage.Maps>
 
       <map:CodeMapPackage.ReferencedPackages>
-        <x:String>System.Net.WebResponse</x:String>
+        <Reference>System.Net.WebResponse</Reference>
       </map:CodeMapPackage.ReferencedPackages>
     </map:CodeMapPackage>
   </MapUnit.Elements>

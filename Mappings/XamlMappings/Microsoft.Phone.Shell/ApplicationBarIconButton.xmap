@@ -40,7 +40,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonEventsToChange</x:String>
+                <Reference>CommonEventsToChange</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

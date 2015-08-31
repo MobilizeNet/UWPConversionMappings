@@ -48,7 +48,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonControlProperties</x:String>
+                <Reference>CommonControlProperties</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
         <xmap:XamlElementMapper ElementName="ApplicationBarMenuItem" ElementNamespace="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
@@ -65,7 +65,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
           <xmap:XamlElementMapper.ReferencedPackages>
-            <x:String>CommonEventsToChange</x:String>
+            <Reference>CommonEventsToChange</Reference>
           </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

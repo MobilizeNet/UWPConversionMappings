@@ -36,7 +36,7 @@
       </map:CodeMapPackage.Maps>
       
       <map:CodeMapPackage.ReferencedPackages>
-        <x:String>System.Net.WebRequest</x:String>
+        <Reference>System.Net.WebRequest</Reference>
       </map:CodeMapPackage.ReferencedPackages>
       
     </map:CodeMapPackage>

@@ -23,9 +23,9 @@
         </xmap:XamlMap>
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
-        <x:String>CommonAttributesToRemove</x:String>
-        <x:String>CommonEventsToChange</x:String>
-        <x:String>CommonColor</x:String>
+        <Reference>CommonAttributesToRemove</Reference>
+        <Reference>CommonEventsToChange</Reference>
+        <Reference>CommonColor</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>

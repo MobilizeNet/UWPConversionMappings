@@ -11,8 +11,8 @@
         </xmap:XamlMap>
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
-        <x:String>CommonColor</x:String>
-        <x:String>CommonEventsToChange</x:String>
+        <Reference>CommonColor</Reference>
+        <Reference>CommonEventsToChange</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>

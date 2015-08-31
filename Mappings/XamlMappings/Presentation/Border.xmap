@@ -4,8 +4,8 @@
     <MapUnit.Elements>        
         <xmap:XamlElementMapper ElementName="Border" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonColor</x:String>
-                <x:String>CommonAttributesToRemove</x:String>
+                <Reference>CommonColor</Reference>
+                <Reference>CommonAttributesToRemove</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
             <xmap:XamlElementMapper.Maps>
                 <xmap:XamlMap Kind="Property" PropertyName="BorderBrush" >

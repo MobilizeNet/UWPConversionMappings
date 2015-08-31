@@ -16,7 +16,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
         <xmap:XamlElementMapper ElementName="PanoramaItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
@@ -33,7 +33,7 @@
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
 
@@ -52,7 +52,7 @@
           </xmap:XamlMap>
         </xmap:XamlElementMapper.Maps>
         <xmap:XamlElementMapper.ReferencedPackages>
-          <x:String>CommonAttributesToRemove</x:String>
+          <Reference>CommonAttributesToRemove</Reference>
         </xmap:XamlElementMapper.ReferencedPackages>
       </xmap:XamlElementMapper>
       <xmap:XamlElementMapper ElementName="PanoramaItem" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
@@ -69,7 +69,7 @@
           </xmap:XamlMap>
         </xmap:XamlElementMapper.Maps>
         <xmap:XamlElementMapper.ReferencedPackages>
-          <x:String>CommonAttributesToRemove</x:String>
+          <Reference>CommonAttributesToRemove</Reference>
         </xmap:XamlElementMapper.ReferencedPackages>
       </xmap:XamlElementMapper>
     </MapUnit.Elements>

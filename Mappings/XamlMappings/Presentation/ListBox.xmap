@@ -4,8 +4,8 @@
     <MapUnit.Elements>                
         <xmap:XamlElementMapper ElementName="ListBox" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
             <xmap:XamlElementMapper.ReferencedPackages>
-                <x:String>CommonAttributesToRemove</x:String>
-                <x:String>CommonEventsToChange</x:String>
+                <Reference>CommonAttributesToRemove</Reference>
+                <Reference>CommonEventsToChange</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

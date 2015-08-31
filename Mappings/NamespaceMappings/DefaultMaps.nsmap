@@ -15,8 +15,8 @@
   <Replace Old="System.Windows.Media" New="Windows.UI.Xaml.Media"/>
   <Replace Old="Microsoft.Phone.Net.NetworkInformation" New="System.Net.NetworkInformation"/>
   <Replace Old="Microsoft.Phone.Maps.Controls" New="Windows.UI.Xaml.Controls.Maps"/>
+  <Replace Old="System.Windows.Controls.Primitives" New="Windows.UI.Xaml.Controls.Primitives"/>
   <Remove>System.Device.Location</Remove>
-  <Remove>System.Windows.Controls.Primitives</Remove>
   <Remove>System.Windows.Shapes</Remove>
   <Remove>Windows.Phone.Speech.Synthesis</Remove>
   <Remove>Windows.Phone.Speech.Recognition</Remove>

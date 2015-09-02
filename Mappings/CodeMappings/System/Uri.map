@@ -1,0 +1,39 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Uri">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="New">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition> 
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="1">
+                    <map:AnyConditionApplies>
+                      <map:Equals>UriKind.Relative</map:Equals>
+                      <map:Equals>System.UriKind.Relative</map:Equals>
+                      <map:Equals>UriKind.RelativeOrAbsolute</map:Equals>
+                      <map:Equals>System.UriKind.RelativeOrAbsolute</map:Equals>
+                    </map:AnyConditionApplies>
+                  </map:WithArgument>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$arg</map:AssignName>
+                  </map:WithArgument>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  new Uri(new Uri("ms-appx://"), $arg)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

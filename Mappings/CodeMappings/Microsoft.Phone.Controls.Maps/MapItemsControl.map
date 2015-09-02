@@ -4,9 +4,11 @@
     <map:CodeMapPackage Type="Microsoft.Phone.Controls.Maps.MapItemsControl">
       <map:CodeMapPackage.Maps>
 
+        <map:CodeMap Kind="Type">
+          <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls.Maps" NewClassName="MapItemsControl" />
+        </map:CodeMap>
        
       </map:CodeMapPackage.Maps>  
-      
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

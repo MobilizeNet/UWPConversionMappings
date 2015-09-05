@@ -1,0 +1,60 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers"
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'>
+	<MapUnit.Elements>
+		<map:CodeMapPackage Type="System.Windows.Data.Binding">
+			<map:CodeMapPackage.Maps>
+				<map:CodeMap Kind="Type">
+					<map:CodeMap.Action>
+					  <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Data"
+                                 NewClassName="Binding" />
+					</map:CodeMap.Action>
+				</map:CodeMap>
+				<map:CodeMap Kind="MemberAccess" MemberName="Converter">
+					<map:Keep />
+				</map:CodeMap>
+				<map:CodeMap Kind="MemberAccess" MemberName="ConverterParameter">
+					<map:Keep />
+				</map:CodeMap>
+				<map:CodeMap Kind="MemberAccess" MemberName="Mode">
+					<map:Keep />
+				</map:CodeMap>
+				<map:CodeMap Kind="MemberAccess" MemberName="Path">
+					<map:Keep />
+				</map:CodeMap>
+				<map:CodeMap Kind="MemberAccess" MemberName="Source">
+					<map:Keep />
+				</map:CodeMap>
+        
+        <map:CodeMap Kind="New">
+          <map:Conditional>
+            <!-- Case for one argument of tipe String -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                    <map:AssignName>$path</map:AssignName>
+                  </map:WithArgument>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                  new Windows.UI.Xaml.Data.Binding(){
+                      Path = new PropertyPath($path)                      
+                  }
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+		</map:CodeMapPackage>
+	</MapUnit.Elements>
+</MapUnit>

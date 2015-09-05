@@ -1,0 +1,54 @@
+
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Markup.ContentPropertyAttribute">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewClassName="ContentPropertyAttribute" NewNamespace="Windows.UI.Xaml.Markup" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$Name</map:AssignName>
+                  </map:WithArgument>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  new Windows.UI.Xaml.Markup.ContentPropertyAttribute
+                  {
+                  Name = $Name
+                  };
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>0</map:ArgumentCount>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  new Windows.UI.Xaml.Markup.ContentPropertyAttribute()
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+      
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

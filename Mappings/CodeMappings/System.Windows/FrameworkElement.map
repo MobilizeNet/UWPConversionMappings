@@ -98,10 +98,20 @@
           <map:Keep/>
         </map:CodeMap>
 
-        <!--TO DO -->
-
         <map:CodeMap Kind="Call" MemberName="SetBinding">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                  <map:IsUsedAsExpression/>
+              </map:Case.Condition>
+              <map:Case.Action>
           <map:MarkAsNotMapped/>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="LayoutUpdated">

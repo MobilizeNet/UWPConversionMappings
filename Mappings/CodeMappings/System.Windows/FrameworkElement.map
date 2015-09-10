@@ -97,7 +97,7 @@
         <map:CodeMap Kind="MemberAccess" MemberName="Language">
           <map:Keep/>
         </map:CodeMap>
-
+<!--
         <map:CodeMap Kind="Call" MemberName="SetBinding">
           <map:Conditional>
             <map:Case>
@@ -113,6 +113,7 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
+-->
 
         <map:CodeMap Kind="MemberAccess" MemberName="LayoutUpdated">
           <map:Keep/>

@@ -33,14 +33,15 @@
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="FontSize" >
           <xmap:XamlMap.Action>
-            <xmap:RemoveAttribute>
-              <xmap:RemoveAttribute.Condition>
+            <xmap:CommentOutProperty>
+              <xmap:CommentOutProperty.Condition>
                 <xmap:AnyConditionApplies>
                   <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeNormal" />
                   <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeSmall" />
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeLarge" />
                 </xmap:AnyConditionApplies>
-              </xmap:RemoveAttribute.Condition>
-            </xmap:RemoveAttribute>
+              </xmap:CommentOutProperty.Condition>
+            </xmap:CommentOutProperty>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
@@ -366,6 +367,24 @@
         <xmap:XamlMap Kind="Property" PropertyName="KeyDown">
           <xmap:XamlMap.Action>
             <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.KeyRoutedEventArgs" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="DoubleTap">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="DoubleTapped" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MouseWheel">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.PointerRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="PointerWheelChanged" />
+            </xmap:ActionSequence>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
 

@@ -81,8 +81,9 @@
 				</map:CodeMap>        
 				<map:CodeMap Kind="EventDecl" MemberName="Tap">
 						<map:ReplaceParameterDeclarationType Position="1">
-							<![CDATA[Windows.UI.Xaml.RoutedEventArgs]]>
-						</map:ReplaceParameterDeclarationType>
+							<!--<![CDATA[Windows.UI.Xaml.RoutedEventArgs]]>-->
+              Windows.UI.Xaml.Input.TappedRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
 				</map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="KeyDown">
@@ -149,7 +150,9 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="Clip">
-          <map:Keep/>
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="Opacity">
@@ -165,6 +168,10 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="CacheMode">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="AddHandler">
           <map:Keep/>
         </map:CodeMap>
 
@@ -218,9 +225,7 @@
 
         <map:CodeMap Kind="Call" MemberName="UpdateLayout">
           <map:Keep/>
-        </map:CodeMap>
-        
-        <!--Verificar luego-->
+        </map:CodeMap>        
         
         <map:CodeMap Kind="Call" MemberName="CaptureMouse">
           <map:ReplaceWithProperty NewProperty="CapturePointer" />
@@ -272,6 +277,35 @@
               Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs
             </map:ReplaceParameterDeclarationType>
           </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Hold">
+          <map:ReplaceWithProperty NewProperty="Holding" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="Hold">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.Input.HoldingRoutedEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DoubleTap">
+          <map:Rename NewName="DoubleTapped" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="DoubleTap">
+          <map:ReplaceParameterDeclarationType Position="1">
+            <![CDATA[Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs]]>
+          </map:ReplaceParameterDeclarationType>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="MouseWheel">
+          <map:Rename NewName="PointerWheelChanged" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="MouseWheel">
+          <map:ReplaceParameterDeclarationType Position="1">
+            Windows.UI.Xaml.Input.PointerRoutedEventArgs
+          </map:ReplaceParameterDeclarationType>
         </map:CodeMap>
 
       </map:CodeMapPackage.Maps>

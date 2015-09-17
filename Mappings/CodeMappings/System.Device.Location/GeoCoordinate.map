@@ -3,6 +3,7 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.Device.Location.GeoCoordinate">
       <map:CodeMapPackage.Maps>
+        
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
             <map:ReplaceClassUsage NewNamespace="Windows.Devices.Geolocation" NewClassName="Geopoint" />
@@ -39,9 +40,11 @@
         <map:CodeMap Kind="MemberAccess" MemberName="Latitude">
           <map:RedirectProperty NewPropertyOwner="Position" NewProperty="Latitude"/>
         </map:CodeMap>
+        
         <map:CodeMap Kind="MemberAccess" MemberName="Longitude">
           <map:RedirectProperty NewPropertyOwner="Position" NewProperty="Longitude"/>
         </map:CodeMap>
+        
         <map:CodeMap Kind="MemberAccess" MemberName="IsUnknown">
           <map:Conditional>
             <map:Case>
@@ -52,7 +55,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  (System.Double.IsNaN($obj.Position.Latitude) ||System.Double.IsNaN($obj.Position.Longitude))
+                  (System.Double.IsNaN($obj.Position.Latitude) || System.Double.IsNaN($obj.Position.Longitude))
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -61,12 +64,14 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
+        
         <map:CodeMap Kind="New">
           <map:CodeMap.Action>
             <map:Conditional>
               <map:Case>
                 <map:Case.Condition>
                   <map:WithConstructorCall>
+                    <map:ArgumentCount>2</map:ArgumentCount>
                     <map:WithArgument Position="0">
                       <map:AssignName>$arg0</map:AssignName>
                     </map:WithArgument>
@@ -84,12 +89,62 @@
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithConstructorCall>
+                    <map:ArgumentCount>3</map:ArgumentCount>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$arg0</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="1">
+                      <map:AssignName>$arg1</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="2">
+                      <map:AssignName>$arg2</map:AssignName>
+                    </map:WithArgument>                    
+                  </map:WithConstructorCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Devices.Geolocation.Geopoint(new Windows.Devices.Geolocation.BasicGeoposition() {
+                    Altitude = $arg2,
+                    Latitude = $arg0,
+                    Longitude = $arg1
+                    })
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithConstructorCall>
+                    <map:ArgumentCount>7</map:ArgumentCount>
+                  </map:WithConstructorCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:MarkAsNotMapped/>
+                </map:Case.Action>
+              </map:Case>
               <map:Default>
-                <map:Keep/>
+                <map:ReplaceWithTemplate>
+                  new Windows.Devices.Geolocation.Geopoint(new Windows.Devices.Geolocation.BasicGeoposition())
+                </map:ReplaceWithTemplate>
               </map:Default>
             </map:Conditional>
           </map:CodeMap.Action>
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="VerticalAccuracy">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HorizontalAccuracy">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

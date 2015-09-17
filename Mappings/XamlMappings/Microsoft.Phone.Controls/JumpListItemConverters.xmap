@@ -6,7 +6,8 @@
             <xmap:XamlElementMapper.Maps>
                 <xmap:XamlMap Kind="Element">
                     <xmap:XamlMap.Action>
-                        <xmap:CommentOutElement />
+                      <xmap:RenameElement NewName="JumpListItemBackgroundConverter"
+                                NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
@@ -15,7 +16,8 @@
             <xmap:XamlElementMapper.Maps>
                 <xmap:XamlMap Kind="Element">
                     <xmap:XamlMap.Action>
-                        <xmap:CommentOutElement />
+                      <xmap:RenameElement NewName="JumpListItemForegroundConverter"
+                             NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>

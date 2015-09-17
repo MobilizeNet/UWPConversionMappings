@@ -23,6 +23,18 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[
+              new Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames(){
+                  EnableDependentAnimation = true                      
+              };
+              ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

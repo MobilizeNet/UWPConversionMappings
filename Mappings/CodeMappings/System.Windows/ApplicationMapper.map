@@ -3,6 +3,7 @@
 	<MapUnit.Elements>
 		<map:CodeMapPackage Type="System.Windows.Application">
 			<map:CodeMapPackage.Maps>
+        
 				<map:CodeMap Kind="Type">
 					<map:CodeMap.Action>
 						<map:ReplaceClassUsage NewClassName="Application" NewNamespace="Windows.UI.Xaml" />
@@ -36,6 +37,38 @@
         <map:CodeMap Kind="Call" MemberName="Terminate">
           <map:CodeMap.Action>
             <map:ReplaceWithProperty NewProperty="Exit" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="LoadComponent">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Resources">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Current">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Host">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="RootVisual">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.UI.Xaml.Window.Current.Content
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

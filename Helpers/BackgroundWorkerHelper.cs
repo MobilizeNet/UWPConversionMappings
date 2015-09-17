@@ -49,9 +49,12 @@ namespace WindowsPhoneUWP.UpgradeHelpers
 				{
 					e2 = new RunWorkerCompletedEventArgsHelper(false, null, true);
 				}
-                RunWorkerCompleted(this, e2);
+				if(RunWorkerCompleted != null) 
+				{
+					RunWorkerCompleted(this, e2);
+				}
 
-            }
+			}
 			else
 			{
 				var exception = new InvalidOperationException();

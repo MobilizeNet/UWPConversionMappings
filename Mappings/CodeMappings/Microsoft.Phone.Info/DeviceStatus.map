@@ -28,6 +28,18 @@
           <map:ReplaceWithTemplate>((new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation()).SystemProductName)</map:ReplaceWithTemplate>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="DeviceTotalMemory">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ApplicationPeakMemoryUsage">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

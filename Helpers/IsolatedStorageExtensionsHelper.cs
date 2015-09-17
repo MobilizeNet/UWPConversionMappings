@@ -1,5 +1,5 @@
 
-
+using System.Threading.Tasks;
 using System;
 
 namespace WindowsPhoneUWP.UpgradeHelpers
@@ -18,5 +18,11 @@ namespace WindowsPhoneUWP.UpgradeHelpers
 			}
 			return result;
 		}
+
+        public static async Task<ulong> GetFreeSpace(Windows.Storage.StorageFolder folder)
+        {
+            var retrivedProperties = await folder.Properties.RetrievePropertiesAsync(new string[] { "System.FreeSpace" });
+            return (ulong)retrivedProperties["System.FreeSpace"];
+        }
 	}
 }

@@ -1,24 +1,23 @@
 <MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
          xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
-    <map:CodeMapPackage Type="System.Windows.Input.GestureEventArgs">
+    <map:CodeMapPackage Type="System.Windows.VisualState">
       <map:CodeMapPackage.Maps>
 
-        <!--<map:CodeMap Kind="Type">
+        <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Input"
-                                   NewClassName="TappedRoutedEventArgs" />
+            <map:ReplaceClassUsage NewClassName="VisualState" NewNamespace="Windows.UI.Xaml" />
           </map:CodeMap.Action>
         </map:CodeMap>
-
-        <map:CodeMap Kind="Call" MemberName="GetPosition">
-          <map:Keep />
+		
+	<map:CodeMap Kind="MemberAccess" MemberName="Name">
+          <map:Keep/>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="Handled">
-          <map:Keep />
-        </map:CodeMap>-->
-
+	<map:CodeMap Kind="MemberAccess" MemberName="Storyboard">
+          <map:Keep/>
+        </map:CodeMap>
+      
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

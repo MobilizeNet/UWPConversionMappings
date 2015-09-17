@@ -12,6 +12,40 @@
         <map:CodeMap Kind="Call" MemberName="Add">
           <map:RedirectCallToInnerMember NewMethod="Add" NewMethodOwner="Items" />
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Count">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$owner</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>               
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $owner.Items.Count
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="Count">
+          <map:RedirectCallToInnerMember NewMethod="Count" NewMethodOwner="Items" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="ElementAccess">
+          <map:CodeMap.Action>
+            <map:RedirectIndexer ToProperty="Items" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="Call" MemberName="RemoveAt">
+          <map:RedirectCallToInnerMember NewMethod="RemoveAt" NewMethodOwner="Items" />
+        </map:CodeMap>
        
       </map:CodeMapPackage.Maps>        
     </map:CodeMapPackage>

@@ -38,9 +38,16 @@
                 </map:WithMethodCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:ReplaceWithTemplate>
-                  $owner.ChangeView(null, $offset, null, false);
-                </map:ReplaceWithTemplate>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                      $owner.ChangeView(null, $offset, null, true);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    $owner.UpdateLayout();
+                  </map:ReplaceWithTemplate>                  
+                </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
             <map:Default>
@@ -65,9 +72,16 @@
                 </map:WithMethodCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:ReplaceWithTemplate>
-                  $owner.ChangeView($offset, null, null, false);
-                </map:ReplaceWithTemplate>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                      $owner.ChangeView($offset, null, null, true);
+                    ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    $owner.UpdateLayout();
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
             <map:Default>

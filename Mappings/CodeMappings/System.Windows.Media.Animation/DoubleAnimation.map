@@ -3,10 +3,23 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.Windows.Media.Animation.DoubleAnimation">
       <map:CodeMapPackage.Maps>
+        
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
             <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation"
                                    NewClassName="DoubleAnimation" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[
+              new Windows.UI.Xaml.Media.Animation.DoubleAnimation(){
+                  EnableDependentAnimation = true                      
+              };
+              ]]>
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

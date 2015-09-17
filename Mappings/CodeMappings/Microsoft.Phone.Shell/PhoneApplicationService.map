@@ -45,13 +45,6 @@
           </map:CodeMap.Action>
         </map:CodeMap>
         
-        <map:CodeMap Kind="MemberAccess" MemberName="Activated">
-          <map:CodeMap.Action>
-            <map:ReplaceWithTemplate>
-              Windows.ApplicationModel.Core.CoreApplication.Resuming
-            </map:ReplaceWithTemplate>
-          </map:CodeMap.Action>
-        </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="Current">
           <map:CodeMap.Action>

@@ -90,26 +90,6 @@
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
-            <!--<map:Case>
-              <map:Case.Condition>
-                <map:WithConstructorCall>
-                  <map:ArgumentCount>2</map:ArgumentCount>
-                  <map:WithArgument Position="0">
-                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
-                    <map:AssignName>$path</map:AssignName>
-                  </map:WithArgument>
-                  <map:WithArgument Position="1">
-                    <map:IsExpressionOfType>System.Boolean</map:IsExpressionOfType>
-                    <map:AssignName>$append</map:AssignName>
-                  </map:WithArgument>                  
-                </map:WithConstructorCall>
-              </map:Case.Condition>
-              <map:Case.Action>
-                <map:ReplaceWithTemplate>
-                  new StreamWriter(File.Open($path, $append ? FileMode.Append : FileMode.Open).AsOutputStream().AsStreamForWrite())
-                </map:ReplaceWithTemplate>
-              </map:Case.Action>
-            </map:Case>-->
             <!-- Case for three arguments and first parameter of type string -->
             <map:Case>
               <map:Case.Condition>

@@ -10,6 +10,24 @@
                  NewClassName="NavigationEventArgs" />
           </map:CodeMap.Action>
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="NavigationMode">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Content">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Uri">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
    
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>

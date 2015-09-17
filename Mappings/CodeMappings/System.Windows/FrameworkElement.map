@@ -97,7 +97,7 @@
         <map:CodeMap Kind="MemberAccess" MemberName="Language">
           <map:Keep/>
         </map:CodeMap>
-<!--
+
         <map:CodeMap Kind="Call" MemberName="SetBinding">
           <map:Conditional>
             <map:Case>
@@ -105,7 +105,7 @@
                   <map:IsUsedAsExpression/>
               </map:Case.Condition>
               <map:Case.Action>
-          <map:MarkAsNotMapped/>
+                <map:MarkAsNotMapped/>
               </map:Case.Action>
             </map:Case>
             <map:Default>
@@ -113,10 +113,16 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
--->
 
         <map:CodeMap Kind="MemberAccess" MemberName="LayoutUpdated">
           <map:Keep/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="LayoutUpdated">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              System.Object
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="Loaded">
@@ -132,6 +138,9 @@
         </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.ReferencedPackages>
+        <Reference>System.Windows.UIElement</Reference>
+      </map:CodeMapPackage.ReferencedPackages>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

@@ -3,12 +3,57 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.Windows.Navigation.NavigationService">
       <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content)
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
         <map:CodeMap Kind="Call" MemberName="GoBack">
           <map:CodeMap.Action>
             <map:Conditional>
               <map:Default>
                 <map:ReplaceWithTemplate>
                   ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).GoBack()
+                </map:ReplaceWithTemplate>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CanGoBack">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Default>
+                <map:ReplaceWithTemplate>
+                  ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).CanGoBack()
+                </map:ReplaceWithTemplate>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Navigated">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="BackStack">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="RemoveBackEntry">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Default>
+                <map:ReplaceWithTemplate>
+                  ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).BackStack.RemoveAt(((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).BackStack.Count - 1)
                 </map:ReplaceWithTemplate>
               </map:Default>
             </map:Conditional>

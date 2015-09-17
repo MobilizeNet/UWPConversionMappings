@@ -4,13 +4,21 @@
     <MapUnit.Elements>                                
         <xmap:XamlElementMapper ElementName="DoubleAnimation" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
             <xmap:XamlElementMapper.Maps>
-                <xmap:XamlMap Kind="Property" PropertyName="Completed">
-                    <xmap:XamlMap.Action>
-                        <xmap:ActionSequence>
-                            <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="object" />
-                        </xmap:ActionSequence>
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
+              
+              <xmap:XamlMap Kind="Property" PropertyName="Completed">
+                  <xmap:XamlMap.Action>
+                      <xmap:ActionSequence>
+                          <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="object" />
+                      </xmap:ActionSequence>
+                  </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+
+              <xmap:XamlMap Kind="Element">
+                <xmap:XamlMap.Action>
+                  <xmap:SetPropertyValueToSimpleValue  AttributeToChangeName="EnableDependentAnimation" NewPropertyValue="True"></xmap:SetPropertyValueToSimpleValue>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>              
+            
             </xmap:XamlElementMapper.Maps>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

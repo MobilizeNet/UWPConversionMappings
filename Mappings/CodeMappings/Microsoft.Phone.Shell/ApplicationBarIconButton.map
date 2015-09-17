@@ -20,9 +20,9 @@
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                  <map:ReplaceWithTemplate>
-                    <![CDATA[ new Windows.UI.Xaml.Controls.AppBarButton() ]]>
-                  </map:ReplaceWithTemplate>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[ new Windows.UI.Xaml.Controls.AppBarButton() ]]>
+                </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <map:Case>
@@ -72,24 +72,24 @@
                 </map:WithConstructorCall>
               </map:Case.Condition>
               <map:Case.Action>
-                  <map:ActionSequence>
-                    <map:AddPreStatementFromTemplate>
-                      <![CDATA[
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
                   Windows.UI.Xaml.Controls.BitmapIcon TempIcon = new Windows.UI.Xaml.Controls.BitmapIcon();
                   ]]>
-                    </map:AddPreStatementFromTemplate>
-                    <map:AddPreStatementFromTemplate>
-                      <![CDATA[ 
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[ 
                       TempIcon.UriSource = $Uri;
                       ]]>
-                    </map:AddPreStatementFromTemplate>
-                    <map:ReplaceWithTemplate>
-                      new Windows.UI.Xaml.Controls.AppBarButton
-                      {
-                      Icon = TempIcon
-                      };
-                    </map:ReplaceWithTemplate>
-                  </map:ActionSequence>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    new Windows.UI.Xaml.Controls.AppBarButton
+                    {
+                    Icon = TempIcon
+                    };
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
             <map:Default>
@@ -108,11 +108,12 @@
             </map:ActionSequence>
           </map:CodeMap.Action>
         </map:CodeMap>
-        
-        
+
+
         <map:CodeMap Kind="MemberAccess" MemberName="Text">
           <map:ReplaceWithProperty NewProperty="Label" />
         </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="IconUri">
           <map:Conditional>
             <map:Case>
@@ -127,10 +128,45 @@
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
-            <map:Default><map:Keep/></map:Default>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
           </map:Conditional>
         </map:CodeMap>
+
+
+        <map:CodeMap Kind="Assign" MemberName="IconUri">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$newIconUri</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $owner.Icon = new Windows.UI.Xaml.Controls.BitmapIcon() { UriSource = $newIconUri }
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
+
+
+      
+      
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

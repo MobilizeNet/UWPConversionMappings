@@ -98,6 +98,12 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsMenuEnabled">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
         
         <map:CodeMap Kind="MemberAccess" MemberName="MenuItems">
           <map:ReplaceWithProperty NewProperty="SecondaryCommands" />

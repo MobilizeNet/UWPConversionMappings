@@ -16,6 +16,7 @@
   <Replace Old="Microsoft.Phone.Net.NetworkInformation" New="System.Net.NetworkInformation"/>
   <Replace Old="Microsoft.Phone.Maps.Controls" New="Windows.UI.Xaml.Controls.Maps"/>
   <Replace Old="System.Windows.Controls.Primitives" New="Windows.UI.Xaml.Controls.Primitives"/>
+  <Remove>Microsoft.Phone.Marketplace</Remove>
   <Remove>System.Device.Location</Remove>
   <Remove>System.Windows.Shapes</Remove>
   <Remove>Windows.Phone.Speech.Synthesis</Remove>
@@ -34,5 +35,8 @@
   <Remove>Microsoft.Phone.Maps.Toolkit</Remove>
   <Remove>Microsoft.Phone.Maps</Remove>
   <Remove>Coding4Fun.Phone.Controls</Remove>
+  <Remove>Microsoft.Phone.Maps.Service</Remove>
+  <Remove>Microsoft.Xna.Framework.Audio</Remove>
+  <Remove>Microsoft.Phone.Scheduler</Remove>
 </NamespaceMappings>
 

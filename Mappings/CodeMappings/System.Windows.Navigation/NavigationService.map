@@ -24,12 +24,24 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="Call" MemberName="CanGoBack">
+        <map:CodeMap Kind="MemberAccess" MemberName="BackStack">
           <map:CodeMap.Action>
             <map:Conditional>
               <map:Default>
                 <map:ReplaceWithTemplate>
-                  ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).CanGoBack()
+                  ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).BackStack
+                </map:ReplaceWithTemplate>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="CanGoBack">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Default>
+                <map:ReplaceWithTemplate>
+                  ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).CanGoBack
                 </map:ReplaceWithTemplate>
               </map:Default>
             </map:Conditional>

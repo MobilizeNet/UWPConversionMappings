@@ -6,13 +6,12 @@
 
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-			      <map:ActionSequence>
-			        <map:AddHelper Path="..\Helpers\DoWorkEventArgsHelper.cs" />
-			        <map:ReplaceClassUsage NewNamespace="WindowsPhoneUWP.UpgradeHelpers" NewClassName="DoWorkEventArgsHelper" />
-			      </map:ActionSequence>
-		      </map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:Keep/>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
         </map:CodeMap>
- 
+
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

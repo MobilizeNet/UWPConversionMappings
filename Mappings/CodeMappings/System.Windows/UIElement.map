@@ -3,8 +3,8 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.Windows.UIElement" Name="System.Windows.UIElement">
       <map:CodeMapPackage.Maps>
-        
-        <map:CodeMap Kind="Type">          
+
+        <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
             <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml" NewClassName="UIElement" />
           </map:CodeMap.Action>
@@ -30,8 +30,8 @@
               Windows.UI.Xaml.Input.PointerRoutedEventArgs
             </map:ReplaceParameterDeclarationType>
           </map:CodeMap.Action>
-        </map:CodeMap>                
-        
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="MouseLeftButtonUp">
           <map:ReplaceWithProperty NewProperty="PointerReleased" />
         </map:CodeMap>
@@ -42,7 +42,7 @@
             </map:ReplaceParameterDeclarationType>
           </map:CodeMap.Action>
         </map:CodeMap>
-        
+
         <map:CodeMap Kind="MemberAccess" MemberName="MouseEnter">
           <map:ReplaceWithProperty NewProperty="PointerEntered" />
         </map:CodeMap>
@@ -52,7 +52,7 @@
               Windows.UI.Xaml.Input.PointerRoutedEventArgs
             </map:ReplaceParameterDeclarationType>
           </map:CodeMap.Action>
-        </map:CodeMap>           
+        </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="MouseLeave">
           <map:ReplaceWithProperty NewProperty="PointerExited" />
@@ -77,15 +77,21 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="Tap">
-					<map:Rename NewName="Tapped" />
-				</map:CodeMap>        
-				<map:CodeMap Kind="EventDecl" MemberName="Tap">
-						<map:ReplaceParameterDeclarationType Position="1">
-							<!--<![CDATA[Windows.UI.Xaml.RoutedEventArgs]]>-->
-              Windows.UI.Xaml.Input.TappedRoutedEventArgs
-            </map:ReplaceParameterDeclarationType>
-				</map:CodeMap>
-
+          <map:Rename NewName="Tapped" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="Tap">
+          <map:ReplaceParameterDeclarationType Position="1">
+            <!--<![CDATA[Windows.UI.Xaml.RoutedEventArgs]]>-->
+            Windows.UI.Xaml.Input.TappedRoutedEventArgs
+          </map:ReplaceParameterDeclarationType>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="DoubleTap">
+          <map:ReplaceParameterDeclarationType Position="1">
+            Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs
+          </map:ReplaceParameterDeclarationType>
+        </map:CodeMap>
+        
+        
         <map:CodeMap Kind="MemberAccess" MemberName="KeyDown">
           <map:Keep/>
         </map:CodeMap>
@@ -106,7 +112,7 @@
               Windows.UI.Xaml.Input.KeyRoutedEventArgs
             </map:ReplaceParameterDeclarationType>
           </map:CodeMap.Action>
-        </map:CodeMap>    
+        </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="ManipulationCompleted">
           <map:Keep/>
@@ -225,8 +231,8 @@
 
         <map:CodeMap Kind="Call" MemberName="UpdateLayout">
           <map:Keep/>
-        </map:CodeMap>        
-        
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="CaptureMouse">
           <map:ReplaceWithProperty NewProperty="CapturePointer" />
         </map:CodeMap>

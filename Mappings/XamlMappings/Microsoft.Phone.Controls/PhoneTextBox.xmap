@@ -1,36 +1,72 @@
-<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers' 
-         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper' 
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
-    <MapUnit.Elements>                
-        <xmap:XamlElementMapper ElementName="PhoneTextBox" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
-            <xmap:XamlElementMapper.Maps>
-                <xmap:XamlMap Kind="Element">
-                    <xmap:XamlMap.Action>
-                        <xmap:RenameElement NewName="TextBox" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="SelectionForeground" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="Hint" >
-                    <xmap:XamlMap.Action>
-                        <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-              <xmap:XamlMap Kind="Property" PropertyName="ActionIcon" >
-                <xmap:XamlMap.Action>
-                  <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
-                </xmap:XamlMap.Action>
-              </xmap:XamlMap>
-              <xmap:XamlMap Kind="Property" PropertyName="ActionIconTapped" >
-                <xmap:XamlMap.Action>
-                  <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
-                </xmap:XamlMap.Action>
-              </xmap:XamlMap>
-            </xmap:XamlElementMapper.Maps>
-        </xmap:XamlElementMapper>
-    </MapUnit.Elements>
-</MapUnit>
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="PhoneTextBox" ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="TextBox" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="SelectionForeground" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="Hint" >
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="PlaceholderText"  />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="ActionIcon" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="ActionIconTapped" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="LengthIndicatorVisible" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="LengthIndicatorThreshold" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
 
+        <xmap:XamlMap Kind="Property" PropertyName="HintStyle" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="ActualHintVisibility" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="OnHintPropertyChanged" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="UpdateHintVisibility" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="DisplayedMaxLength" >
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped ElementName="PhoneTextBox" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+      </xmap:XamlElementMapper.Maps>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>

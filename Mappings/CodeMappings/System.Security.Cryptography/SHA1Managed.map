@@ -704,7 +704,7 @@
                   </map:AddPreStatementFromTemplate>
                   <map:AddPreStatementFromTemplate>
                     <![CDATA[
-         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray($owner.HashData(Windows.Security.Cryptography.CryptographicBuffer.CreateFromByteArray($byteArray)), out tempBuffer);
+         Windows.Security.Cryptography.CryptographicBuffer.CopyToByteArray($owner.HashData(Windows.Security.Cryptography.CryptographicBuffer.CreateFromByteArray(((MemoryStream)$byteArray).ToArray())), out tempBuffer);
                     ]]>
                   </map:AddPreStatementFromTemplate>
                   <map:ReplaceWithTemplate>

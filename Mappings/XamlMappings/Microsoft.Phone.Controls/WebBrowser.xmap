@@ -18,6 +18,33 @@
                         </xmap:ActionSequence>
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
+              
+                <xmap:XamlMap Kind="Property" PropertyName="Navigated">
+                  <xmap:XamlMap.Action>
+                    <xmap:ActionSequence>
+                      <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs" />
+                      <xmap:RenameProperty NewPropertyLocalName="NavigationCompleted" />
+                    </xmap:ActionSequence>
+                  </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+
+
+              <xmap:XamlMap Kind="Property" PropertyName="IsScriptEnabled">
+                <xmap:XamlMap.Action>
+                  <xmap:ActionSequence>
+                    <xmap:CommentOutProperty/>
+                  </xmap:ActionSequence>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+              
+                <xmap:XamlMap Kind="Property" PropertyName="NavigationFailed">
+                  <xmap:XamlMap.Action>
+                    <xmap:ActionSequence>
+                      <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Controls.WebViewNavigationFailedEventArgs" />
+                    </xmap:ActionSequence>
+                  </xmap:XamlMap.Action>
+                </xmap:XamlMap>
+              
             </xmap:XamlElementMapper.Maps>
           <xmap:XamlElementMapper.ReferencedPackages>
             <Reference>CommonEventsToChange</Reference>

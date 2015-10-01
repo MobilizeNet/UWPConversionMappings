@@ -1,0 +1,41 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Controls.ItemsControl">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls"
+                                   NewClassName="ItemsControl" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Items">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemContainerGenerator">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemsSource">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <!--<map:CodeMap Kind="Call" MemberName="OnItemsChanged">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="OnItemsChanged">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="0">
+              <![CDATA[  object ]]>
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>-->
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

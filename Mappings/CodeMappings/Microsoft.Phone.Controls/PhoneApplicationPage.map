@@ -3,12 +3,14 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="Microsoft.Phone.Controls.PhoneApplicationPage">
       <map:CodeMapPackage.Maps>
+        
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
             <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls"
                                    NewClassName="Page" />
           </map:CodeMap.Action>
         </map:CodeMap>
+        
         <map:CodeMap Kind="MemberAccess" MemberName="State">
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>Windows.Storage.ApplicationData.Current.LocalSettings.Values</map:ReplaceWithTemplate>
@@ -60,15 +62,13 @@
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>Windows.Graphics.Display.DisplayInformation.GetForCurrentView().CurrentOrientation</map:ReplaceWithTemplate>
           </map:CodeMap.Action>
-        </map:CodeMap>
+        </map:CodeMap>             
 
         <map:CodeMap Kind="MemberAccess" MemberName="SupportedOrientations">
           <map:CodeMap.Action>
-            <map:ReplaceWithTemplate>DisplayInformation.AutoRotationPreferences</map:ReplaceWithTemplate>
+            <map:ReplaceWithTemplate>Windows.Graphics.Display.DisplayInformation.AutoRotationPreferences</map:ReplaceWithTemplate>
           </map:CodeMap.Action>
-        </map:CodeMap>
-        
-
+        </map:CodeMap>       
 
         <map:CodeMap Kind="MemberAccess" MemberName="BackKeyPress">
           <map:ReplaceWithTemplate>Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested</map:ReplaceWithTemplate>
@@ -82,6 +82,57 @@
 
               <map:ReplaceParameterDeclarationType Position="1">
                 Windows.UI.Core.BackRequestedEventArgs
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FontFamily">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FontSize">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Foreground">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnOrientationChanged">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnBackKeyPress">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OrientationChanged">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>Windows.Graphics.Display.DisplayInformation.GetForCurrentView().OrientationChanged</map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="OrientationChanged">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterValue Position="1">
+                $parameter0Name
+              </map:ReplaceParameterValue>
+              <map:ReplaceParameterDeclarationType Position="0">
+                Windows.Graphics.Display.DisplayInformation
+              </map:ReplaceParameterDeclarationType>
+              <map:ReplaceParameterDeclarationType Position="1">
+                System.Object
               </map:ReplaceParameterDeclarationType>
             </map:ActionSequence>
           </map:CodeMap.Action>

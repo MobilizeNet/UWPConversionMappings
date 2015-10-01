@@ -106,7 +106,7 @@
             </xmap:RemoveAttribute>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        
+
       </xmap:XamlElementMappingActions.Maps>
     </xmap:XamlElementMappingActions>
     <xmap:XamlElementMappingActions Name="CommonControlProperties" >
@@ -195,7 +195,7 @@
             <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Element">
+        <xmap:XamlMap Kind="ElementPostChildren">
           <xmap:XamlMap.Action>
             <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
           </xmap:XamlMap.Action>
@@ -225,7 +225,7 @@
             <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Element">
+        <xmap:XamlMap Kind="ElementPostChildren">
           <xmap:XamlMap.Action>
             <xmap:RemoveNamespaceDeclaration NamespaceDeclarationValue="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" />
           </xmap:XamlMap.Action>
@@ -265,6 +265,15 @@
             <xmap:ActionSequence>
               <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.TappedRoutedEventArgs" />
               <xmap:RenameProperty NewPropertyLocalName="Tapped" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="DoubleTap">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="DoubleTapped" />
             </xmap:ActionSequence>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
@@ -369,7 +378,7 @@
             <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Input.KeyRoutedEventArgs" />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        
+
         <xmap:XamlMap Kind="Property" PropertyName="DoubleTap">
           <xmap:XamlMap.Action>
             <xmap:ActionSequence>

@@ -43,6 +43,12 @@
           </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="Body">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="Show">
           <map:Conditional>
             <map:Case>

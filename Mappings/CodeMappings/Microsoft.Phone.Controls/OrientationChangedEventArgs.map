@@ -4,13 +4,25 @@
     <map:CodeMapPackage Type="Microsoft.Phone.Controls.OrientationChangedEventArgs">
       <map:CodeMapPackage.Maps>
 
-        <map:CodeMap Kind="Type">
+        <!--<map:CodeMap Kind="Type">
           <map:CodeMap.Action>
 			      <map:ActionSequence>
                     <map:AddHelper Path="..\Helpers\OrientationChangedEventArgsHelper.cs" />
 			        <map:ReplaceClassUsage NewNamespace="WindowsPhoneUWP.UpgradeHelpers" NewClassName="OrientationChangedEventArgsHelper" />
 			      </map:ActionSequence>
 		      </map:CodeMap.Action>
+        </map:CodeMap>-->
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+              <map:ReplaceClassUsage NewNamespace="Windows.Graphics.Display" NewClassName="DisplayInformation" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Orientation">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="CurrentOrientation"/>
+          </map:CodeMap.Action>
         </map:CodeMap>
  
       </map:CodeMapPackage.Maps>

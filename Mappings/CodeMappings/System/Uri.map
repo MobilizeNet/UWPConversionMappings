@@ -6,7 +6,22 @@
         <map:CodeMap Kind="New">
           <map:Conditional>
             <map:Case>
-              <map:Case.Condition> 
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$arg</map:AssignName>
+                  </map:WithArgument>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  new Uri(new Uri("ms-appx://"), $arg)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
                 <map:WithConstructorCall>
                   <map:ArgumentCount>2</map:ArgumentCount>
                   <map:WithArgument Position="1">

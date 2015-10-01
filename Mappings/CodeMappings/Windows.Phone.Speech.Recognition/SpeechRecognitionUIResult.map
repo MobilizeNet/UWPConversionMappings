@@ -16,9 +16,9 @@
           <map:Conditional>
             <map:Case>
               <map:Case.Condition>
-                <map:WithCalledMemberOwner>
+                <map:WithLeftSideOfDottedAccess>
                   <map:AssignName>$expr</map:AssignName>
-                </map:WithCalledMemberOwner>
+                </map:WithLeftSideOfDottedAccess>
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>$expr</map:ReplaceWithTemplate>

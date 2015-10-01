@@ -7,7 +7,7 @@
 	  
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewClassName="DisplayRequest" NewNamespace="Windows.System.Display" />
+            <map:ReplaceClassUsage NewClassName="CoreApplicationView" NewNamespace="Windows.ApplicationModel.Core" />
           </map:CodeMap.Action>
         </map:CodeMap>
 
@@ -36,12 +36,38 @@
           </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="Assign" MemberName="ApplicationIdleDetectionMode">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\PhoneApplicationServiceHelper.cs" />
+                  <map:ReplaceWithTemplate>
+                    WindowsPhoneUWP.UpgradeHelpers.PhoneApplicationServiceHelper.UserIdleDetectionMode($right)
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep></map:Keep>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
         
         <map:CodeMap Kind="MemberAccess" MemberName="Activated">
           <map:CodeMap.Action>
-            <map:ReplaceWithTemplate>
+            <map:Keep/>
+            <!--<map:ReplaceWithTemplate>
               Windows.ApplicationModel.Core.CoreApplication.Resuming
-            </map:ReplaceWithTemplate>
+            </map:ReplaceWithTemplate>-->
           </map:CodeMap.Action>
         </map:CodeMap>
         
@@ -70,11 +96,26 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="State">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Launching">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="EventDecl" MemberName="Activated">
           <map:CodeMap.Action>
             <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="0">
+                Windows.ApplicationModel.Core.CoreApplicationView
+              </map:ReplaceParameterDeclarationType>
               <map:ReplaceParameterDeclarationType Position="1">
-                Object
+                Windows.ApplicationModel.Activation.IActivatedEventArgs
               </map:ReplaceParameterDeclarationType>
               <!--<map:RemoveParameter Position="1"/>-->
             </map:ActionSequence>

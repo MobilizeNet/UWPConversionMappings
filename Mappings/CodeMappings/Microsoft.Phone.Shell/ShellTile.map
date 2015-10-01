@@ -4,6 +4,15 @@
     <map:CodeMapPackage Type="Microsoft.Phone.Shell.ShellTile">
       <map:CodeMapPackage.Maps>
 
+
+        <map:CodeMap Kind="Type" >
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage
+                  NewNamespace="Windows.UI.StartScreen"
+                  NewClassName="SecondaryTile" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="ActiveTiles">
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>
@@ -41,17 +50,25 @@
               <map:Case.Condition>
                 <map:WithMethodCall>
                   <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$uri</map:AssignName>
+                  </map:WithArgument>
                   <map:WithArgument Position="1">
                     <map:AssignName>$owner</map:AssignName>
                   </map:WithArgument>
                 </map:WithMethodCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:ReplaceWithTemplate>
-                  await $owner.RequestCreateAsync();
-                </map:ReplaceWithTemplate>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\TilesHelper.cs"/>
+                  <map:AddNamespaceImport>WindowsPhoneUWP.UpgradeHelpers</map:AddNamespaceImport>
+                  <map:ReplaceWithTemplate>
+                    await $owner.FinishInitialization($uri).RequestCreateAsync()
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
+
 
             <map:Case>
               <map:Case.Condition>
@@ -108,7 +125,34 @@
           </map:Default>
         </map:Conditional>
       </map:CodeMap>
-        
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="NavigationUri">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithLeftSideOfDottedAccess>
+                    <map:AssignName>$obj</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ActionSequence>
+                    <map:AddHelper Path="..\Helpers\TilesHelper.cs"/>
+                    <map:AddNamespaceImport>WindowsPhoneUWP.UpgradeHelpers</map:AddNamespaceImport>
+                    <map:ReplaceWithTemplate>
+                      $obj.GetAsNavigationUri()
+                    </map:ReplaceWithTemplate>
+                  </map:ActionSequence>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
 
       

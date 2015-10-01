@@ -23,6 +23,14 @@
           <map:Keep/>
         </map:CodeMap>
 
+        <map:CodeMap Kind="EventDecl" MemberName="Tick">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              <![CDATA[  object ]]>
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="IsEnabled">
           <map:Keep/>
         </map:CodeMap>
@@ -37,7 +45,7 @@
 
         <map:CodeMap Kind="Call" MemberName="Stop">
          <map:Keep/>
-        </map:CodeMap>
+        </map:CodeMap>       
    
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>

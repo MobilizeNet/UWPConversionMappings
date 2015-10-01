@@ -11,10 +11,14 @@
                   NewClassName="SecondaryTile" />
           </map:CodeMap.Action>
         </map:CodeMap>
-
-
-
-
+        
+        
+      <map:CodeMap Kind="MemberAccess" MemberName="Title">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="DisplayName"/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
         <map:CodeMap Kind="MemberAccess" MemberName="BackgroundImage">
           <map:Conditional>
             <map:Case>
@@ -30,7 +34,7 @@
                </map:Case.Action>
             </map:Case>
             <map:Default>
-              <map:Keep/>
+              <map:ReplaceWithProperty NewProperty="Logo"/>
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
@@ -83,8 +87,18 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
-        
 
+        <map:CodeMap Kind="MemberAccess" MemberName="BackContent">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="BackTitle">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
         
         
       </map:CodeMapPackage.Maps>

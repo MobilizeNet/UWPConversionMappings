@@ -66,6 +66,34 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="EventDecl" MemberName="NavigationFailed">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Xaml.Controls.WebViewNavigationFailedEventArgs
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Navigated">
+          <map:ReplaceWithProperty NewProperty="NavigationCompleted"/>
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="Navigated">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsScriptEnabled">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.Metadata>

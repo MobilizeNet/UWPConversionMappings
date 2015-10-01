@@ -3,12 +3,37 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="Windows.Phone.Speech.VoiceCommands.VoiceCommandService">
       <map:CodeMapPackage.Maps>
+        
         <map:CodeMap Kind="Call" MemberName="InstallCommandSetsFromFileAsync">
           <map:RedirectCall
             NewMethod="InstallCommandDefinitionsFromStorageFileAsync"
             NewMethodOwner="Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager"
             />
         </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="InstallCommandSetsFromFileAsync">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$parameter0Name</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[ Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync($parameter0Name))]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Default.Action />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

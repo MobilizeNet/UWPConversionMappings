@@ -15,7 +15,7 @@
         <map:CodeMap Kind="New">
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>
-              Windows.UI.Notifications.ToastNotificationManager.GetTemplateContent(Windows.UI.Notifications.ToastTemplateType.ToastText01)
+              Windows.UI.Notifications.ToastNotificationManager.GetTemplateContent(Windows.UI.Notifications.ToastTemplateType.ToastText02)
             </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
@@ -106,7 +106,10 @@
                 </map:WithMethodCall>
               </map:Case.Condition>
               <map:Case.Action>
-                <map:ActionSequence>
+                <map:ReplaceWithTemplate>
+                  Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier().Show(new Windows.UI.Notifications.ToastNotification($owner));
+                </map:ReplaceWithTemplate>
+                <!--<map:ActionSequence>
                   <map:AddPreStatementFromTemplate>
                     <![CDATA[
                     if (!Window.Current.Visible)
@@ -116,7 +119,7 @@
                     ]]>
                     </map:AddPreStatementFromTemplate>
                   <map:RemoveCurrentStatement/>
-                </map:ActionSequence>
+                </map:ActionSequence>-->
               </map:Case.Action>
             </map:Case>
             <map:Default>

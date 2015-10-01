@@ -58,9 +58,22 @@
               NewProperty="DefaultThreadCurrentCulture"
               NewPropertyOwner="System.Globalization.CultureInfo" />
         </map:CodeMap>
-      </map:CodeMapPackage.Maps>
-      
-      
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ManagedThreadId">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              System.Environment.CurrentManagedThreadId
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CurrentThread">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+      </map:CodeMapPackage.Maps>          
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

@@ -6,5 +6,6 @@ Visit the http://www.mobilize.net/uwp-bridge page to download the **Mobilize.NET
 
 Visit the [wiki](https://github.com/MobilizeNet/UWPConversionMappings/wiki) for more information on how to mappings are defined.
 
-If interested in contributing to this project see [CONTRIBUTING](CONTRIBUTING.md)  .
+A list of the current mappings can be found here: [current mappings](code_mappings_listing.md) .
 
+If interested in contributing to this project see [CONTRIBUTING](CONTRIBUTING.md)  .

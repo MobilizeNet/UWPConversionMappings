@@ -1,0 +1,33 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="SuperImage"
+                            ElementNamespace="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls">
+      <xmap:XamlElementMapper.AlternativeNamespaces>
+        <xmap:AlternativeNamespace>clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls</xmap:AlternativeNamespace>
+      </xmap:XamlElementMapper.AlternativeNamespaces>
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="StackPanel" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="Sources">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:MoveValueToContentProperty />                            
+            </xmap:ActionSequence>           
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>               
+        
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

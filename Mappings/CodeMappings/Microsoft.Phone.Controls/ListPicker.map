@@ -1,0 +1,116 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.ListPicker">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="ComboBox" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="SelectedItem">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="SelectedIndex">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="Header">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="HeaderTemplate">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="ItemSource">
+          <map:Keep />
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListPickerMode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemsCountTheshold">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FullModeItemTemplate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FullModeHeader">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SelectedIndexProperty">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SelectedItemProperty">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FullModeItemTemplateProperty">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="FullModeItemTemplate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="PickerPageUri">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SelectionMode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ExpansionMode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Open" >
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Open" >
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

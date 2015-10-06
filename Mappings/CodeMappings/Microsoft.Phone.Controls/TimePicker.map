@@ -1,0 +1,186 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.TimePicker">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="TimePicker" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess"  MemberName="ValueProperty">
+          <map:ReplaceWithProperty NewProperty="TimeProperty"/>
+        </map:CodeMap>
+
+       
+        <map:CodeMap Kind="MemberAccess" MemberName="Header">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HeaderTemplate">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="PickerPageUri">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ValueStringFormat">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="PickerPageUriProperty">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Value">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>                
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$Owner</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <!--<![CDATA[((DateTime?)(new DateTime(1,1,1,$Owner.Time.Hours, $Owner.Time.Minutes, $Owner.Time.Seconds)).Time]]>-->
+                  (DateTime?)Convert.ToDateTime($Owner.Time.ToString())
+                  <!--((New DateTime(2015,10,1)).Date)-->
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>         
+            
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="Assign" MemberName="Value" >
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$left</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>                                            
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>$left.Time = ($right).TimeOfDay;</map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:ReplaceWithProperty NewProperty="Time" />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ValueString">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $obj.Time.ToString()
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ValueChanged">
+          <map:ReplaceWithProperty NewProperty="TimeChanged" />
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Assign" MemberName="ValueChanged">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$left</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:WithConstructorCall>
+                      <map:WithArgument Position="0">
+                        <map:AssignName>$method</map:AssignName>
+                      </map:WithArgument>
+                    </map:WithConstructorCall>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $left.TimeChanged += $method
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$left</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$method</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $left.TimeChanged += $method
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+
+
+
+
+        <map:CodeMap Kind="EventDecl" MemberName="ValueChanged">
+          <map:CodeMap.Action>                        
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Xaml.Controls.TimePickerValueChangedEventArgs
+              </map:ReplaceParameterDeclarationType>            
+          </map:CodeMap.Action>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

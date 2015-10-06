@@ -1,0 +1,66 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.DateTimeValueChangedEventArgs">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="TimePickerValueChangedEventArgs" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+     <!--   <map:CodeMap Kind="MemberAccess"  MemberName="NewDateTime">
+          <map:ReplaceWithProperty NewProperty="NewDate"/>
+        </map:CodeMap>
+      -->
+        <map:CodeMap Kind="MemberAccess" MemberName="NewDateTime">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  DateTime.Now.Date + $obj.NewTime
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+        <!-- <map:CodeMap Kind="MemberAccess" MemberName="OldDateTime">
+          <map:ReplaceWithProperty NewProperty="OldDate" />
+        </map:CodeMap>
+        -->
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OldDateTime">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  DateTime.Now.Date + $obj.OldTime
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

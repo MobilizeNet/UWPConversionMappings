@@ -1,0 +1,68 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="ProgressOverlay"
+                            ElementNamespace="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls">
+      <xmap:XamlElementMapper.AlternativeNamespaces>
+        <xmap:AlternativeNamespace>clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls</xmap:AlternativeNamespace>
+      </xmap:XamlElementMapper.AlternativeNamespaces>
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="ProgressBar" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="Content">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ContentTemplate">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ProgressControl">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="OnApplyTemplate">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ProgressOverlay">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="Cursor">
+          <xmap:ActionSequence>
+            <xmap:MarkAsNotMapped />
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ActualIsIndeterminate" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+
+
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

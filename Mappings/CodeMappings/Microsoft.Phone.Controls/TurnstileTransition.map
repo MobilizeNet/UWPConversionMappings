@@ -1,0 +1,128 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <!--TurnstileTransition-->
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.TurnstileTransition">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation" NewClassName="CommonNavigationTransitionInfo" />
+          </map:ActionSequence>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[new Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo() ]]> 
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Mode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped  />
+          </map:CodeMap.Action>
+        </map:CodeMap>       
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+    <!--RollTransition-->
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.RollTransition">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation" NewClassName="CommonNavigationTransitionInfo" />
+          </map:ActionSequence>
+        </map:CodeMap>
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[new Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo() ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+  
+  
+
+    <!--RotateTransition-->
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.RotateTransition">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation" NewClassName="CommonNavigationTransitionInfo" />
+          </map:ActionSequence>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Mode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped  />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[new Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo() ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+    <!--TurnstileFeatherTransition-->
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.TurnstileFeatherTransition">
+      <map:CodeMapPackage.Maps>
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation" NewClassName="CommonNavigationTransitionInfo" />
+          </map:ActionSequence>
+        </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="Mode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped  />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[new Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo() ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+    <!--SwivelTransition-->
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.SwivelTransition">
+      <map:CodeMapPackage.Maps>
+        
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Media.Animation" NewClassName="CommonNavigationTransitionInfo" />
+          </map:ActionSequence>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Mode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped  />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              <![CDATA[new Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo() ]]>
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+
+
+  </MapUnit.Elements>
+</MapUnit>

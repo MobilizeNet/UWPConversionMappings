@@ -1,77 +1,62 @@
 <MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
-
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="ListPicker"
+    <xmap:XamlElementMapper ElementName="TimePicker"
                             ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
       <xmap:XamlElementMapper.Maps>
         <xmap:XamlMap Kind="Element">
           <xmap:XamlMap.Action>
-            <xmap:RenameElement NewName="ComboBox" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            <xmap:RenameElement NewName="TimePicker" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="ListPickerMode">
+        <xmap:XamlMap Kind="Property" PropertyName="Value" >
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Time" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="ValueProperty">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="ItemCountThreshold">
+        <xmap:XamlMap Kind="Property" PropertyName="ValueString">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="FullModeHeader">
+        <xmap:XamlMap Kind="Property" PropertyName="ValueStringFormat">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="SelectedIndexProperty">
+        <xmap:XamlMap Kind="Property" PropertyName="ValueStringFormatProperty">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="SelectedItemProperty">
-          <xmap:XamlMap.Action>
-            <xmap:CommentOutProperty/>
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="FullModeItemTemplate">
-          <xmap:XamlMap.Action>
-            <xmap:CommentOutProperty/>
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="FullModeItemTemplateProperty">
-          <xmap:XamlMap.Action>
-            <xmap:CommentOutProperty/>
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
+           
         <xmap:XamlMap Kind="Property" PropertyName="PickerPageUri">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="SelectionMode">
+        <xmap:XamlMap Kind="Property" PropertyName="PickerPageUriProperty">
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
-        </xmap:XamlMap>
-        <xmap:XamlMap Kind="Property" PropertyName="ExpansionMode">
+        </xmap:XamlMap>        
+        <xmap:XamlMap Kind="Property" PropertyName="ValueChanged" >
           <xmap:XamlMap.Action>
-            <xmap:CommentOutProperty/>
+            <xmap:ActionSequence>
+              <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.UI.Xaml.Controls.TimePickerValueChangedEventArgs" />
+              <xmap:RenameProperty NewPropertyLocalName="TimeChanged" />
+            </xmap:ActionSequence>            
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-
-
-        <xmap:XamlMap Kind="Property" PropertyName="Open" >
-          <xmap:XamlMap.Action>
-            <xmap:RenameProperty NewPropertyLocalName="DropDownOpened" />
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
-
-
+        
       </xmap:XamlElementMapper.Maps>
-        <xmap:XamlElementMapper.ReferencedPackages>
+      <xmap:XamlElementMapper.ReferencedPackages>
         <Reference>CommonEventsToChange</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>

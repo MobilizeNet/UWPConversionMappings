@@ -1,7 +1,7 @@
 <MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
          xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
-    <map:CodeMapPackage Type="Microsoft.Phone.Controls.TiltEffect">
+    <map:CodeMapPackage Type="Microsoft.Xna.Framework.FrameworkDispatcher">
       <map:CodeMapPackage.Maps>
 
         <map:CodeMap Kind="Type">
@@ -10,26 +10,15 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="TiltableItems" >
+        <!--Properties-->
+        
+        <map:CodeMap Kind="Call" MemberName="Update">
           <map:CodeMap.Action>
             <map:MarkAsNotMapped />
           </map:CodeMap.Action>
         </map:CodeMap>
-
-        <map:CodeMap Kind="MemberAccess" MemberName="IsTiltEnabled" >
-          <map:CodeMap.Action>
-            <map:MarkAsNotMapped />
-          </map:CodeMap.Action>          
-        </map:CodeMap>
-
-        <map:CodeMap Kind="MemberAccess" MemberName="SuppressTilt">
-          <map:CodeMap.Action>
-            <map:MarkAsNotMapped />
-          </map:CodeMap.Action>
-        </map:CodeMap>     
-
-      </map:CodeMapPackage.Maps>        
+        
+      </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>
-

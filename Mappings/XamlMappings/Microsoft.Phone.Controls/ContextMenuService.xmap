@@ -1,0 +1,31 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="ContextMenuService"
+                            ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="ContextMenu">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>              
+              <xmap:RenameProperty NewElementName="Button" NewPropertyLocalName="Flyout" NewXmlNamespaceName="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                <xmap:RenameProperty.Condition>
+                  <xmap:CurrentElement ElementName="Button" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+                </xmap:RenameProperty.Condition>
+              </xmap:RenameProperty>
+              <xmap:RenameProperty NewElementName="FlyoutBase" NewPropertyLocalName="AttachedFlyout" NewXmlNamespaceName="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+              </xmap:RenameProperty>
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

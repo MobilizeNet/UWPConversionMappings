@@ -2,14 +2,20 @@
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="WrapPanel"
+    <xmap:XamlElementMapper ElementName="PerformanceProgressBar"
                             ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
-      <xmap:XamlElementMapper.Maps>                
+      <xmap:XamlElementMapper.Maps>
         <xmap:XamlMap Kind="Element">
           <xmap:XamlMap.Action>
-            <xmap:RenameElement NewName="VariableSizedWrapGrid" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            <xmap:RenameElement NewName="ProgressBar" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
           </xmap:XamlMap.Action>
-        </xmap:XamlMap>     
+        </xmap:XamlMap>    
+
+        <xmap:XamlMap Kind="Property" PropertyName="ActualIsIndeterminate" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>             
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
         <Reference>CommonEventsToChange</Reference>

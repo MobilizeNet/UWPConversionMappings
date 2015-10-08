@@ -6,14 +6,106 @@
 
         <map:CodeMap Kind="Call" MemberName="ToShortTimeString" >
           <map:CodeMap.Action>
-            <map:ReplaceWithTemplate>
-               DateTime.Now.ToString("hh:mm tt")
-            </map:ReplaceWithTemplate>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithCalledMemberOwner>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithCalledMemberOwner>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("shorttime").Format($owner)
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
           </map:CodeMap.Action>
         </map:CodeMap>
-       
-      </map:CodeMapPackage.Maps>        
+
+        <map:CodeMap Kind="Call" MemberName="ToLongTimeString" >
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithCalledMemberOwner>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithCalledMemberOwner>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime").Format($owner)
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="Call" MemberName="ToShortDateString" >
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithCalledMemberOwner>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithCalledMemberOwner>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("shortdate").Format($owner)
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ToLongDateString" >
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithCalledMemberOwner>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithCalledMemberOwner>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate").Format($owner)
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>    
+
+      </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>
+
+
 

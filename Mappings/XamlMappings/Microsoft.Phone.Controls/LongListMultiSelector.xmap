@@ -2,11 +2,11 @@
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="LongListSelector"
-                         ElementNamespace="clr-namespace:MMicrosoft.Phone.Controls;assembly=Microsoft.Phone">
+    <xmap:XamlElementMapper ElementName="LongListMultiSelector"
+                         ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
  
       <xmap:XamlElementMapper.AlternativeNamespaces>
-    <xmap:AlternativeNamespace> clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone</xmap:AlternativeNamespace>
+    <xmap:AlternativeNamespace>clr-namespace:Microsoft.Toolkit.Controls;assembly=Microsoft.Phone.Controls.Toolkit</xmap:AlternativeNamespace>
       </xmap:XamlElementMapper.AlternativeNamespaces>
       <xmap:XamlElementMapper.Maps>
         <xmap:XamlMap Kind="Element">
@@ -29,6 +29,7 @@
             <xmap:BindPropertyValueElement ContextKeyName="$groupStyleTemplate" PropertyName="GroupStyle"/>
             <xmap:BindPropertyValueElement ContextKeyName="$HideIfEmptyTemplate" PropertyName="HideEmptyGroups"/>
             <xmap:BindPropertyValueElement ContextKeyName="$ItemTemplate" PropertyName="JumpListStyle"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$ItemTemplate" PropertyName="SelectionMode"/>
             <xmap:BindPropertyValueElement ContextKeyName="$controlName" PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
 
 
@@ -36,7 +37,7 @@
             PropertyName="ZoomedInView">
               <xmap:SetPropertyValueToComplexElement.TemplateContents>
                 <![CDATA[ 
-                    <ListView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    <ListView SelectionMode="Multiple" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
                     ]]>
               </xmap:SetPropertyValueToComplexElement.TemplateContents>
             </xmap:SetPropertyValueToComplexElement>
@@ -45,7 +46,7 @@
                 PropertyName="ZoomedInView">
               <xmap:SetPropertyValueToComplexElement.TemplateContents>
                 <![CDATA[ 
-                    <ListView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    <ListView SelectionMode="Multiple" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
                     ]]>
               </xmap:SetPropertyValueToComplexElement.TemplateContents>
               <xmap:SetPropertyValueToComplexElement.Condition>
@@ -56,7 +57,7 @@
             <xmap:SetPropertyValueToComplexElement
                PropertyName="ZoomedInView">
               <![CDATA[ 
-                    <GridView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    <GridView SelectionMode="Multiple" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
                     ]]>
               <xmap:SetPropertyValueToComplexElement.Condition>                
                   <xmap:ElementContainsAttribute PropertyLocalName="LayoutMode" PropertyValueRegex="Grid" /> <!--I need to apply multiple Condition here-->
@@ -160,11 +161,11 @@
             <xmap:CommentOutProperty />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
-        <!--<xmap:XamlMap Kind="Property" PropertyName="JumpListStyle" >
+        <xmap:XamlMap Kind="Property" PropertyName="IsSelectionEnabled" >
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty />
           </xmap:XamlMap.Action>
-        </xmap:XamlMap>-->
+        </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="ItemsSource" >
           <xmap:XamlMap.Action>
             <xmap:ActionSequence>
@@ -227,16 +228,38 @@
               <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;GroupStyle HeaderTemplate=&quot;$GROUP_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
               <xmap:RenameProperty NewPropertyLocalName="GroupStyle" />
             </xmap:ActionSequence>            
-          </xmap:XamlMap.Action>         
-         
+          </xmap:XamlMap.Action>                  
         </xmap:XamlMap>
-      
-        <xmap:XamlMap Kind="Property" PropertyName="IsGroupingEnabled" >
+        
+        <xmap:XamlMap Kind="Property" PropertyName="ItemContainerStyle" >
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ListFooter" >
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewElementName="Footer" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ListFooterTemplate">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewElementName="FooterTemplate" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ListHeader">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewElementName="Header" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+
       </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>
 </MapUnit>

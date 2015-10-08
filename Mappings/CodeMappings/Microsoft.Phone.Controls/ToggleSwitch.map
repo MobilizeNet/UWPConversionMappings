@@ -1,0 +1,244 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.ToggleSwitch">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="ToggleSwitch" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="New" MemberName="ToggleSwitch">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsCheckedProperty">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  ((bool?)$obj.IsOnProperty).Value
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsChecked">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  ((bool?)$obj.IsOn)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>      
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>        
+
+        <map:CodeMap Kind="Assign" MemberName="IsChecked" >
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $owner.IsOn = System.Convert.ToBoolean($right)
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Assign" MemberName="Content" >
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$owner</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$right</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $owner.OnContent = $owner.OffContent = $right
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Content">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithLeftSideOfDottedAccess>
+                  <map:AssignName>$obj</map:AssignName>
+                </map:WithLeftSideOfDottedAccess>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $obj.OnContent
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Header">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HeaderTemplate">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HeaderProperty">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HeaderTemplateProperty">
+          <map:Keep />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsCheckedProperty">
+          <map:ReplaceWithProperty NewProperty="IsOnProperty" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SwitchForegroundProperty">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SwitchForeground">
+          <map:ReplaceWithProperty NewProperty="Foreground" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Checked">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+       
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Unchecked">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Indeterminate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Click">
+          <map:ReplaceWithProperty NewProperty="Toggled" />
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Assign" MemberName="Click">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$left</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:WithConstructorCall>
+                      <map:WithArgument Position="0">
+                        <map:AssignName>$method</map:AssignName>
+                      </map:WithArgument>
+                    </map:WithConstructorCall>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $left.Toggled += $method
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:WithLeftSideOfDottedAccess>
+                      <map:AssignName>$left</map:AssignName>
+                    </map:WithLeftSideOfDottedAccess>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:AssignName>$method</map:AssignName>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  $left.Toggled += $method
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+        
+        
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

@@ -18,7 +18,38 @@
         <map:CodeMap Kind="MemberAccess" MemberName="GeoCoordinate" >
           <map:ReplaceWithProperty NewProperty="Location" />
         </map:CodeMap>
-       
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnPositionOriginChangedCallback">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnDoubleTap">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnHold">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnKeyUp">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnTap">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
       </map:CodeMapPackage.Maps>        
     </map:CodeMapPackage>
   </MapUnit.Elements>

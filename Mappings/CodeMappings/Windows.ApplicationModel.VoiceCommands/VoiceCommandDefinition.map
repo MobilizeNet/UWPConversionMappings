@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers" xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Windows.Phone.Speech.VoiceCommands.VoiceCommandSet">
+      <map:CodeMapPackage.Maps>
+        
+        <map:CodeMap Kind="Type" >
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewClassName="VoiceCommandDefinition" NewNamespace="Windows.ApplicationModel.VoiceCommands" />
+          </map:ActionSequence>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Language">
+          <map:Keep/>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Name">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="UpdatePhraseListAsync">
+          <map:ReplaceWithProperty NewProperty="SetPhraseListAsync" />
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

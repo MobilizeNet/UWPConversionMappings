@@ -1,0 +1,41 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="MenuItem"
+                            ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>
+        
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>                                    
+              <xmap:RenameElement  NewName="MenuFlyoutItem" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="Header">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Text" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="HeaderTemplate">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Template" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ItemContainerStyle">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Style" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

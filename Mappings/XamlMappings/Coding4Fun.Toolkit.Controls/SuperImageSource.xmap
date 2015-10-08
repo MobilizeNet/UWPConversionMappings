@@ -1,0 +1,59 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="SuperImageSource"
+                            ElementNamespace="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls">
+      <xmap:XamlElementMapper.AlternativeNamespaces>
+        <xmap:AlternativeNamespace>clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls</xmap:AlternativeNamespace>
+      </xmap:XamlElementMapper.AlternativeNamespaces>
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:AddHelper HelperPath="..\Helpers\ConvertSuperImage.cs" />
+              <xmap:RenameElement NewName="Image" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+              
+              <xmap:BindPropertyValueElement ContextKeyName="$Max" PropertyName="MaxScale"/>
+              <xmap:BindPropertyValueElement ContextKeyName="$Min" PropertyName="MinScale"/>
+              <xmap:CommentOutProperty PropertyName="MaxScale" />
+              <xmap:CommentOutProperty PropertyName="MinScale" />
+              
+              <xmap:SetPropertyValueToComplexElement PropertyName="UtilityProperties.SpecialVisibility" PropertyNamespace="using:WindowsPhoneUWP.UpgradeHelpers" >
+                <![CDATA[<ResolutionRange xmlns="WindowsPhoneUWP.UpgradeHelpers" />]]>
+              </xmap:SetPropertyValueToComplexElement>
+
+             
+
+
+              <xmap:WithComplexPropertyValue PropertyName="UtilityProperties.SpecialVisibility" PropertyNamespace="using:WindowsPhoneUWP.UpgradeHelpers"  >
+
+                <xmap:SetPropertyValueToBoundVariable PropertyName="MaxScale" VariableName="$Max">
+                  <xmap:SetPropertyValueToBoundVariable.Condition>
+                    <xmap:VariableIsBoundToValue>$Max</xmap:VariableIsBoundToValue>
+                  </xmap:SetPropertyValueToBoundVariable.Condition>
+                </xmap:SetPropertyValueToBoundVariable>
+                
+                
+                <xmap:SetPropertyValueToBoundVariable PropertyName="MinScale" VariableName="$Min">
+                  <xmap:SetPropertyValueToBoundVariable.Condition>
+                    <xmap:VariableIsBoundToValue>$Min</xmap:VariableIsBoundToValue>
+                  </xmap:SetPropertyValueToBoundVariable.Condition>
+                </xmap:SetPropertyValueToBoundVariable>
+
+                
+              </xmap:WithComplexPropertyValue>
+              
+            </xmap:ActionSequence>            
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

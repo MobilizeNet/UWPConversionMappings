@@ -1,14 +1,40 @@
-﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
-         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers" xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
     <map:CodeMapPackage Type="Windows.Phone.Speech.Synthesis.SpeechSynthesizer">
       <map:CodeMapPackage.Maps>
-        <map:CodeMap Kind="Type">
-          <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechSynthesis"
-                                   NewClassName="SpeechSynthesizer" />
-          </map:CodeMap.Action>
+        
+        <map:CodeMap Kind="Type" >
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewClassName="SpeechSynthesizer" NewNamespace="Windows.Media.SpeechSynthesis" />
+          </map:ActionSequence>
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="BookmarkReached">
+          <map:MarkAsNotMapped/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SpeechStarted">
+          <map:MarkAsNotMapped/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CancelAll">
+          <map:MarkAsNotMapped/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SpeakSsmlAsync">
+          <map:MarkAsNotMapped/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="SpeakSsmlFromUriAsync">
+          <map:MarkAsNotMapped/>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Close">
+          <map:ReplaceWithProperty NewProperty="Dispose" />
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="SpeakTextAsync">
           <map:Conditional>
             <map:Case>
@@ -51,11 +77,87 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="SetVoice">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$Owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$voice</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[$Owner.Voice = $voice]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:MarkAsNotMapped />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetVoice">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:AssignName>$Left</map:AssignName>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+                    <map:WithMethodCall>
+                      <map:WithCalledMemberOwner>
+                        <map:AssignName>$Owner</map:AssignName>
+                      </map:WithCalledMemberOwner>
+                    </map:WithMethodCall>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[$Left = $Owner.Voice]]>
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$Owner</map:AssignName>
+                  </map:WithCalledMemberOwner>               
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[Windows.Media.SpeechSynthesis.VoiceInformation x;]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[x = $Owner.Voice]]>
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:MarkAsNotMapped />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.Metadata>
         <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SpeakTextAsync"/>
       </map:CodeMapPackage.Metadata>
-
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

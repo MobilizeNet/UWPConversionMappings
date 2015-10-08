@@ -4,18 +4,16 @@
   <MapUnit.Elements>
     <xmap:XamlElementMapper ElementName="WrapPanel"
                             ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
-      <xmap:XamlElementMapper.Maps>
-        <xmap:XamlMap Kind="Property" PropertyName="ItemWidth">
-          <xmap:XamlMap.Action>
-            <xmap:MarkAsNotMapped ElementName="WrapPanel"/>
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
+      <xmap:XamlElementMapper.Maps>                
         <xmap:XamlMap Kind="Element">
           <xmap:XamlMap.Action>
-            <xmap:RenameElement NewName="StackPanel" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            <xmap:RenameElement NewName="VariableSizedWrapGrid" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
           </xmap:XamlMap.Action>
-        </xmap:XamlMap>
+        </xmap:XamlMap>     
       </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>
 </MapUnit>

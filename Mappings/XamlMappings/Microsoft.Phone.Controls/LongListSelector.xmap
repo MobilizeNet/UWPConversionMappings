@@ -1,92 +1,243 @@
-<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers' 
-         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper' 
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
-    <MapUnit.Elements>                
-        <xmap:XamlElementMapper ElementName="LongListSelector" 
-                             ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
-            <xmap:XamlElementMapper.Maps>
-                <xmap:XamlMap Kind="Element">
-                    <xmap:XamlMap.Action>
-                        <xmap:RenameElement NewName="GridView" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="LayoutMode" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="SelectionChanged" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="HideEmptyGroups" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="GridCellSize" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="JumpListStyle" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="ItemsSource" >
-                    <xmap:XamlMap.Action>
-                        <xmap:ActionSequence>
-                            <xmap:ActionSequence.Condition>
-                                <xmap:ElementContainsAttribute PropertyLocalName="IsGroupingEnabled" PropertyValueRegex="true" />
-                            </xmap:ActionSequence.Condition>
-                            <xmap:BindPropertyValueElement ContextKeyName="$CURRENT_ITEM_SOURCE" />
-                            <xmap:ReplacePropertyValueWithParentResource  >
-                                <xmap:ReplacePropertyValueWithParentResource.ReplacementTemplateContents>
-                                    <![CDATA[
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="LongListSelector"
+                         ElementNamespace="clr-namespace:MMicrosoft.Phone.Controls;assembly=Microsoft.Phone">
+ 
+      <xmap:XamlElementMapper.AlternativeNamespaces>
+    <xmap:AlternativeNamespace> clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone</xmap:AlternativeNamespace>
+      </xmap:XamlElementMapper.AlternativeNamespaces>
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:RenameElement NewName="SemanticZoom"
+                                  NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="TargetTypeReference">
+              <xmap:RenameElement NewName="GridView"
+                                  NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:ActionSequence>
+            <xmap:BindPropertyValueElement ContextKeyName="$currentItemSource" PropertyName="ItemsSource"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$headerTemplate" PropertyName="Header"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$itemTemplate" PropertyName="ItemTemplate"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$groupStyleTemplate" PropertyName="GroupStyle"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$HideIfEmptyTemplate" PropertyName="HideEmptyGroups"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$ItemTemplate" PropertyName="JumpListStyle"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$controlName" PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+
+
+            <xmap:SetPropertyValueToComplexElement
+            PropertyName="ZoomedInView">
+              <xmap:SetPropertyValueToComplexElement.TemplateContents>
+                <![CDATA[ 
+                    <ListView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    ]]>
+              </xmap:SetPropertyValueToComplexElement.TemplateContents>
+            </xmap:SetPropertyValueToComplexElement>
+
+            <xmap:SetPropertyValueToComplexElement
+                PropertyName="ZoomedInView">
+              <xmap:SetPropertyValueToComplexElement.TemplateContents>
+                <![CDATA[ 
+                    <ListView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    ]]>
+              </xmap:SetPropertyValueToComplexElement.TemplateContents>
+              <xmap:SetPropertyValueToComplexElement.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="LayoutMode" PropertyValueRegex="List" />
+              </xmap:SetPropertyValueToComplexElement.Condition>
+            </xmap:SetPropertyValueToComplexElement>
+         
+            <xmap:SetPropertyValueToComplexElement
+               PropertyName="ZoomedInView">
+              <![CDATA[ 
+                    <GridView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    ]]>
+              <xmap:SetPropertyValueToComplexElement.Condition>                
+                  <xmap:ElementContainsAttribute PropertyLocalName="LayoutMode" PropertyValueRegex="Grid" /> <!--I need to apply multiple Condition here-->
+                  <!--<xmap:ElementContainsAttribute PropertyLocalName="GridCellSize" PropertyValueRegex="^.+$" />-->                
+              </xmap:SetPropertyValueToComplexElement.Condition>
+            </xmap:SetPropertyValueToComplexElement>
+
+            <xmap:SetPropertyValueToComplexElement
+                PropertyName="ZoomedOutView">
+              <![CDATA[ 
+                    <GridView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+                    ]]>
+            </xmap:SetPropertyValueToComplexElement>
+
+
+            <xmap:RemoveAttribute PropertyName="LayoutMode" />
+            <xmap:RemoveAttribute PropertyName="GridCellSize" />
+            <xmap:RemoveAttribute PropertyName="HideEmptyGroups" />
+            <xmap:RemoveAttribute PropertyName="JumpListStyle" />
+                        
+            <xmap:WithComplexPropertyValue PropertyName="ZoomedInView">
+              
+              <xmap:SetPropertyValueToSimpleValue AttributeToChangeName="ItemsSource" NewPropertyValue="$currentItemSource"/>
+              <xmap:SetPropertyValueToBoundVariable PropertyName="Header" VariableName="$headerTemplate">
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$headerTemplate</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+
+              <xmap:SetPropertyValueToBoundVariable PropertyName="ItemTemplate" VariableName="$itemTemplate">
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$itemTemplate</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+
+              <xmap:SetPropertyValueToBoundVariable PropertyName="GroupStyle" VariableName="$groupStyleTemplate">
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$groupStyleTemplate</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+
+              <xmap:SetPropertyValueToBoundVariable PropertyName="GroupStyle" VariableName="$groupStyleTemplate">
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$groupStyleTemplate</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+ 
+              <xmap:SetPropertyValueToBoundVariable PropertyName="Name" VariableName="$controlName" 
+                                                    PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml">
+
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$controlName</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+                          
+            </xmap:WithComplexPropertyValue>
+
+            <xmap:WithComplexPropertyValue PropertyName="ZoomedOutView">
+              <xmap:SetPropertyValueToSimpleValue AttributeToChangeName="ItemsSource" NewPropertyValue="$currentItemSource">
+                <xmap:SetPropertyValueToSimpleValue.Condition>
+                  <xmap:VariableIsBoundToValue>$currentItemSource</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToSimpleValue.Condition>
+              </xmap:SetPropertyValueToSimpleValue>
+              <xmap:SetPropertyValueToSimpleValue AttributeToChangeName="Style" NewPropertyValue="$ItemTemplate">
+                <xmap:SetPropertyValueToSimpleValue.Condition>
+                  <xmap:VariableIsBoundToValue>$ItemTemplate</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToSimpleValue.Condition>
+              </xmap:SetPropertyValueToSimpleValue>
+            </xmap:WithComplexPropertyValue>
+
+            <xmap:RemoveAttribute PropertyName="ItemsSource"/>
+            <xmap:RemoveAttribute PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+            <xmap:RemoveAttribute PropertyName="Header"/>
+            <xmap:RemoveAttribute PropertyName="GroupStyle"/>
+            <xmap:RemoveAttribute PropertyName="ItemTemplate"/>            
+          </xmap:ActionSequence>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="GroupFooterTemplate" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <!--<xmap:XamlMap Kind="Property" PropertyName="LayoutMode" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>-->
+        <xmap:XamlMap Kind="Property" PropertyName="SelectionChanged" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <!--<xmap:XamlMap Kind="Property" PropertyName="HideEmptyGroups" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>-->
+        <xmap:XamlMap Kind="Property" PropertyName="GridCellSize" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <!--<xmap:XamlMap Kind="Property" PropertyName="JumpListStyle" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>-->
+        <xmap:XamlMap Kind="Property" PropertyName="ItemsSource" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ActionSequence.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="IsGroupingEnabled" PropertyValueRegex="true" />
+              </xmap:ActionSequence.Condition>
+              <xmap:BindPropertyValueElement ContextKeyName="$CURRENT_ITEM_SOURCE" />
+              <xmap:ReplacePropertyValueWithParentResource  >
+                <xmap:ReplacePropertyValueWithParentResource.ReplacementTemplateContents>
+                  <![CDATA[
                                         <CollectionViewSource 
                                                     IsSourceGrouped="True" 
                                                     Source="$CURRENT_ITEM_SOURCE" 
                                                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
                                         </CollectionViewSource>
                                         ]]>
-                                </xmap:ReplacePropertyValueWithParentResource.ReplacementTemplateContents>
-                            </xmap:ReplacePropertyValueWithParentResource>
-                        </xmap:ActionSequence>
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="ListHeaderTemplate" >
-                    <xmap:XamlMap.Action>
-                        <xmap:ActionSequence>
-                            <xmap:ActionSequence.Condition>
-                                <xmap:ElementContainsAttribute PropertyLocalName="ListHeaderTemplate" PropertyValueRegex="^.StaticResource" />
-                            </xmap:ActionSequence.Condition>
-                            <xmap:BindPropertyValueElement ContextKeyName="$LIST_HEADER_TEMPLATE" />
-                            <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;ContentControl ContentTemplate=&quot;$LIST_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
-                            <xmap:RenameProperty NewPropertyLocalName="Header" />
-                        </xmap:ActionSequence>
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="GroupHeaderTemplate" >
-                    <xmap:XamlMap.Action>
-                        <xmap:ActionSequence>
-                            <xmap:ActionSequence.Condition>
-                                <xmap:ElementContainsAttribute PropertyLocalName="GroupHeaderTemplate" PropertyValueRegex="^.StaticResource" />
-                            </xmap:ActionSequence.Condition>
-                            <xmap:BindPropertyValueElement ContextKeyName="$GROUP_HEADER_TEMPLATE" />
-                            <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;GroupStyle HeaderTemplate=&quot;$GROUP_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
-                            <xmap:RenameProperty NewPropertyLocalName="GroupStyle" />
-                        </xmap:ActionSequence>
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-                <xmap:XamlMap Kind="Property" PropertyName="IsGroupingEnabled" >
-                    <xmap:XamlMap.Action>
-                        <xmap:CommentOutProperty />
-                    </xmap:XamlMap.Action>
-                </xmap:XamlMap>
-            </xmap:XamlElementMapper.Maps>
-        </xmap:XamlElementMapper>
-    </MapUnit.Elements>
+                </xmap:ReplacePropertyValueWithParentResource.ReplacementTemplateContents>
+              </xmap:ReplacePropertyValueWithParentResource>
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="ListHeaderTemplate" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ActionSequence.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="ListHeaderTemplate" PropertyValueRegex="^.StaticResource" />
+              </xmap:ActionSequence.Condition>
+              <xmap:BindPropertyValueElement ContextKeyName="$LIST_HEADER_TEMPLATE" />
+              <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;ContentControl ContentTemplate=&quot;$LIST_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
+              <xmap:RenameProperty NewPropertyLocalName="Header" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="GroupHeaderTemplate" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ActionSequence.Condition>
+                <xmap:AllConditionsApply>
+                  <xmap:ElementContainsAttribute PropertyLocalName="GroupHeaderTemplate" PropertyValueRegex="^.StaticResource" />
+                  <xmap:ElementContainsAttribute PropertyLocalName="HideEmptyGroups" PropertyValueRegex="^.+$" />
+                </xmap:AllConditionsApply>
+              </xmap:ActionSequence.Condition>
+              <xmap:BindPropertyValueElement ContextKeyName="$GROUP_HEADER_TEMPLATE" PropertyName="GroupHeaderTemplate" />
+              <xmap:BindPropertyValueElement ContextKeyName="$HIDE_EMPTY_TEMPLATE" PropertyName="HideEmptyGroups" />
+              <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;GroupStyle HidesIfEmpty=&quot;$HIDE_EMPTY_TEMPLATE&quot; HeaderTemplate=&quot;$GROUP_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
+              <xmap:RenameProperty NewPropertyLocalName="GroupStyle" />
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="GroupHeaderTemplate" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>              
+              <xmap:ActionSequence.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="GroupHeaderTemplate" PropertyValueRegex="^.StaticResource" />
+              </xmap:ActionSequence.Condition>
+              <xmap:BindPropertyValueElement ContextKeyName="$GROUP_HEADER_TEMPLATE" />
+              <xmap:SetPropertyValueToComplexElement TemplateContents="&lt;GroupStyle HeaderTemplate=&quot;$GROUP_HEADER_TEMPLATE&quot; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;/&gt;" />
+              <xmap:RenameProperty NewPropertyLocalName="GroupStyle" />
+            </xmap:ActionSequence>            
+          </xmap:XamlMap.Action>         
+         
+        </xmap:XamlMap>
+      
+        <xmap:XamlMap Kind="Property" PropertyName="IsGroupingEnabled" >
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+      </xmap:XamlElementMapper.Maps>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
 </MapUnit>
 

@@ -1,0 +1,72 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Coding4Fun.Toolkit.Controls.AboutPrompt">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:ActionSequence >
+              <map:AddHelper Path="..\Helpers\AboutPrompt.cs" />
+              <map:AddHelper Path="..\Helpers\AboutPromptUserControl.xaml" />
+              <map:AddHelper Path="..\Helpers\AboutPromptUserControl.xaml.cs" />
+              <map:ReplaceClassUsage NewNamespace="WindowsPhoneUWP.UpgradeHelpers" NewClassName="AboutPrompt" />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsPromptMode">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Body">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Footer">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Title">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="VersionNumber">
+          <map:Keep/>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="WaterMark">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Show">
+          <map:Keep/>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Completed">
+          <map:ReplaceWithProperty NewProperty="PrimaryButtonClick" />
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="Completed">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="0">
+                Windows.UI.Xaml.Controls.ContentDialog
+              </map:ReplaceParameterDeclarationType>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Xaml.Controls.ContentDialogButtonClickEventArgs
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

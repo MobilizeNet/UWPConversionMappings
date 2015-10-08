@@ -1,0 +1,152 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Phone.Controls.LongListMultiSelector">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="New">          
+            <map:ReplaceWithTemplate>
+              new Windows.UI.Xaml.Controls.ListView() {SelectionMode = Windows.UI.Xaml.Controls.ListViewSelectionMode.Multiple}
+            </map:ReplaceWithTemplate>           
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Type">
+          <map:ActionSequence>
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="ListBox" />
+          </map:ActionSequence>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="LayoutMode">
+          <map:ActionSequence>
+            <map:MarkAsNotMapped />            
+          </map:ActionSequence>
+        </map:CodeMap>
+       
+        <map:CodeMap Kind="MemberAccess" MemberName="IsSelectionEnabled">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="GridCellSize">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListFooterTemplate" >
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="FooterTemplate" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListFooter" >
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Footer" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListHeaderTemplate" >
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="HeaderTemplate" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HideEmptyGroups" >
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IsGroupingEnabled" >
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="HideEmptyGroups" >
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="SelectedItems">
+          <map:Keep/>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemContainerStyle">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemInfoTemplate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ItemInfoTemplate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="OnItemsSourcePropertyChanged">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="DefaultListItemContainerStyle">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="JumpListStyle">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="GroupFooterTemplate">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListFooter">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Footer" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ListHeader">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Header" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Language">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CacheMode">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Style">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

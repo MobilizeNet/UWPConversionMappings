@@ -1,0 +1,70 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="SlideTransition"
+                            ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>
+
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="PaneThemeTransition" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>        
+
+        <xmap:XamlMap Kind="Property" PropertyName="Mode" >                   
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>              
+              <xmap:ReplaceAttributeValue>                
+                <xmap:RegexReplacementPair ReplacementString="Top" ValueRegex="SlideDownFadeIn" />                                                                
+              </xmap:ReplaceAttributeValue>
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Top" ValueRegex="SlideUpFadeOut" />
+              </xmap:ReplaceAttributeValue>
+              
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Bottom" ValueRegex="SlideUpFadeIn" />
+              </xmap:ReplaceAttributeValue>
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Bottom" ValueRegex="SlideDownFadeOut" />
+              </xmap:ReplaceAttributeValue>
+
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Left" ValueRegex="SlideRightFadeIn" />
+              </xmap:ReplaceAttributeValue>
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Left" ValueRegex="SlideLeftFadeLeftOut" />
+              </xmap:ReplaceAttributeValue>
+
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Right" ValueRegex="SlideLeftFadein" />
+              </xmap:ReplaceAttributeValue>
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ReplacementString="Right" ValueRegex="SlideLeftFadeRightOut" />
+              </xmap:ReplaceAttributeValue>
+
+              <xmap:RenameProperty  NewPropertyLocalName="Edge" />
+
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+     
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:RenameElement NewName="PaneThemeTransition" NewNamespace="using:Windows.UI.Xaml.Media.Animation" />
+  
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+
+
+
+
+      </xmap:XamlElementMapper.Maps>
+      
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

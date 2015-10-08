@@ -1,0 +1,195 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="AutoCompleteBox"
+                            ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+      <xmap:XamlElementMapper.Maps>                
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>            
+            <xmap:RenameElement NewName="AutoSuggestBox" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="SearchText">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Text"  />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="IsDropDownOpen">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="IsSuggestionListOpen"/>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="FilterMode">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MaxDropDownHeight">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="MaxSuggestionListHeght"  />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MaxDropDownHeightProperty">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="MaxSuggestionListHeightProperty"  />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="SearchText">
+          <xmap:XamlMap.Action>
+            <xmap:RenameProperty NewPropertyLocalName="Text"  />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ItemFilter">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="TextFilter">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MinimumPopulateDelay">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="MinimumPrefixLength">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="IsTextCompletionEnabled">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MinimumPrefixLengthProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="MinimumPopulateDelayProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ItemTemplateProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ItemContainerStyleProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="IsDropDownOpenProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="ItemSourceProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="SelectedItemProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="TextProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="SearchTextProperty">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="InputScope">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="DropDownPopup">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="Populated">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="Populating">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="DropDownOpening">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="DropDownOpened">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="DropDownClosing">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="PopulateComplete">
+          <xmap:XamlMap.Action>
+            <xmap:CommentOutProperty />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        
+        <xmap:XamlMap Kind="Property" PropertyName="TextChanged">
+          <xmap:XamlMap.Action>
+            <xmap:ChangeEventHandlerEventArgsType  NewEventArgsTypeName="Windows.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs" />
+          </xmap:XamlMap.Action>           
+        </xmap:XamlMap>
+        
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

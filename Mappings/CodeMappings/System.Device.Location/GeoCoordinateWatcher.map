@@ -32,7 +32,9 @@
                 </map:Case.Action>
               </map:Case>
               <map:Default>
-                <map:Keep/>
+                <map:ReplaceWithTemplate>
+                  new Windows.Devices.Geolocation.Geolocator()
+                </map:ReplaceWithTemplate>
               </map:Default>
             </map:Conditional>
           </map:CodeMap.Action>

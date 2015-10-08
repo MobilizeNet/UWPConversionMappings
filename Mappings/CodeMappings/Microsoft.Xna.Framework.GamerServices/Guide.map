@@ -1,0 +1,90 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="Microsoft.Xna.Framework.GamerServices.Guide">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Call" MemberName="EndShowMessageBox">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$arg</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    (int)$arg.Result.Id
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:MarkAsNotMapped/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
+        <map:CodeMap Kind="Call" MemberName="BeginShowMessageBox">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$caption</map:AssignName>
+                    </map:WithArgument>
+
+                    <map:WithArgument Position="1">
+                      <map:AssignName>$message</map:AssignName>
+                    </map:WithArgument>
+                    
+                    <map:WithArgument Position="2">
+                      <map:AssignName>$buttons</map:AssignName>
+                    </map:WithArgument>
+
+                    <map:WithArgument Position="4">
+                      <map:AssignName>$icon</map:AssignName>
+                    </map:WithArgument>
+                    
+                    <map:WithArgument Position="5">
+                      <map:AssignName>$callback</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ActionSequence>
+                    <map:AddPreStatementFromTemplate>
+                      <![CDATA[  var messageBoxDialog =  new Windows.UI.Popups.MessageDialog( $message , $caption); ]]>
+                    </map:AddPreStatementFromTemplate>
+                    <map:AddPreStatementFromTemplate>
+                      <![CDATA[  int buttonTextIndex = 0; ]]>
+                    </map:AddPreStatementFromTemplate>
+                    <map:AddPreStatementFromTemplate>                      
+                      <![CDATA[  foreach(var buttonToAdd in $buttons) 
+                      {                      
+                          messageBoxDialog.Commands.Add(new Windows.UI.Popups.UICommand() { Id = buttonTextIndex++, Label = buttonToAdd });
+                      }]]>
+                    </map:AddPreStatementFromTemplate>
+                    <map:ReplaceWithTemplate>
+                      <![CDATA[
+                      messageBoxDialog.ShowAsync().AsTask().ContinueWith($callback)
+                      ]]>
+                    </map:ReplaceWithTemplate>
+                  </map:ActionSequence>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:MarkAsNotMapped/>
+              </map:Default>
+            </map:Conditional>
+		      </map:CodeMap.Action>
+        </map:CodeMap>
+ 
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

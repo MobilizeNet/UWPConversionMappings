@@ -6,7 +6,52 @@
 
         <map:CodeMap Kind="Call" MemberName="SaveJpeg">
           <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithCalledMemberOwner>
+                      <map:AssignName>
+                        $writableBitmapInstance
+                      </map:AssignName>
+                    </map:WithCalledMemberOwner>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>
+                        $stream
+                      </map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ActionSequence>
+                    <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+                
+                    <map:AddPreStatementFromTemplate>
+                      <![CDATA[
+                      using(var itermediateStream = new Windows.Storage.Streams.InMemoryRandomAccessStream()) 
+                      {
+                        var encoder = await Windows.Graphics.Imaging.BitmapEncoder.CreateAsync(Windows.Graphics.Imaging.BitmapEncoder.JpegEncoderId,
+                                                                                               itermediateStream);
+                        encoder.SetPixelData(Windows.Graphics.Imaging.BitmapPixelFormat.Bgra8, 
+                                             Windows.Graphics.Imaging.BitmapAlphaMode.Ignore,
+                                             (uint)$writableBitmapInstance.PixelWidth, 
+                                             (uint)$writableBitmapInstance.PixelHeight, 
+                                             96.0, 96.0, 
+                                             $writableBitmapInstance.PixelBuffer.ToArray());
+                        await encoder.FlushAsync();
+                        itermediateStream.Seek(0);
+                        itermediateStream.AsStreamForRead().CopyTo($stream);
+                      }
+                      ]]>
+                    </map:AddPreStatementFromTemplate>
+                    <map:RemoveCurrentStatement/>
+                  </map:ActionSequence>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
             <map:MarkAsNotMapped/>
+              </map:Default>
+            </map:Conditional>
           </map:CodeMap.Action>
         </map:CodeMap>
 
@@ -17,6 +62,11 @@
         </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
+
+
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SaveJpeg"/>
+      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

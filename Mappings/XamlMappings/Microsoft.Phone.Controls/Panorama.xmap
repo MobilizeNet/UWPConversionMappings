@@ -6,7 +6,20 @@
       <xmap:XamlElementMapper.Maps>
         <xmap:XamlMap Kind="Element">
           <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReportConversionIssue
+                  Message="x:Name attributes used inside Panorama element may not be converted as expected"
+                  ReferenceUri="https://github.com/MobilizeNet/UWPConversionMappings/wiki/Panorama-to-Hub-considerations">
+                <xmap:ReportConversionIssue.Condition>                 
+                  <xmap:DescendantChildContainsProperty
+                      PropertyName="Name"
+                      PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+                </xmap:ReportConversionIssue.Condition>
+              </xmap:ReportConversionIssue>
+              
+              
             <xmap:RenameElement NewName="Hub" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+            </xmap:ActionSequence>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="Title" >

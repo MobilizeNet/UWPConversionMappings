@@ -35,6 +35,12 @@
               </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="NavigationMode">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
    
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>

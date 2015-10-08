@@ -72,6 +72,56 @@
           </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="EventDecl" MemberName="ZoomLevelChanged">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+               <map:ReplaceParameterDeclarationType Position="0">
+                 Windows.UI.Xaml.Controls.Maps.MapControl
+               </map:ReplaceParameterDeclarationType>
+                <map:ReplaceParameterDeclarationType Position="1">
+                  System.Object
+                </map:ReplaceParameterDeclarationType>              
+            </map:ActionSequence>           
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="ConvertGeoCoordinateToViewportPoint">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$point</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                        Windows.Foundation.Point point;
+                      ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:AddPreStatementFromTemplate>
+                    <![CDATA[
+                        $owner.GetOffsetFromLocation($point, out point);
+                      ]]>
+                  </map:AddPreStatementFromTemplate>
+                  <map:ReplaceWithTemplate>
+                    point
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep />
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
         <map:CodeMap Kind="Call" MemberName="SetView">
           <map:Conditional>
             <map:Case>
@@ -163,6 +213,48 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="ColorModeChanged">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CartographicModeChanged">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="GetMapElementAt">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="CenterChanged ">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:ReplaceParameterDeclarationType Position="0">
+                Windows.UI.Xaml.Controls.Maps.MapControl
+              </map:ReplaceParameterDeclarationType>
+              <map:ReplaceParameterDeclarationType Position="1">
+                System.Object
+              </map:ReplaceParameterDeclarationType>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Hold">
+          <map:ReplaceWithProperty NewProperty="MapHolding" />
+        </map:CodeMap>
+        <map:CodeMap Kind="EventDecl" MemberName="Hold">
+          <map:CodeMap.Action>
+              <map:ReplaceParameterDeclarationType Position="1">
+                Windows.UI.Xaml.Controls.Maps.MapInputEventArgs
+              </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="ConvertGeoCoordinateToViewportPoint">
           <map:Conditional>
             <map:Case>
@@ -201,11 +293,36 @@
           </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="EventDecl" MemberName="PitchChanged">
+          <map:ActionSequence>
+            <map:ReplaceParameterDeclarationType Position="0">
+              Windows.UI.Xaml.Controls.Maps.MapControl
+            </map:ReplaceParameterDeclarationType>
+            <map:ReplaceParameterDeclarationType Position="1">
+              System.Object
+            </map:ReplaceParameterDeclarationType>
+          </map:ActionSequence>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="HeadingChanged">
+          <map:ActionSequence>
+            <map:ReplaceParameterDeclarationType Position="0">
+              Windows.UI.Xaml.Controls.Maps.MapControl
+            </map:ReplaceParameterDeclarationType>
+            <map:ReplaceParameterDeclarationType Position="1">
+              System.Object
+            </map:ReplaceParameterDeclarationType>
+          </map:ActionSequence>
+        </map:CodeMap>
      
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.Metadata>
         <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SetView"/>
       </map:CodeMapPackage.Metadata>
+    <map:CodeMapPackage.ReferencedPackages>
+        <Reference>System.Windows.FrameworkElement</Reference>
+        <Reference>System.Windows.UIElement</Reference>
+      </map:CodeMapPackage.ReferencedPackages>
     </map:CodeMapPackage>  
   </MapUnit.Elements>
 </MapUnit>

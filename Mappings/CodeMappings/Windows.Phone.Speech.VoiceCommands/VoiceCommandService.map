@@ -4,11 +4,16 @@
     <map:CodeMapPackage Type="Windows.Phone.Speech.VoiceCommands.VoiceCommandService">
       <map:CodeMapPackage.Maps>
         
-        <map:CodeMap Kind="Call" MemberName="InstallCommandSetsFromFileAsync">
-          <map:RedirectCall
-            NewMethod="InstallCommandDefinitionsFromStorageFileAsync"
-            NewMethodOwner="Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager"
-            />
+        <map:CodeMap Kind="Type">
+          <map:ReplaceClassUsage
+            NewClassName="VoiceCommandDefinitionManager"
+            NewNamespace="Windows.ApplicationModel.VoiceCommands" />
+        </map:CodeMap>
+
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="InstalledCommandSets">
+          <map:RedirectProperty NewProperty="InstalledCommandDefinitions"/>
         </map:CodeMap>
 
         <map:CodeMap Kind="Call" MemberName="InstallCommandSetsFromFileAsync">

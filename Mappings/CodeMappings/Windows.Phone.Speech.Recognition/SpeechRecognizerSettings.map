@@ -1,25 +1,25 @@
 ﻿<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
          xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
-    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechRecognizerUI">
+    <map:CodeMapPackage Type="Windows.Phone.Speech.Recognition.SpeechRecognizerSettings">
       <map:CodeMapPackage.Maps>
         <map:CodeMap Kind="Type">
           <map:ReplaceClassUsage NewNamespace="Windows.Media.SpeechRecognition"
-                                 NewClassName="SpeechRecognizer" />
+                                 NewClassName="SpeechRecognizerUIOptions" />
         </map:CodeMap>
-
-        
-        <map:CodeMap Kind="MemberAccess" MemberName="Recognizer">
+        <map:CodeMap Kind="MemberAccess" MemberName="EndSilenceTimeout">
           <map:Conditional>
             <map:Case>
               <map:Case.Condition>
                 <map:WithLeftSideOfDottedAccess>
+                  <map:WithLeftSideOfDottedAccess>
                     <map:AssignName>$recognizer</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
                 </map:WithLeftSideOfDottedAccess>
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  $recognizer
+                  $recognizer.Timeouts.EndSilenceTimeout
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -28,10 +28,7 @@
             </map:Default>
           </map:Conditional>
         </map:CodeMap>
-        
-        <map:CodeMap Kind="MemberAccess" MemberName="Settings">
-          <map:ReplaceWithProperty NewProperty="UIOptions" />
-        </map:CodeMap>
+     
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

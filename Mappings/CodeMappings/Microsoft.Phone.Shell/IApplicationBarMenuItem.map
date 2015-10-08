@@ -19,7 +19,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)$obj).IsEnabled
+                    ((Windows.UI.Xaml.Controls.AppBarButton)$obj).IsEnabled
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
@@ -40,7 +40,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)$obj).Label
+                    ((Windows.UI.Xaml.Controls.AppBarButton)$obj).Label
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>

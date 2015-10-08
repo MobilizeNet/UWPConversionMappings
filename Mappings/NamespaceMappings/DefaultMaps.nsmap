@@ -38,5 +38,7 @@
   <Remove>Microsoft.Phone.Maps.Service</Remove>
   <Remove>Microsoft.Xna.Framework.Audio</Remove>
   <Remove>Microsoft.Phone.Scheduler</Remove>
+  <Remove>Microsoft.Xna.Framework.Media</Remove>
+  <Remove>Microsoft.Xna.Framework</Remove>
 </NamespaceMappings>
 

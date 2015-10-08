@@ -1,0 +1,35 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Windows.Interop.Content">
+      <map:CodeMapPackage.Maps>
+
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ScaleFactor">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              (int)Windows.Graphics.Display.DisplayInformation.GetForCurrentView().ResolutionScale
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ActualHeight">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Height
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ActualWidth">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

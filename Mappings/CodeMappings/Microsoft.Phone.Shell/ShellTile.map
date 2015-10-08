@@ -104,19 +104,22 @@
 
       <map:CodeMap Kind="Call" MemberName="Update">
         <map:Conditional>
-          <!-- Case for two arguments -->
           <map:Case>
             <map:Case.Condition>
               <map:WithMethodCall>
                 <map:ArgumentCount>1</map:ArgumentCount>
-                <map:WithArgument Position="0">
+                <map:WithCalledMemberOwner>
                   <map:AssignName>$owner</map:AssignName>
+                </map:WithCalledMemberOwner>
+
+                <map:WithArgument Position="0">
+                  <map:AssignName>$newTile</map:AssignName>
                 </map:WithArgument>
               </map:WithMethodCall>
             </map:Case.Condition>
             <map:Case.Action>
               <map:ReplaceWithTemplate>
-                await $owner.UpdateAsync();
+                Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForSecondaryTile($owner.TileId).Update(new Windows.UI.Notifications.TileNotification($newTile));
               </map:ReplaceWithTemplate>
             </map:Case.Action>
           </map:Case>

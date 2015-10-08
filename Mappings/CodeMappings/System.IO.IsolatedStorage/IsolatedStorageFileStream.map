@@ -12,48 +12,7 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="New" >
-          <map:CodeMap.Action>
-            <map:Conditional>
-              <map:Case>
-                <map:Case.Condition>
-                  <map:WithConstructorCall>
-                    <map:ArgumentCount>3</map:ArgumentCount>
-                    <!--<map:WithArgument Position="1">
-                      <map:Equals>FileMode.Append</map:Equals>
-                    </map:WithArgument>-->
-                    <map:WithArgument Position="0">
-                      <map:AssignName>$fileNameExpression</map:AssignName>
-                    </map:WithArgument>
-                    <map:WithArgument Position="2">
-                      <map:AssignName>$folderReference</map:AssignName>
-                    </map:WithArgument>
-                  </map:WithConstructorCall>
-                </map:Case.Condition>
-                <map:Case.Action>
-                  <map:ReplaceWithTemplate>await $folderReference.OpenStreamForWriteAsync($fileNameExpression, Windows.Storage.CreationCollisionOption.FailIfExists)</map:ReplaceWithTemplate>
-                </map:Case.Action>
-              </map:Case>
-              <map:Case>
-                <map:Case.Condition>
-                  <map:WithConstructorCall>
-                    <map:ArgumentCount>4</map:ArgumentCount>
-                    <map:WithArgument Position="0">
-                      <map:AssignName>$fileNameExpression</map:AssignName>
-                    </map:WithArgument>
-                    <map:WithArgument Position="3">
-                      <map:AssignName>$folderReference</map:AssignName>
-                    </map:WithArgument>
-                  </map:WithConstructorCall>
-                </map:Case.Condition>
-                <map:Case.Action>
-                  <map:ReplaceWithTemplate>await $folderReference.OpenStreamForWriteAsync($fileNameExpression, Windows.Storage.CreationCollisionOption.FailIfExists)</map:ReplaceWithTemplate>
-                </map:Case.Action>
-              </map:Case>
-              <map:Default>
                 <map:Keep/>
-              </map:Default>
-            </map:Conditional>
-          </map:CodeMap.Action>
         </map:CodeMap>
 
         <map:CodeMap Kind="Call" MemberName="Close">
@@ -62,9 +21,7 @@
 
       </map:CodeMapPackage.Maps>
 
-      <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="IsolatedStorageFileStream"/>
-      </map:CodeMapPackage.Metadata>
+
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

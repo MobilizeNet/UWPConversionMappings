@@ -101,7 +101,7 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="IsMenuEnabled">
           <map:CodeMap.Action>
-            <map:MarkAsNotMapped/>
+            <map:ReplaceWithProperty NewProperty="IsEnabled" />
           </map:CodeMap.Action>
         </map:CodeMap>
         

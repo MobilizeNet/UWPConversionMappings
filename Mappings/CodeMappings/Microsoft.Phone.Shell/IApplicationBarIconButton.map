@@ -5,7 +5,8 @@
       <map:CodeMapPackage.Maps>
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" NewClassName="ICommandBarElement" />
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls" 
+                                   NewClassName="ICommandBarElement" />
           </map:CodeMap.Action>
         </map:CodeMap>
         <map:CodeMap Kind="MemberAccess" MemberName="IsEnabled">
@@ -19,7 +20,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)$obj).IsEnabled
+                    ((Windows.UI.Xaml.Controls.AppBarButton)$obj).IsEnabled
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
@@ -40,7 +41,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    ((Windows.UI.Xaml.Controls.Primitives.ButtonBase)$obj).Label
+                    ((Windows.UI.Xaml.Controls.AppBarButton)$obj).Label
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
@@ -56,6 +57,60 @@
             <map:MarkAsNotMapped/>
           </map:CodeMap.Action>
         </map:CodeMap>
+        <map:CodeMap Kind="MemberAccess" MemberName="IconUri">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithLeftSideOfDottedAccess>
+                    <map:AssignName>$obj</map:AssignName>
+                  </map:WithLeftSideOfDottedAccess>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    ((Windows.UI.Xaml.Controls.BitmapIcon)((Windows.UI.Xaml.Controls.AppBarButton)$obj).Icon).UriSource
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Assign" MemberName="IconUri">
+          <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithAssignment>
+                    <map:WithAssignmentLeftSide>
+                      <map:WithLeftSideOfDottedAccess>
+                        <map:AssignName>$obj</map:AssignName>
+                      </map:WithLeftSideOfDottedAccess>
+                    </map:WithAssignmentLeftSide>
+                    <map:WithAssignmentRightSide>
+                        <map:AssignName>$uri</map:AssignName>
+                    </map:WithAssignmentRightSide>
+                  </map:WithAssignment>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    ((Windows.UI.Xaml.Controls.AppBarButton)$obj).Icon = new Windows.UI.Xaml.Controls.BitmapIcon()
+                    {
+                      UriSource = $uri
+                    }
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

@@ -73,7 +73,39 @@
 
         <map:CodeMap Kind="Call" MemberName="Render">
           <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:Conditional>
+                <map:Case>
+                  <map:Case.Condition>
+                    <map:WithMethodCall>
+                      <map:WithCalledMemberOwner>
+                        <map:AssignName>$obj</map:AssignName>
+                      </map:WithCalledMemberOwner>
+                      <map:WithArgument Position="0">
+                        <map:AssignName>$control</map:AssignName>
+                      </map:WithArgument>
+                    <map:WithArgument Position="1">
+                        <map:AssignName>$transform</map:AssignName>
+                      </map:WithArgument>
+                    </map:WithMethodCall>
+                  </map:Case.Condition>
+                  <map:Case.Action>
+                    <map:ActionSequence>
+                      <map:AddHelper Path="..\Helpers\WriteableBitmapHelperExtensions.cs"/>
+                      <map:ReplaceWithTemplate>
+                        <![CDATA[
+                        await WindowsPhoneUWP.UpgradeHelpers.WriteableBitmapHelper.RenderHelper( $obj, $control, $transform)
+                        ]]>
+                      </map:ReplaceWithTemplate>
+                    </map:ActionSequence>
+                  </map:Case.Action>
+                  </map:Case>
+                <map:Default>
             <map:MarkAsNotMapped/>
+                </map:Default>
+              </map:Conditional>
+
+            </map:ActionSequence>
           </map:CodeMap.Action>
         </map:CodeMap>
 
@@ -99,6 +131,10 @@
 
 
       </map:CodeMapPackage.Maps>
+
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Render"/>
+      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

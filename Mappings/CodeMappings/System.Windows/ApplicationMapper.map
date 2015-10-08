@@ -60,7 +60,9 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="Host">
           <map:CodeMap.Action>
-            <map:MarkAsNotMapped />
+            <map:ReplaceWithTemplate>
+              Application.Current
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

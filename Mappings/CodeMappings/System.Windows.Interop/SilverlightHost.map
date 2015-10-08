@@ -1,23 +1,22 @@
 <MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
          xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
   <MapUnit.Elements>
-    <map:CodeMapPackage Type="System.Windows.Input.Key">
+    <map:CodeMapPackage Type="System.Windows.Interop.SilverlightHost">
       <map:CodeMapPackage.Maps>
 
-        <map:CodeMap Kind="Type">
+        <map:CodeMap Kind="MemberAccess" MemberName="Content">
           <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewNamespace="Windows.System"
-                                   NewClassName="VirtualKey" />
+            <map:ReplaceWithTemplate>
+              Windows.Graphics.Display.DisplayInformation.GetForCurrentView()
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="Shift">
-          <map:Keep />
-        </map:CodeMap>
-
-        <map:CodeMap Kind="Assign" MemberName="Shift">
+        <map:CodeMap Kind="MemberAccess" MemberName="Settings">
           <map:CodeMap.Action>
-          <map:MarkAsNotMapped />
+            <map:ReplaceWithTemplate>
+              Application.Current.DebugSettings
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

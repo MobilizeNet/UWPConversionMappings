@@ -99,6 +99,9 @@
       <map:CodeMapPackage.Metadata>
         <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SaveToString; InvokeScript"/>
       </map:CodeMapPackage.Metadata>
+      <map:CodeMapPackage.ReferencedPackages>
+        <Reference>System.Windows.FrameworkElement</Reference>
+      </map:CodeMapPackage.ReferencedPackages>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

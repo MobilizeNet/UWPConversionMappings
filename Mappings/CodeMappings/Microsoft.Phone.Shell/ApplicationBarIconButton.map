@@ -124,7 +124,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  $owner.Icon.BaseUri
+                  ((Windows.UI.Xaml.Controls.BitmapIcon)$owner.Icon).UriSource
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>

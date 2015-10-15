@@ -15,9 +15,12 @@
                 </map:WithLeftSideOfDottedAccess>
               </map:Case.Condition>
               <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddNamespaceImport>System.IO</map:AddNamespaceImport>
                 <map:ReplaceWithTemplate>
                    await $obj.OpenStreamForReadAsync()
                 </map:ReplaceWithTemplate>
+                </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
             <map:Default>

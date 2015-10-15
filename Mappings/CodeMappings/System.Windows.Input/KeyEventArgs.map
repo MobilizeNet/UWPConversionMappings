@@ -6,10 +6,12 @@
 
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-			        <map:ReplaceClassUsage NewNamespace="Windows.UI.Core" NewClassName="KeyEventArgs" />
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Input" NewClassName="KeyRoutedEventArgs" />
 		      </map:CodeMap.Action>
         </map:CodeMap>
  
+
+
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

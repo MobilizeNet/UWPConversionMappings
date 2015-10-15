@@ -36,6 +36,28 @@
           </map:Conditional>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="UserIdleDetectionMode">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:AddHelper Path="..\Helpers\PhoneApplicationServiceHelper.cs" />
+              <map:ReplaceWithTemplate>
+                WindowsPhoneUWP.UpgradeHelpers.PhoneApplicationServiceHelper.IdleDetectionMode
+              </map:ReplaceWithTemplate>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="ApplicationIdleDetectionMode">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:AddHelper Path="..\Helpers\PhoneApplicationServiceHelper.cs" />
+              <map:ReplaceWithTemplate>
+                WindowsPhoneUWP.UpgradeHelpers.PhoneApplicationServiceHelper.IdleDetectionMode
+              </map:ReplaceWithTemplate>
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="Assign" MemberName="ApplicationIdleDetectionMode">
           <map:Conditional>
             <map:Case>
@@ -98,7 +120,7 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="State">
           <map:CodeMap.Action>
-            <map:MarkAsNotMapped/>
+            <map:ReplaceWithTemplate>Windows.Storage.ApplicationData.Current.LocalSettings.Values</map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

@@ -10,6 +10,14 @@
 					</map:CodeMap.Action>
 				</map:CodeMap>
 
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:ReplaceWithTemplate>
+              Windows.UI.Xaml.Application.Current
+            </map:ReplaceWithTemplate>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="GetResourceStream">
           <map:CodeMap.Action>
             <map:Conditional>

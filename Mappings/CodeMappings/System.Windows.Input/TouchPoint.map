@@ -9,6 +9,12 @@
             <map:ReplaceClassUsage NewNamespace="Windows.UI.Input" NewClassName="PointerPoint" />
         </map:CodeMap.Action>
       </map:CodeMap>
+        
+      <map:CodeMap Kind="New">
+        <map:CodeMap.Action>
+          <map:MarkAsNotMapped />
+        </map:CodeMap.Action>
+      </map:CodeMap>
 
       <map:CodeMap Kind="MemberAccess" MemberName="Action">
         <map:CodeMap.Action>

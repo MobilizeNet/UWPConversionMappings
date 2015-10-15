@@ -46,6 +46,7 @@
 
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.ReferencedPackages>
+        <Reference>System.Windows.FrameworkElement</Reference>
         <Reference>System.Windows.UIElement</Reference>
       </map:CodeMapPackage.ReferencedPackages>
     </map:CodeMapPackage>

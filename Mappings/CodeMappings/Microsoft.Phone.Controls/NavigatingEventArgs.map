@@ -10,27 +10,27 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="Equals">
+        <map:CodeMap Kind="Call"  MemberName="Equals">
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="Finalize">
+        <map:CodeMap Kind="Call"  MemberName="Finalize">
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="GetHashCode">
+        <map:CodeMap Kind="Call"  MemberName="GetHashCode">
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="GetType">
+        <map:CodeMap Kind="Call"  MemberName="GetType">
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="MemberwiseClone">
+        <map:CodeMap Kind="Call"  MemberName="MemberwiseClone">
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess"  MemberName="ToString">
+        <map:CodeMap Kind="Call"  MemberName="ToString">
           <map:Keep />
         </map:CodeMap>
 

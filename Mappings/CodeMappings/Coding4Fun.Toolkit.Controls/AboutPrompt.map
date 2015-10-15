@@ -43,7 +43,7 @@
           <map:Keep/>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="Show">
+        <map:CodeMap Kind="Call" MemberName="Show">
           <map:Keep/>
         </map:CodeMap>
 

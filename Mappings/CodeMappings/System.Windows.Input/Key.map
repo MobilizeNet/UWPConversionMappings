@@ -15,9 +15,15 @@
           <map:Keep />
         </map:CodeMap>
 
-        <map:CodeMap Kind="Assign" MemberName="Shift">
+        <map:CodeMap Kind="MemberAccess" MemberName="Ctrl">
           <map:CodeMap.Action>
-          <map:MarkAsNotMapped />
+            <map:ReplaceWithProperty NewProperty="Control" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="CapsLock">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="CapitalLock" />
           </map:CodeMap.Action>
         </map:CodeMap>
 

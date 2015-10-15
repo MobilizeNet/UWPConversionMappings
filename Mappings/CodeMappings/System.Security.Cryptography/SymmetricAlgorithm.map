@@ -1,0 +1,58 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Security.Cryptography.SymmetricAlgorithm">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="IV">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.cryptography.core.cryptographicengine.aspx"
+                />              
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Assign" MemberName="Key">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.cryptography.core.cryptographicengine.aspx"
+                />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CreateDecryptor">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.cryptography.core.cryptographicengine.aspx"
+                />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="Call" MemberName="CreateEncryptor">
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.cryptography.core.cryptographicengine.aspx"
+                />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+      </map:CodeMapPackage.Maps>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

@@ -13,11 +13,11 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="Convert">
+        <map:CodeMap Kind="Call" MemberName="Convert">
           <map:Keep/>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="ConvertBack">
+        <map:CodeMap Kind="Call" MemberName="ConvertBack">
           <map:Keep/>
         </map:CodeMap>
 

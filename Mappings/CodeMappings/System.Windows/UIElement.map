@@ -234,11 +234,27 @@
         </map:CodeMap>
 
         <map:CodeMap Kind="Call" MemberName="CaptureMouse">
-          <map:ReplaceWithProperty NewProperty="CapturePointer" />
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.capturepointer"
+                />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
         </map:CodeMap>
 
         <map:CodeMap Kind="Call" MemberName="ReleaseMouseCapture">
-          <map:ReplaceWithProperty NewProperty="ReleasePointerCapture" />
+          <map:CodeMap.Action>
+            <map:ActionSequence>
+              <map:MarkAsNotMapped/>
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.releasepointercapture"
+                />
+            </map:ActionSequence>
+          </map:CodeMap.Action>
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="KeyDownEvent">

@@ -6,11 +6,6 @@
                             ElementNamespace="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
       
       <xmap:XamlElementMapper.Maps>
-        <!--  <xmap:XamlMap Kind="Element">
-          <xmap:XamlMap.Action>
-            <xmap:RenameElement NewName="Page" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>-->
 
         <xmap:XamlMap Kind="Property" PropertyName="NavigationInTransition" >
           <xmap:XamlMap.Action>
@@ -20,8 +15,6 @@
 
         <xmap:XamlMap Kind="Property" PropertyName="NavigationOutTransition" >
           <xmap:XamlMap.Action>
-            <!--<xmap:RenameProperty NewPropertyLocalName="Transitions" NewElementName="Page" NewXmlNamespaceName="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  />-->
-            <!--<xmap:CommentOutElement />-->
             <xmap:CommentOutProperty />
           </xmap:XamlMap.Action> 
         </xmap:XamlMap>

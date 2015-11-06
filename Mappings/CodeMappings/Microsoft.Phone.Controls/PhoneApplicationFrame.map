@@ -11,6 +11,12 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="Call" MemberName="OnApplyTemplate">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="Orientation">
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>Windows.Graphics.Display.DisplayInformation.GetForCurrentView().CurrentOrientation</map:ReplaceWithTemplate>

@@ -12,7 +12,7 @@ namespace WindowsPhoneUWP.UpgradeHelpers
 			object tmp;
 			bool result;
 			value = default(T);
-			if (result = settings.TryGetValue(key, out tmp))
+			if (result = settings.Values.TryGetValue(key, out tmp))
 			{
 				value = (T)tmp;
 			}

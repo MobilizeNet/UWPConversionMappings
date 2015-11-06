@@ -23,11 +23,11 @@
           <map:Keep/>
         </map:CodeMap>
 
-        <!--<map:CodeMap Kind="Call" MemberName="OnItemsChanged">
+        <map:CodeMap Kind="Call" MemberName="OnItemsChanged">
           <map:Keep/>
         </map:CodeMap>
 
-        <map:CodeMap Kind="Call" MemberName="OnItemsChanged">
+        <!--<map:CodeMap Kind="Call" MemberName="OnItemsChanged">
           <map:CodeMap.Action>
             <map:ReplaceParameterDeclarationType Position="0">
               <![CDATA[  object ]]>

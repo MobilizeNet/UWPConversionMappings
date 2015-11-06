@@ -120,7 +120,10 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="State">
           <map:CodeMap.Action>
-            <map:ReplaceWithTemplate>Windows.Storage.ApplicationData.Current.LocalSettings.Values</map:ReplaceWithTemplate>
+            <map:ActionSequence>
+              <map:AddHelper>..\Helpers\TransientStateHelper.cs</map:AddHelper>
+              <map:ReplaceWithTemplate>WindowsPhoneUWP.UpgradeHelpers.TransientStateHelper.Values</map:ReplaceWithTemplate>
+            </map:ActionSequence>
           </map:CodeMap.Action>
         </map:CodeMap>
 

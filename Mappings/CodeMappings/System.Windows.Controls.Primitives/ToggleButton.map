@@ -16,6 +16,12 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="Call" MemberName="OnApplyTemplate">
+          <map:CodeMap.Action>
+            <map:Keep />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="Tap">
           <map:ReplaceWithProperty NewProperty="Tapped" />
         </map:CodeMap>

@@ -137,6 +137,12 @@
             </map:ActionSequence>
           </map:CodeMap.Action>
         </map:CodeMap>
+        
+        <map:CodeMap Kind="MemberAccess" MemberName="Loaded">
+          <map:CodeMap.Action>
+            <map:Keep/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>

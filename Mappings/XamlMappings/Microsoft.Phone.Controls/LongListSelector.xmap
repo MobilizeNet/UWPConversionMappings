@@ -30,6 +30,7 @@
             <xmap:BindPropertyValueElement ContextKeyName="$HideIfEmptyTemplate" PropertyName="HideEmptyGroups"/>
             <xmap:BindPropertyValueElement ContextKeyName="$ItemTemplate" PropertyName="JumpListStyle"/>
             <xmap:BindPropertyValueElement ContextKeyName="$controlName" PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+            <xmap:BindPropertyValueElement ContextKeyName="$selectedItemChangedHandler" PropertyName="SelectionChanged"/>
 
 
             <xmap:SetPropertyValueToComplexElement
@@ -104,6 +105,13 @@
                 </xmap:SetPropertyValueToBoundVariable.Condition>
               </xmap:SetPropertyValueToBoundVariable>
  
+              <xmap:SetPropertyValueToBoundVariable PropertyName="SelectionChanged" VariableName="$selectedItemChangedHandler">
+
+                <xmap:SetPropertyValueToBoundVariable.Condition>
+                  <xmap:VariableIsBoundToValue>$selectedItemChangedHandler</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToBoundVariable.Condition>
+              </xmap:SetPropertyValueToBoundVariable>
+
               <xmap:SetPropertyValueToBoundVariable PropertyName="Name" VariableName="$controlName" 
                                                     PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml">
 
@@ -111,6 +119,14 @@
                   <xmap:VariableIsBoundToValue>$controlName</xmap:VariableIsBoundToValue>
                 </xmap:SetPropertyValueToBoundVariable.Condition>
               </xmap:SetPropertyValueToBoundVariable>
+                          
+              <xmap:SetPropertyValueToSimpleValue AttributeToChangeName="FieldModifier" NewPropertyValue="internal"
+                                                    AttributeToChangeNamespace="http://schemas.microsoft.com/winfx/2006/xaml">
+
+                <xmap:SetPropertyValueToSimpleValue.Condition>
+                  <xmap:VariableIsBoundToValue>$controlName</xmap:VariableIsBoundToValue>
+                </xmap:SetPropertyValueToSimpleValue.Condition>
+              </xmap:SetPropertyValueToSimpleValue>
                           
             </xmap:WithComplexPropertyValue>
 
@@ -132,6 +148,7 @@
             <xmap:RemoveAttribute PropertyName="Header"/>
             <xmap:RemoveAttribute PropertyName="GroupStyle"/>
             <xmap:RemoveAttribute PropertyName="ItemTemplate"/>            
+            <xmap:RemoveAttribute PropertyName="SelectionChanged"/>
           </xmap:ActionSequence>
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="GroupFooterTemplate" >
@@ -145,11 +162,7 @@
             <xmap:CommentOutProperty />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>-->
-        <xmap:XamlMap Kind="Property" PropertyName="SelectionChanged" >
-          <xmap:XamlMap.Action>
-            <xmap:CommentOutProperty />
-          </xmap:XamlMap.Action>
-        </xmap:XamlMap>
+        
         <!--<xmap:XamlMap Kind="Property" PropertyName="HideEmptyGroups" >
           <xmap:XamlMap.Action>
             <xmap:CommentOutProperty />

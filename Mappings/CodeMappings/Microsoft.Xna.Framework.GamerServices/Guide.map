@@ -17,7 +17,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    (int)$arg.Result.Id
+                    (int)$arg.Id
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
@@ -69,9 +69,12 @@
                           messageBoxDialog.Commands.Add(new Windows.UI.Popups.UICommand() { Id = buttonTextIndex++, Label = buttonToAdd });
                       }]]>
                     </map:AddPreStatementFromTemplate>
+                    <map:AddPreStatementFromTemplate>
+                      <![CDATA[  System.Action<Windows.UI.Popups.IUICommand> messageCallback = $callback; ]]>
+                    </map:AddPreStatementFromTemplate>
                     <map:ReplaceWithTemplate>
                       <![CDATA[
-                      messageBoxDialog.ShowAsync().AsTask().ContinueWith($callback)
+                      messageCallback(await messageBoxDialog.ShowAsync());
                       ]]>
                     </map:ReplaceWithTemplate>
                   </map:ActionSequence>
@@ -85,6 +88,9 @@
         </map:CodeMap>
  
       </map:CodeMapPackage.Maps>
+      <map:CodeMapPackage.Metadata>
+          <map:PackageMetadata Key="ASYNC_MEMBERS" Value="BeginShowMessageBox"/>
+      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

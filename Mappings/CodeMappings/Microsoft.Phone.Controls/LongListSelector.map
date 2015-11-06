@@ -146,6 +146,12 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="Call" MemberName="ScrollTo">
+          <map:CodeMap.Action>
+            <map:RedirectCall NewMethod="ScrollIntoView" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>
   </MapUnit.Elements>

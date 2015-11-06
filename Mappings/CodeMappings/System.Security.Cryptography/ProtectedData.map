@@ -1,0 +1,86 @@
+<MapUnit xmlns="clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers"
+         xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers">
+  <MapUnit.Elements>
+    <map:CodeMapPackage Type="System.Security.Cryptography.ProtectedData">
+      <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Call" MemberName="Protect" >
+          <map:CodeMap.Action>
+
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$data</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="1">
+                      <map:AssignName>$optionaEntropy</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ActionSequence>
+                    <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+
+                    <map:ReplaceWithTemplate>
+                      <![CDATA[
+                (await new Windows.Security.Cryptography.DataProtection.DataProtectionProvider("LOCAL=user").ProtectAsync($data.AsBuffer())).ToArray()
+                ]]>
+                    </map:ReplaceWithTemplate>
+                  </map:ActionSequence>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+        <map:CodeMap Kind="Call" MemberName="Unprotect" >
+          <map:CodeMap.Action>
+
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithMethodCall>
+                    <map:WithArgument Position="0">
+                      <map:AssignName>$data</map:AssignName>
+                    </map:WithArgument>
+                    <map:WithArgument Position="1">
+                      <map:AssignName>$optionaEntropy</map:AssignName>
+                    </map:WithArgument>
+                  </map:WithMethodCall>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ActionSequence>
+                    <map:AddNamespaceImport>System.Runtime.InteropServices.WindowsRuntime</map:AddNamespaceImport>
+
+                    <map:ReplaceWithTemplate>
+                      <![CDATA[
+                (await new Windows.Security.Cryptography.DataProtection.DataProtectionProvider("LOCAL=user").UnprotectAsync($data.AsBuffer())).ToArray()
+                ]]>
+                    </map:ReplaceWithTemplate>
+                  </map:ActionSequence>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
+                <map:Keep/>
+              </map:Default>
+            </map:Conditional>
+
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+
+      </map:CodeMapPackage.Maps>
+
+      <map:CodeMapPackage.Metadata>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Protect; Unprotect"/>
+      </map:CodeMapPackage.Metadata>
+    </map:CodeMapPackage>
+  </MapUnit.Elements>
+</MapUnit>

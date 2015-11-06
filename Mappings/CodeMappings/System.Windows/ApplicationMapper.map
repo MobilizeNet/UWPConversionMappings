@@ -82,6 +82,18 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="UnhandledException">
+          <map:Keep/>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="EventDecl" MemberName="UnhandledException">
+          <map:CodeMap.Action>
+            <map:ReplaceParameterDeclarationType Position="1">
+              Windows.UI.Xaml.UnhandledExceptionEventArgs
+            </map:ReplaceParameterDeclarationType>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.Metadata>
         <map:PackageMetadata Key="ASYNC_MEMBERS" Value="GetResourceStream"/>

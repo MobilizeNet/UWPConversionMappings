@@ -3,10 +3,26 @@
     <map:CodeMapPackage Type="System.Diagnostics.DebuggableAttribute">
       <map:CodeMapPackage.Maps>
 
+        <map:CodeMap Kind="New">
+          <map:Conditional>
+            <!-- Case for two arguments and first parameter of type Exception, then Boolean -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithConstructorCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
+                </map:WithConstructorCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:MarkAsNotMapped/>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
       </map:CodeMapPackage.Maps>
-      <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="DIRECT_MAPPING" Value="true"/>
-      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

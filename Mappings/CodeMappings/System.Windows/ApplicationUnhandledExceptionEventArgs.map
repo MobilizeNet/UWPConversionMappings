@@ -2,21 +2,28 @@
          xmlns:map="clr-namespace:Mobilize.Mappers.Extensibility.Code;assembly=Mobilize.ExtensibleMappers"
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'>
   <MapUnit.Elements>
-    <map:CodeMapPackage Type="System.Windows.Controls.Button">
+    <map:CodeMapPackage Type="System.Windows.ApplicationUnhandledExceptionEventArgs">
       <map:CodeMapPackage.Maps>
 
         <map:CodeMap Kind="Type">
           <map:CodeMap.Action>
-            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml.Controls"
-                                   NewClassName="Button" />
+            <map:ReplaceClassUsage NewNamespace="Windows.UI.Xaml"
+                                   NewClassName="UnhandledExceptionEventArgs" />
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="Call" MemberName="OnApplyTemplate">
+        <map:CodeMap Kind="MemberAccess" MemberName="ExceptionObject">
+          <map:CodeMap.Action>
+            <map:ReplaceWithProperty NewProperty="Exception"/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Handled">
           <map:CodeMap.Action>
             <map:Keep />
           </map:CodeMap.Action>
         </map:CodeMap>
+
 
       </map:CodeMapPackage.Maps>
       <map:CodeMapPackage.ReferencedPackages>

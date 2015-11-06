@@ -9,10 +9,29 @@
             <xmap:CommentOutProperty/>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="NavigateUri">
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ActionSequence.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="NavigateUri" PropertyValueRegex="^/.*\.xaml"/>
+              </xmap:ActionSequence.Condition>
+              <xmap:AddHelper HelperPath="..\Helpers\LocalNavigationHelper.cs"/>
+              <xmap:BindPropertyValueElement ContextKeyName="$uri" PropertyName="NavigateUri"/>
+              <xmap:SetPropertyValueToSimpleValue
+                                   AttributeToChangeName="LocalNavigationHelper.DestinationXamlPage"
+                                   AttributeToChangeNamespace="using:WindowsPhoneUWP.UpgradeHelpers"
+                                   NewPropertyValue="$uri" />
+              <xmap:RemoveAttribute PropertyName="NavigateUri"/>
+            </xmap:ActionSequence>
+
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
         <Reference>CommonColor</Reference>
         <Reference>CommonEventsToChange</Reference>
+        <Reference>CommonAttributesToRemove</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>

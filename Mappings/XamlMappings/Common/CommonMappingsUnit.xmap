@@ -38,6 +38,7 @@
                 <xmap:AnyConditionApplies>
                   <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeNormal" />
                   <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeSmall" />
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeMedium" />
                   <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeLarge" />
                 </xmap:AnyConditionApplies>
               </xmap:CommentOutProperty.Condition>
@@ -81,11 +82,16 @@
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="FontSize" >
           <xmap:XamlMap.Action>
-            <xmap:RemoveAttribute>
-              <xmap:RemoveAttribute.Condition>
+            <xmap:CommentOutProperty>
+              <xmap:CommentOutProperty.Condition>
+                <xmap:AnyConditionApplies>
                 <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeNormal" />
-              </xmap:RemoveAttribute.Condition>
-            </xmap:RemoveAttribute>
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeSmall" />
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeMedium" />
+                  <xmap:PropertyUsesStaticResource PropertyName="FontSize" StaticResourceName="PhoneFontSizeLarge" />
+                </xmap:AnyConditionApplies>
+              </xmap:CommentOutProperty.Condition>
+            </xmap:CommentOutProperty>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
         <xmap:XamlMap Kind="Property" PropertyName="Foreground" >
@@ -253,6 +259,19 @@
         <xmap:XamlMap Kind="ElementPostChildren">
           <xmap:XamlMap.Action>
             <xmap:ReplaceNamespaceDeclaration AttributeValueRegex="clr-namespace:[ ]*([^;]*)(;.*)?$" Replacement="using:$1" />
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="ElementPostChildren">
+          <xmap:XamlMap.Action>
+            <xmap:SetPropertyValueToSimpleValue
+                AttributeToChangeName="FieldModifier"
+                AttributeToChangeNamespace="http://schemas.microsoft.com/winfx/2006/xaml"
+                NewPropertyValue="internal" >
+              <xmap:SetPropertyValueToSimpleValue.Condition>
+                <xmap:ElementContainsAttribute PropertyLocalName="Name"/>
+              </xmap:SetPropertyValueToSimpleValue.Condition>
+            </xmap:SetPropertyValueToSimpleValue>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
       </xmap:XamlElementMappingActions.Maps>

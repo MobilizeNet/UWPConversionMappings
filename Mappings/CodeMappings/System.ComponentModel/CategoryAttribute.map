@@ -3,10 +3,14 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.ComponentModel.CategoryAttribute">
       <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Type">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
       </map:CodeMapPackage.Maps>
-      <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="DIRECT_MAPPING" Value="true"/>
-      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

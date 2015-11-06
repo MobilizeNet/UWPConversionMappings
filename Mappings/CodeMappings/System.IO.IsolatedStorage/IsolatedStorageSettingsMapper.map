@@ -106,9 +106,16 @@
         
         <map:CodeMap Kind="MemberAccess" MemberName="Count">
           <map:CodeMap.Action>
-            <map:ReplaceWithProperty NewProperty="Count" NewPropertyOwner="Values" />
+            <map:RedirectProperty NewProperty="Count" NewPropertyOwner="Values" />
           </map:CodeMap.Action>
         </map:CodeMap>
+
+        <map:CodeMap Kind="MemberAccess" MemberName="Clear">
+          <map:CodeMap.Action>
+            <map:RedirectProperty NewProperty="Clear" NewPropertyOwner="Values" />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+        
         <map:CodeMap Kind="ElementAccess">
           <map:CodeMap.Action>
             <map:RedirectIndexer ToProperty="Values" />

@@ -54,9 +54,15 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="BackStack">
+        <map:CodeMap Kind="Call" MemberName="Navigate">
           <map:CodeMap.Action>
+            <map:ActionSequence>
             <map:MarkAsNotMapped />
+              <map:ReportConversionIssue
+                Message="This element requires a special manual conversion"
+                ReferenceUri="https://msdn.microsoft.com/en-us/library/windows/apps/hh702394.aspx"
+                />
+            </map:ActionSequence>
           </map:CodeMap.Action>
         </map:CodeMap>
 

@@ -40,5 +40,7 @@
   <Remove>Microsoft.Phone.Scheduler</Remove>
   <Remove>Microsoft.Xna.Framework.Media</Remove>
   <Remove>Microsoft.Xna.Framework</Remove>
+  <Remove>System.Windows.Interactivity</Remove>
+  <Remove>System.Windows.Interop</Remove>
 </NamespaceMappings>
 

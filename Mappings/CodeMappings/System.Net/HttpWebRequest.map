@@ -30,7 +30,11 @@
           </map:Conditional>
         </map:CodeMap>
 
-        
+        <map:CodeMap Kind="MemberAccess" MemberName="AllowAutoRedirect">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
 
         
       </map:CodeMapPackage.Maps>

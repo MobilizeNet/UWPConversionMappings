@@ -1,0 +1,66 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers'
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+  <MapUnit.Elements>
+    <xmap:XamlElementMapper ElementName="InkPresenter" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+      <xmap:XamlElementMapper.Maps>
+        <xmap:XamlMap Kind="Element" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <!--<xmap:RenameElement NewName="InkCanvas"
+                                  NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>-->
+              <xmap:BindPropertyValueElement ContextKeyName="$controlName" PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+              <xmap:BindPropertyValueElement ContextKeyName="$simpleName" PropertyName="Name"/>
+              <xmap:SetPropertyValueToComplexElement PropertyName="tmp">
+                <![CDATA[
+                <InkCanvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                </InkCanvas>
+                ]]>
+              </xmap:SetPropertyValueToComplexElement>
+
+              <xmap:WithComplexPropertyValue PropertyName="tmp">
+                <xmap:ActionSequence>
+                <xmap:SetPropertyValueToBoundVariable PropertyName="Name" VariableName="$controlName"
+                                                    PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml">
+
+                  <xmap:SetPropertyValueToBoundVariable.Condition>
+                    <xmap:VariableIsBoundToValue>$controlName</xmap:VariableIsBoundToValue>
+                  </xmap:SetPropertyValueToBoundVariable.Condition>
+                </xmap:SetPropertyValueToBoundVariable>
+
+                  <xmap:SetPropertyValueToBoundVariable PropertyName="Name" VariableName="$simpleName"
+                                                    PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml">
+
+                    <xmap:SetPropertyValueToBoundVariable.Condition>
+                      <xmap:VariableIsBoundToValue>$simpleName</xmap:VariableIsBoundToValue>
+                    </xmap:SetPropertyValueToBoundVariable.Condition>
+                  </xmap:SetPropertyValueToBoundVariable>
+                </xmap:ActionSequence>
+              </xmap:WithComplexPropertyValue>
+
+              <xmap:RemoveAttribute PropertyName="Name" PropertyNamespace="http://schemas.microsoft.com/winfx/2006/xaml"/>
+              <xmap:RemoveAttribute PropertyName="Name" />
+
+
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="Property" PropertyName="tmp">
+          <xmap:MoveValueToContentProperty AtTheEnd="true"/>
+        </xmap:XamlMap>
+        <xmap:XamlMap Kind="ElementPostChildren">
+          
+          <xmap:RenameElement NewName="Grid"
+                              NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation"/>
+
+        </xmap:XamlMap>
+      </xmap:XamlElementMapper.Maps>
+      <xmap:XamlElementMapper.ReferencedPackages>
+        <Reference>CommonAttributesToRemove</Reference>
+        <Reference>CommonPostMappingActions</Reference>
+        <Reference>CommonEventsToChange</Reference>
+      </xmap:XamlElementMapper.ReferencedPackages>
+    </xmap:XamlElementMapper>
+  </MapUnit.Elements>
+</MapUnit>
+

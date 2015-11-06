@@ -12,6 +12,11 @@
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
             </xmap:XamlElementMapper.Maps>
+          <xmap:XamlElementMapper.ReferencedPackages>
+            <Reference>CommonAttributesToRemove</Reference>
+            <Reference>CommonEventsToChange</Reference>
+            <Reference>CommonColor</Reference>
+          </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>
 </MapUnit>

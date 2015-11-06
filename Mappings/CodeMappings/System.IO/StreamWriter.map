@@ -25,7 +25,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open))
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open))
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -46,7 +46,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append))
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append))
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -66,7 +66,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open))
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open))
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -86,7 +86,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open))
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open))
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -94,7 +94,7 @@
             <map:Case>
               <map:Case.Condition>
                 <map:WithConstructorCall>
-                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:ArgumentCount>3</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
                     <map:AssignName>$path</map:AssignName>
@@ -111,14 +111,14 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append), $encoding)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append), $encoding)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <map:Case>
               <map:Case.Condition>
                 <map:WithConstructorCall>
-                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:ArgumentCount>3</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
                     <map:AssignName>$path</map:AssignName>
@@ -135,7 +135,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -159,7 +159,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open), $encoding)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open), $encoding)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -167,7 +167,7 @@
             <map:Case>
               <map:Case.Condition>
                 <map:WithConstructorCall>
-                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:ArgumentCount>4</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
                     <map:AssignName>$path</map:AssignName>
@@ -188,14 +188,14 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append), $encoding, $buffer)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Append), $encoding, $buffer)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
             <map:Case>
               <map:Case.Condition>
                 <map:WithConstructorCall>
-                  <map:ArgumentCount>2</map:ArgumentCount>
+                  <map:ArgumentCount>4</map:ArgumentCount>
                   <map:WithArgument Position="0">
                     <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
                     <map:AssignName>$path</map:AssignName>
@@ -216,7 +216,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding, $buffer)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, FileMode.Open), $encoding, $buffer)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>
@@ -244,7 +244,7 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
-                  new StreamWriter(IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open), $encoding, $buffer)
+                  new StreamWriter(System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication().OpenFile($path, $append ? FileMode.Append : FileMode.Open), $encoding, $buffer)
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>

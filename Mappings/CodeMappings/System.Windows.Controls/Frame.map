@@ -29,7 +29,9 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="CurrentSource">
           <map:CodeMap.Action>
-            <map:Keep/>
+            <map:ReplaceWithTemplate>
+              new Uri("/" + ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).CurrentSourcePageType.Name + ".xaml", UriKind.Relative)
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>          
         </map:CodeMap>
 

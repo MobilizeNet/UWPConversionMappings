@@ -2,10 +2,15 @@
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="TextBox" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <xmap:XamlElementMapper ElementName="Path" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+      <xmap:XamlElementMapper.AlternativeNamespaces>
+        <xmap:AlternativeNamespace>http://schemas.microsoft.com/client/2007</xmap:AlternativeNamespace>
+      </xmap:XamlElementMapper.AlternativeNamespaces>
       <xmap:XamlElementMapper.Maps>
-        <xmap:XamlMap Kind="Property" PropertyName="VerticalScrollBarVisibility">
-          <xmap:MarkAsNotMapped/>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="Path" NewNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />
+          </xmap:XamlMap.Action>
         </xmap:XamlMap>
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>

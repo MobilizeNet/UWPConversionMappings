@@ -1,0 +1,25 @@
+<MapUnit xmlns='clr-namespace:Mobilize.Mappers.Extensibility.Core;assembly=Mobilize.ExtensibleMappers' 
+         xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper' 
+         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
+    <MapUnit.Elements>                                
+        <xmap:XamlElementMapper ElementName="Interaction" 
+                                ElementNamespace="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity">          
+            <xmap:XamlElementMapper.Maps>
+              
+                <xmap:XamlMap Kind="Element">
+                    <xmap:XamlMap.Action>
+                        <xmap:RenameElement NewName="Interaction" NewNamespace="using:Microsoft.Xaml.Interactivity" />
+                    </xmap:XamlMap.Action>
+                </xmap:XamlMap>  
+              
+              <xmap:XamlMap Kind="Property" PropertyName="Behaviors">
+                <xmap:XamlMap.Action>
+                  <xmap:RenameProperty NewElementName="Interaction" NewPropertyLocalName="Behaviors" NewXmlNamespaceName="using:Microsoft.Xaml.Interactivity"></xmap:RenameProperty>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
+                            
+            </xmap:XamlElementMapper.Maps>          
+        </xmap:XamlElementMapper>
+    </MapUnit.Elements>
+</MapUnit>
+

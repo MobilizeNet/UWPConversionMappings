@@ -161,7 +161,7 @@
       
       
       <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Create; Delete; Update"/>
+        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="Create; Delete; Update;ActiveTiles"/>
       </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>

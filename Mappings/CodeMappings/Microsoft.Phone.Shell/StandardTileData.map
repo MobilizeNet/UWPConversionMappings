@@ -94,6 +94,12 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="BackBackgroundImage">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped/>
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="BackTitle">
           <map:CodeMap.Action>
             <map:MarkAsNotMapped/>

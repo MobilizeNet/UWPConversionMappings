@@ -2,14 +2,16 @@
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="TextBox" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <xmap:XamlElementMapper ElementName="AdControl"
+                            ElementNamespace="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
       <xmap:XamlElementMapper.Maps>
-        <xmap:XamlMap Kind="Property" PropertyName="VerticalScrollBarVisibility">
-          <xmap:MarkAsNotMapped/>
+        <xmap:XamlMap Kind="Element">
+          <xmap:XamlMap.Action>
+            <xmap:RenameElement NewName="AdControl" NewNamespace="using:Microsoft.Advertising.WinRT.UI" />
+          </xmap:XamlMap.Action>
         </xmap:XamlMap>
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
-        <Reference>CommonAttributesToRemove</Reference>
         <Reference>CommonEventsToChange</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>

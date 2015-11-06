@@ -31,7 +31,7 @@
                 </map:Case.Condition>
                 <map:Case.Action>
                   <map:ReplaceWithTemplate>
-                    await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(System.Text.RegularExpressions.Regex.Replace($url.OriginalString, "^.*;component/","").Replace('/','\\'))
+                    await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(System.Text.RegularExpressions.Regex.Replace($url.AbsolutePath, "^.*;component/","").Replace('/','\\'))
                   </map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>

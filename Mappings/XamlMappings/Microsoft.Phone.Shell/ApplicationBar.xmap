@@ -23,7 +23,13 @@
                 </xmap:XamlMap>
                 <xmap:XamlMap Kind="Property" PropertyName="Mode" >
                     <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:ReplaceAttributeValue>
+                <xmap:RegexReplacementPair ValueRegex="Default" ReplacementString="true"/>
+                <xmap:RegexReplacementPair ValueRegex="Minimized" ReplacementString="false"/>
+              </xmap:ReplaceAttributeValue>
                         <xmap:RenameProperty NewPropertyLocalName="IsOpen" />
+            </xmap:ActionSequence>
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
                 <xmap:XamlMap Kind="Property" PropertyName="BackgroundColor" >
@@ -41,6 +47,21 @@
                         <xmap:RenameProperty NewPropertyLocalName="PrimaryCommands" />
                     </xmap:XamlMap.Action>
                 </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="StateChanged" >
+          <xmap:XamlMap.Action>
+            <xmap:ActionSequence>
+              <xmap:BindPropertyValueElement PropertyName="StateChanged" ContextKeyName="$handler" />
+              <xmap:SetPropertyValueToSimpleValue
+                  AttributeToChangeName="Closed" NewPropertyValue="$handler"/>
+              <xmap:ChangeEventHandlerEventArgsType
+                NewEventArgsTypeName="System.Object" />
+              <xmap:RenameProperty NewPropertyLocalName="Opened" />
+
+            </xmap:ActionSequence>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
                 <xmap:XamlMap Kind="Property" PropertyName="IsMenuEnabled" >
                     <xmap:XamlMap.Action>
                         <xmap:CommentOutProperty />

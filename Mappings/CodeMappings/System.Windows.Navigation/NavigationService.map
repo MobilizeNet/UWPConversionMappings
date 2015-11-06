@@ -50,7 +50,9 @@
 
         <map:CodeMap Kind="MemberAccess" MemberName="Navigated">
           <map:CodeMap.Action>
-            <map:Keep />
+            <map:ReplaceWithTemplate>
+              ((Windows.UI.Xaml.Controls.Frame)Windows.UI.Xaml.Window.Current.Content).Navigated
+            </map:ReplaceWithTemplate>
           </map:CodeMap.Action>
         </map:CodeMap>
 

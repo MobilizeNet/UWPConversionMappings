@@ -43,7 +43,7 @@
                   </map:WithConstructorCall>
                 </map:Case.Condition>
                 <map:Case.Action>
-                  <map:ReplaceWithTemplate>new System.Threading.Timer($callback, $object, (int)$dueTime, (int)$period)</map:ReplaceWithTemplate>
+                  <map:ReplaceWithTemplate>new System.Threading.Timer($callback, $object, $dueTime, $period)</map:ReplaceWithTemplate>
                 </map:Case.Action>
               </map:Case>
               <map:Default>

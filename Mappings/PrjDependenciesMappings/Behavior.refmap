@@ -1,0 +1,9 @@
+﻿<ReferenceMap Id="Behaviors"
+              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.References;assembly=Mobilize.ExtensibleMappers">
+  <ReferenceMap.Obsolete>
+    <Assembly Name="System.Windows.Interactivity"></Assembly>
+  </ReferenceMap.Obsolete>
+  <ReferenceMap.New>
+    <SDKReference Name="BehaviorsXamlSDKManaged" Version="12.0"  />
+  </ReferenceMap.New>
+</ReferenceMap>

@@ -31,6 +31,7 @@
             <map:Case>
               <map:Case.Condition>
                 <map:WithMethodCall>
+                  <map:ArgumentCount>2</map:ArgumentCount>
                   <map:WithCalledMemberOwner>
                     <map:AssignName>$webView</map:AssignName>
                   </map:WithCalledMemberOwner>
@@ -43,6 +44,24 @@
               <map:Case.Action>
                 <map:ReplaceWithTemplate>
                   await $webView.InvokeScriptAsync($function, new[] {$argsFromtwo})
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>1</map:ArgumentCount>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$webView</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$function</map:AssignName>
+                  </map:WithArgument>            
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  await $webView.InvokeScriptAsync($function, new[] { string.Empty })
                 </map:ReplaceWithTemplate>
               </map:Case.Action>
             </map:Case>

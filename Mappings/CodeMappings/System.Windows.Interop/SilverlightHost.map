@@ -4,6 +4,12 @@
     <map:CodeMapPackage Type="System.Windows.Interop.SilverlightHost">
       <map:CodeMapPackage.Maps>
 
+        <map:CodeMap Kind="New">
+          <map:CodeMap.Action>
+            <map:MarkAsNotMapped />
+          </map:CodeMap.Action>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="Content">
           <map:CodeMap.Action>
             <map:ReplaceWithTemplate>

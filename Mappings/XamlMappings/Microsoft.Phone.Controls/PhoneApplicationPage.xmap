@@ -47,6 +47,24 @@
                   </xmap:ActionSequence>
                 </xmap:XamlMap.Action>
               </xmap:XamlMap>
+
+              <xmap:XamlMap Kind="Property" PropertyName="OrientationChanged" >
+                <xmap:XamlMap.Action>
+                  <xmap:ActionSequence>
+                    <xmap:AddStatementToConstructorFromTemplate>
+                      <![CDATA[ Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation, object> orientationChangedHandler =  (di,snder) => $propertyValue(snder, di);  ]]>
+                    </xmap:AddStatementToConstructorFromTemplate>
+                    <xmap:AddStatementToConstructorFromTemplate>
+                      <![CDATA[ this.Loaded += (object sender, Windows.UI.Xaml.RoutedEventArgs args) => Windows.Graphics.Display.DisplayInformation.GetForCurrentView().OrientationChanged += orientationChangedHandler;  ]]>
+                    </xmap:AddStatementToConstructorFromTemplate>
+                    <xmap:AddStatementToConstructorFromTemplate>
+                      <![CDATA[ this.Unloaded += (object sender, Windows.UI.Xaml.RoutedEventArgs args) => Windows.Graphics.Display.DisplayInformation.GetForCurrentView().OrientationChanged -= orientationChangedHandler;  ]]>
+                    </xmap:AddStatementToConstructorFromTemplate>
+                    <xmap:ChangeEventHandlerEventArgsType NewEventArgsTypeName="Windows.Graphics.Display.DisplayInformation" />                    
+                    <xmap:RemoveAttribute/>
+                  </xmap:ActionSequence>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
               
             </xmap:XamlElementMapper.Maps>
             <xmap:XamlElementMapper.ReferencedPackages>

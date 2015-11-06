@@ -54,6 +54,13 @@
             </xmap:RemoveAttribute>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
+
+        <xmap:XamlMap Kind="Property" PropertyName="OpacityMask">
+          <xmap:XamlMap.Action>
+            <xmap:MarkAsNotMapped/>
+          </xmap:XamlMap.Action>
+        </xmap:XamlMap>
+
         <xmap:XamlMap Kind="Property" PropertyName="Background" >
           <xmap:XamlMap.Action>
             <xmap:RemoveAttribute>
@@ -163,6 +170,13 @@
                   NewThemeResourceName="SystemColorControlAccentBrush"
                   OldStaticResourceName="PhoneAccentBrush" />
               <xmap:ReplaceStaticResourceWithThemeResource NewThemeResourceName="DefaultTextForegroundThemeBrush" OldStaticResourceName="PhoneSubtleBrush" />
+
+              <xmap:RemoveAttribute>
+                <xmap:RemoveAttribute.Condition>
+                  <xmap:PropertyUsesStaticResource PropertyName="Foreground" StaticResourceName="PhoneForegroundBrush" />
+                </xmap:RemoveAttribute.Condition>
+              </xmap:RemoveAttribute>
+              
             </xmap:ActionSequence>
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
@@ -258,7 +272,7 @@
         </xmap:XamlMap>
         <xmap:XamlMap Kind="ElementPostChildren">
           <xmap:XamlMap.Action>
-            <xmap:ReplaceNamespaceDeclaration AttributeValueRegex="clr-namespace:[ ]*([^;]*)(;.*)?$" Replacement="using:$1" />
+            <xmap:ReplaceNamespaceDeclaration AttributeValueRegex="clr-namespace:[ ]*([^;]*)?$" Replacement="using:$1" />
           </xmap:XamlMap.Action>
         </xmap:XamlMap>
 

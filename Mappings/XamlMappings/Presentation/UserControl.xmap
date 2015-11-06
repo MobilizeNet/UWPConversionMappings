@@ -6,6 +6,7 @@
             <xmap:XamlElementMapper.ReferencedPackages>
                 <Reference>CommonAttributesToRemove</Reference>
                 <Reference>CommonPostMappingActions</Reference>
+        <Reference>CommonEventsToChange</Reference>
             </xmap:XamlElementMapper.ReferencedPackages>
         </xmap:XamlElementMapper>
     </MapUnit.Elements>

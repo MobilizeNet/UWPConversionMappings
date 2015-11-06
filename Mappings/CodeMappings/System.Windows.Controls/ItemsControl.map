@@ -27,13 +27,15 @@
           <map:Keep/>
         </map:CodeMap>
 
-        <!--<map:CodeMap Kind="Call" MemberName="OnItemsChanged">
+        <map:CodeMap Kind="ClassInheritance" >
           <map:CodeMap.Action>
+            <map:ApplyToMethodDeclaration MethodName="OnItemsChanged">
             <map:ReplaceParameterDeclarationType Position="0">
-              <![CDATA[  object ]]>
+                System.Object
             </map:ReplaceParameterDeclarationType>
+            </map:ApplyToMethodDeclaration>
           </map:CodeMap.Action>
-        </map:CodeMap>-->
+        </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
     </map:CodeMapPackage>

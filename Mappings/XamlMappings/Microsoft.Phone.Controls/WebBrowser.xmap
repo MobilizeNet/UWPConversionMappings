@@ -36,6 +36,12 @@
                   </xmap:ActionSequence>
                 </xmap:XamlMap.Action>
               </xmap:XamlMap>
+
+              <xmap:XamlMap Kind="Property" PropertyName="Foreground">
+                <xmap:XamlMap.Action>
+                  <xmap:MarkAsNotMapped/>
+                </xmap:XamlMap.Action>
+              </xmap:XamlMap>
               
                 <xmap:XamlMap Kind="Property" PropertyName="NavigationFailed">
                   <xmap:XamlMap.Action>

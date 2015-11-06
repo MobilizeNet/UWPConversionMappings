@@ -2,15 +2,23 @@
          xmlns:xmap='clr-namespace:Mobilize.XamlMappers;assembly=Mobilize.XamlMapper'
          xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml' >
   <MapUnit.Elements>
-    <xmap:XamlElementMapper ElementName="TextBox" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <xmap:XamlElementMapper ElementName="ScrollViewer" ElementNamespace="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
       <xmap:XamlElementMapper.Maps>
-        <xmap:XamlMap Kind="Property" PropertyName="VerticalScrollBarVisibility">
-          <xmap:MarkAsNotMapped/>
+        <xmap:XamlMap Kind="Property" PropertyName="ManipulationMode">
+          <xmap:CommentOutProperty>
+            <xmap:CommentOutProperty.Condition>
+              <xmap:ElementContainsAttribute 
+                PropertyLocalName="ManipulationMode" 
+                PropertyValueRegex="Control" />
+            </xmap:CommentOutProperty.Condition>
+          </xmap:CommentOutProperty>
         </xmap:XamlMap>
+
       </xmap:XamlElementMapper.Maps>
       <xmap:XamlElementMapper.ReferencedPackages>
         <Reference>CommonAttributesToRemove</Reference>
         <Reference>CommonEventsToChange</Reference>
+        <Reference>CommonColor</Reference>
       </xmap:XamlElementMapper.ReferencedPackages>
     </xmap:XamlElementMapper>
   </MapUnit.Elements>

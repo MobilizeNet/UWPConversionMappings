@@ -12,7 +12,57 @@
 
         <map:CodeMap Kind="ElementAccess" MemberName="Item">
           <map:CodeMap.Action>
+            <map:Conditional>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithArgument Position="0">
+                    <map:Equals>"PhoneDarkThemeVisibility"</map:Equals>
+                  </map:WithArgument>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[
+                    (Windows.UI.Xaml.Application.Current.RequestedTheme.ToString() == "Dark" 
+                     ? Windows.UI.Xaml.Visibility.Visible
+                     : Windows.UI.Xaml.Visibility.Collapsed)
+                  ]]>
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithArgument Position="0">
+                    <map:Equals>"PhoneLightThemeVisibility"</map:Equals>
+                  </map:WithArgument>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[
+                    (Windows.UI.Xaml.Application.Current.RequestedTheme.ToString() == "Light" 
+                     ? Windows.UI.Xaml.Visibility.Visible
+                     : Windows.UI.Xaml.Visibility.Collapsed)
+                  ]]>
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Case>
+                <map:Case.Condition>
+                  <map:WithArgument Position="0">
+                    <map:Equals>"PhoneAccentBrush"</map:Equals>
+                  </map:WithArgument>
+                </map:Case.Condition>
+                <map:Case.Action>
+                  <map:ReplaceWithTemplate>
+                    <![CDATA[
+                    Windows.UI.Xaml.Application.Current.Resources["SystemColorControlAccentBrush"]
+                  ]]>
+                  </map:ReplaceWithTemplate>
+                </map:Case.Action>
+              </map:Case>
+              <map:Default>
             <map:Keep />
+              </map:Default>
+            </map:Conditional>
           </map:CodeMap.Action>
         </map:CodeMap>
 

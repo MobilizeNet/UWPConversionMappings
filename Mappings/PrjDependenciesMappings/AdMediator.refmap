@@ -1,0 +1,9 @@
+﻿<ReferenceMap Id="MSAdvertising"
+              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.References;assembly=Mobilize.ExtensibleMappers">
+  <ReferenceMap.Obsolete>
+    <SDKReference Name="MSAdvertising"></SDKReference>
+  </ReferenceMap.Obsolete>
+  <ReferenceMap.New>
+    <SDKReference Name="Microsoft.Advertising.Xaml" Version="10.0" />
+  </ReferenceMap.New>
+</ReferenceMap>

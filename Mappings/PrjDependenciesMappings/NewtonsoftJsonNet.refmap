@@ -1,0 +1,13 @@
+﻿<ReferenceMap Id="NewtonsoftJsonNet"
+              xmlns="clr-namespace:Mobilize.Mappers.Extensibility.References;assembly=Mobilize.ExtensibleMappers">
+  <ReferenceMap.Obsolete>
+    <Nuget Id="Newtonsoft.Json">
+      <Assembly Name="Newtonsoft.Json"/>
+    </Nuget>
+  </ReferenceMap.Obsolete>
+  <ReferenceMap.New>
+    <Nuget Id="Newtonsoft.Json" Version="7.0.1" >
+      <Assembly Name="Newtonsoft.Json"/>
+    </Nuget>
+  </ReferenceMap.New>
+</ReferenceMap>

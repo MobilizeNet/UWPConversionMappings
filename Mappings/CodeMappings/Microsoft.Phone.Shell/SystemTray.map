@@ -38,6 +38,12 @@
           </map:CodeMap.Action>
         </map:CodeMap>
 
+        <map:CodeMap Kind="MemberAccess" MemberName="ProgressIndicator">
+          <map:ReplaceWithTemplate>
+            Windows.UI.ViewManagement.StatusBar.GetForCurrentView().ProgressIndicator
+          </map:ReplaceWithTemplate>
+        </map:CodeMap>
+
         <map:CodeMap Kind="Call" MemberName="SetProgressIndicator">
           <map:CodeMap.Action>
             <map:MarkAsNotMapped/>

@@ -185,6 +185,38 @@
           <map:Keep/>
         </map:CodeMap>
 
+        <map:CodeMap Kind="Assign" MemberName="LayoutUpdated">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithAssignment>
+                  <map:WithAssignmentLeftSide>
+                    <map:AssignName>$left</map:AssignName>
+                  </map:WithAssignmentLeftSide>
+                  <map:WithAssignmentRightSide>
+
+                    <map:WithConstructorCall>
+                      <map:WithArgument Position="0">
+                        <map:AssignName>$handler</map:AssignName>
+                      </map:WithArgument>
+                    </map:WithConstructorCall>
+                  </map:WithAssignmentRightSide>
+                </map:WithAssignment>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ReplaceWithTemplate>
+                  <![CDATA[
+                  $left += new System.EventHandler<object>($handler)
+                  ]]>
+                </map:ReplaceWithTemplate>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
         <map:CodeMap Kind="MemberAccess" MemberName="RenderTransformOrigin">
           <map:Keep/>
         </map:CodeMap>

@@ -22,8 +22,33 @@
           <map:MarkAsNotMapped/>
         </map:CodeMap>
 
-        <map:CodeMap Kind="MemberAccess" MemberName="SpeakSsmlAsync">
-          <map:MarkAsNotMapped/>
+        <map:CodeMap Kind="Call" MemberName="SpeakSsmlAsync">
+          <map:Conditional>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:WithCalledMemberOwner>
+                    <map:AssignName>$owner</map:AssignName>
+                  </map:WithCalledMemberOwner>
+                  <map:WithArgument Position="0">
+                    <map:AssignName>$text</map:AssignName>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:ActionSequence>
+                  <map:AddHelper Path="..\Helpers\SpeechSynthHelpers.cs"/>
+                  <map:AddNamespaceImport>WindowsPhoneUWP.UpgradeHelpers</map:AddNamespaceImport>
+                  <map:ReplaceWithTemplate>
+                     $owner.SpeakSsmlHelperAsync($text)
+                  </map:ReplaceWithTemplate>
+                </map:ActionSequence>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
         </map:CodeMap>
 
         <map:CodeMap Kind="MemberAccess" MemberName="SpeakSsmlFromUriAsync">
@@ -50,25 +75,11 @@
               </map:Case.Condition>
               <map:Case.Action>
                 <map:ActionSequence>
-                  <map:AddPreStatementFromTemplate>
-                    <![CDATA[
-                  var speechStream = await $owner.SynthesizeTextToStreamAsync($text);
-                  ]]>
-                  </map:AddPreStatementFromTemplate>
-                  <map:AddPreStatementFromTemplate>
-                    <![CDATA[ var localMediaElement = new Windows.UI.Xaml.Controls.MediaElement() {
-                                 AutoPlay = true
-                            };]]>
-                  </map:AddPreStatementFromTemplate>
-                  <map:AddPreStatementFromTemplate>
-                    <![CDATA[
-                  localMediaElement.SetSource(speechStream, speechStream.ContentType);
-                  ]]>
-                  </map:AddPreStatementFromTemplate>
-                  <map:AddPreStatementFromTemplate>
-                    localMediaElement.Play();
-                  </map:AddPreStatementFromTemplate>
-                  <map:RemoveCurrentStatement/>
+                  <map:AddHelper Path="..\Helpers\SpeechSynthHelpers.cs"/>
+                  <map:AddNamespaceImport>WindowsPhoneUWP.UpgradeHelpers</map:AddNamespaceImport>
+                  <map:ReplaceWithTemplate>
+                    $owner.SpeakTextHelperAsync($text)
+                  </map:ReplaceWithTemplate>
                 </map:ActionSequence>
               </map:Case.Action>
             </map:Case>
@@ -155,9 +166,8 @@
         </map:CodeMap>
 
       </map:CodeMapPackage.Maps>
-      <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="ASYNC_MEMBERS" Value="SpeakTextAsync"/>
-      </map:CodeMapPackage.Metadata>
+
+
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

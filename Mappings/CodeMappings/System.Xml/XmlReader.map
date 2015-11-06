@@ -3,10 +3,76 @@
   <MapUnit.Elements>
     <map:CodeMapPackage Type="System.Xml.XmlReader">
       <map:CodeMapPackage.Maps>
+
+        <map:CodeMap Kind="Call" MemberName="Create">
+          <map:Conditional>
+            <!-- Case for three arguments -->
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.FileStream</map:IsExpressionOfType>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Xml.XmlReaderSettings</map:IsExpressionOfType>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:MarkAsNotMapped/>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Xml.XmlReaderSettings</map:IsExpressionOfType>           
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:IsExpressionOfType>System.Xml.XmlParserContext</map:IsExpressionOfType>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:MarkAsNotMapped/>
+              </map:Case.Action>
+            </map:Case>
+            <map:Case>
+              <map:Case.Condition>
+                <map:WithMethodCall>
+                  <map:ArgumentCount>3</map:ArgumentCount>
+                  <map:WithArgument Position="0">
+                    <map:IsExpressionOfType>System.IO.TextReader</map:IsExpressionOfType>
+                  </map:WithArgument>
+                  <map:WithArgument Position="1">
+                    <map:IsExpressionOfType>System.Xml.XmlReaderSettings</map:IsExpressionOfType>
+                  </map:WithArgument>
+                  <map:WithArgument Position="2">
+                    <map:IsExpressionOfType>System.String</map:IsExpressionOfType>
+                  </map:WithArgument>
+                </map:WithMethodCall>
+              </map:Case.Condition>
+              <map:Case.Action>
+                <map:MarkAsNotMapped/>
+              </map:Case.Action>
+            </map:Case>
+            <map:Default>
+              <map:Keep/>
+            </map:Default>
+          </map:Conditional>
+        </map:CodeMap>
+
+
+
       </map:CodeMapPackage.Maps>
-      <map:CodeMapPackage.Metadata>
-        <map:PackageMetadata Key="DIRECT_MAPPING" Value="true"/>
-      </map:CodeMapPackage.Metadata>
     </map:CodeMapPackage>
   </MapUnit.Elements>
 </MapUnit>

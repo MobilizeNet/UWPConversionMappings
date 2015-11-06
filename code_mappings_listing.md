@@ -363,6 +363,7 @@
 |Language                                |MemberAccess   |             |             |
 |CacheMode                               |MemberAccess   |             |             |
 |Style                                   |MemberAccess   |             |             |
+|ScrollTo                                |Call           |             |             |
  
 ### Microsoft.Phone.Controls.Maps.ApplicationIdCredentialsProvider
  
@@ -533,6 +534,7 @@
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
 |PhoneApplicationFrame                   |Type           |             |             |
+|OnApplyTemplate                         |Call           |             |             |
 |Orientation                             |MemberAccess   |             |             |
 |RemoveBackEntry                         |Call           |             |             |
 |OrientationChanged                      |MemberAccess   |             |             |
@@ -556,6 +558,7 @@
 |OnOrientationChanged                    |MemberAccess   |             |Always       |
 |OnBackKeyPress                          |MemberAccess   |             |Always       |
 |OrientationChanged                      |MemberAccess   |             |             |
+|Loaded                                  |MemberAccess   |             |             |
  
 ### Microsoft.Phone.Controls.Pivot
  
@@ -1150,7 +1153,7 @@
 |Current                                 |MemberAccess   |             |             |
 |Closing                                 |MemberAccess   |             |             |
 |Deactivated                             |MemberAccess   |             |             |
-|State                                   |MemberAccess   |             |             |
+|State                                   |MemberAccess   |Always       |             |
 |Launching                               |MemberAccess   |             |Always       |
  
 ### Microsoft.Phone.Shell.ProgressIndicator
@@ -1701,6 +1704,7 @@
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
+|CategoryAttribute                       |Type           |             |Always       |
  
 ### System.ComponentModel.DefaultValueAttribute
  
@@ -2069,6 +2073,7 @@
 |Save                                    |Call           |             |Always       |
 |Add                                     |Call           |             |             |
 |Count                                   |MemberAccess   |             |             |
+|Clear                                   |MemberAccess   |             |             |
  
 ### System.IO.MemoryStream
  
@@ -2726,9 +2731,18 @@
 |----------------------------------------|---------------|-------------|-------------|
 |ComputeHash                             |Call           |             |             |
  
-### System.Security.Cryptography.SHA1Managed
+### System.Security.Cryptography.ProtectedData
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/HashAlgorithm.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|Protect                                 |Call           |             |             |
+|Unprotect                               |Call           |             |             |
+ 
+### System.Security.Cryptography.SHA1Managed
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/ProtectedData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2996,10 +3010,21 @@
 |Current                                 |MemberAccess   |             |             |
 |Host                                    |MemberAccess   |             |             |
 |RootVisual                              |MemberAccess   |             |             |
+|UnhandledException                      |MemberAccess   |             |             |
+ 
+### System.Windows.ApplicationUnhandledExceptionEventArgs
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationMapper.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|ApplicationUnhandledExceptionEventArgs  |Type           |             |             |
+|ExceptionObject                         |MemberAccess   |             |             |
+|Handled                                 |MemberAccess   |             |             |
  
 ### System.Windows.BaseButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationMapper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationUnhandledExceptionEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3030,6 +3055,7 @@
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
 |Button                                  |Type           |             |             |
+|OnApplyTemplate                         |Call           |             |             |
  
 ### System.Windows.Controls.Canvas
  
@@ -3115,6 +3141,7 @@
 |NavigationFailed                        |MemberAccess   |             |             |
 |NavigationStopped                       |MemberAccess   |             |             |
 |CurrentSource                           |MemberAccess   |             |             |
+|Navigate                                |Call           |             |Always       |
  
 ### System.Windows.Controls.Grid
  
@@ -3164,6 +3191,7 @@
 |Items                                   |MemberAccess   |             |             |
 |ItemContainerGenerator                  |MemberAccess   |             |             |
 |ItemsSource                             |MemberAccess   |             |             |
+|OnItemsChanged                          |Call           |             |             |
  
 ### System.Windows.Controls.ListBox
  
@@ -3172,6 +3200,7 @@
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
 |ListBox                                 |Type           |             |             |
+|OnApplyTemplate                         |Call           |             |             |
  
 ### System.Windows.Controls.ListBoxItem
  
@@ -3275,6 +3304,7 @@
 |SelectionChanged                        |MemberAccess   |             |             |
 |SelectedIndex                           |MemberAccess   |             |             |
 |SelectedItem                            |MemberAccess   |             |             |
+|PrepareContainerForItemOverride         |Call           |             |             |
  
 ### System.Windows.Controls.Primitives.ToggleButton
  
@@ -3284,6 +3314,7 @@
 |----------------------------------------|---------------|-------------|-------------|
 |ToggleButton                            |Type           |             |             |
 |IsChecked                               |MemberAccess   |             |             |
+|OnApplyTemplate                         |Call           |             |             |
 |Tap                                     |MemberAccess   |             |             |
  
 ### System.Windows.Controls.ProgressBar
@@ -4359,9 +4390,18 @@
 |OK                                      |MemberAccess   |             |             |
 |Cancel                                  |MemberAccess   |             |             |
  
-### System.Windows.Navigation.LoadCompletedEventHandler
+### System.Windows.Navigation.JournalEntry
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/MessageBoxResult.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|JournalEntry                            |Type           |             |             |
+|Source                                  |MemberAccess   |             |             |
+ 
+### System.Windows.Navigation.LoadCompletedEventHandler
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/JournalEntry.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4393,9 +4433,18 @@
 |----------------------------------------|---------------|-------------|-------------|
 |NavigatingCancelEventHandler            |Type           |             |             |
  
-### System.Windows.Navigation.NavigationContext
+### System.Windows.Navigation.NavigatingEventArgs
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingCancelEventHandler.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|NavigatingEventArgs                     |Type           |             |             |
+|Uri                                     |MemberAccess   |             |             |
+ 
+### System.Windows.Navigation.NavigationContext
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4431,7 +4480,7 @@
 |BackStack                               |MemberAccess   |             |             |
 |CanGoBack                               |MemberAccess   |             |             |
 |Navigated                               |MemberAccess   |             |             |
-|BackStack                               |MemberAccess   |             |Always       |
+|Navigate                                |Call           |             |Always       |
 |RemoveBackEntry                         |Call           |             |             |
  
 ### System.Windows.Navigation.UriMapperBase

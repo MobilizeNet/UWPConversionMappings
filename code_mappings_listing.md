@@ -1037,9 +1037,18 @@
 |Add                                     |Call           |             |Conditionally|
 |Remove                                  |Call           |             |Conditionally|
  
-### Microsoft.Phone.Shell.ApplicationBar
+### Microsoft.Phone.Shell.ActivatedEventArgs
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Scheduler/ToastNotificationManager.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|ActivatedEventArgs                      |Type           |             |             |
+|IsApplicationInstancePreserved          |MemberAccess   |             |Always       |
+ 
+### Microsoft.Phone.Shell.ApplicationBar
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ActivatedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1072,9 +1081,25 @@
 |ApplicationBarMenuItem                  |Type           |             |             |
 |Text                                    |MemberAccess   |             |             |
  
-### Microsoft.Phone.Shell.FlipTileData
+### Microsoft.Phone.Shell.ApplicationBarStateChangedEventArgs
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarMenuItem.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|IsMenuVisible                           |MemberAccess   |             |             |
+ 
+### Microsoft.Phone.Shell.DeactivatedEventArgs
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarStateChangedEventArgs.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|DeactivatedEventArgs                    |Type           |             |             |
+ 
+### Microsoft.Phone.Shell.FlipTileData
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/DeactivatedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1213,6 +1238,7 @@
 |BackgroundImage                         |MemberAccess   |             |             |
 |BackgroundImage                         |Assign         |             |             |
 |BackContent                             |MemberAccess   |             |Always       |
+|BackBackgroundImage                     |MemberAccess   |             |Always       |
 |BackTitle                               |MemberAccess   |             |Always       |
  
 ### Microsoft.Phone.Shell.SystemTray
@@ -1224,6 +1250,7 @@
 |SystemTray                              |Type           |             |             |
 |IsVisible                               |Assign         |Conditionally|             |
 |IsVisible                               |MemberAccess   |             |Always       |
+|ProgressIndicator                       |MemberAccess   |             |             |
 |SetProgressIndicator                    |Call           |             |Always       |
 |Opacity                                 |MemberAccess   |             |             |
 |BackgroundColor                         |MemberAccess   |             |             |
@@ -2251,6 +2278,7 @@
 |----------------------------------------|---------------|-------------|-------------|
 |HttpWebRequest                          |Type           |             |             |
 |UserAgent                               |MemberAccess   |             |             |
+|AllowAutoRedirect                       |MemberAccess   |             |Always       |
  
 ### System.Net.HttpWebResponse
  
@@ -3171,9 +3199,19 @@
 |Source                                  |MemberAccess   |             |             |
 |Stretch                                 |MemberAccess   |             |             |
  
-### System.Windows.Controls.ItemContainerGenerator
+### System.Windows.Controls.InkPresenter
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Image.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|InkPresenter                            |Type           |             |             |
+|Strokes                                 |MemberAccess   |             |             |
+|Background                              |MemberAccess   |             |Always       |
+ 
+### System.Windows.Controls.ItemContainerGenerator
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/InkPresenter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3428,9 +3466,17 @@
 |UserControl                             |Type           |             |             |
 |Content                                 |MemberAccess   |             |             |
  
-### System.Windows.Data.Binding
+### System.Windows.Controls.Viewbox
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/UserControl.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|Viewbox                                 |Type           |             |             |
+ 
+### System.Windows.Data.Binding
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ViewBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3620,9 +3666,27 @@
 |----------------------------------------|---------------|-------------|-------------|
 |HorizontalAlignment                     |Type           |             |             |
  
-### System.Windows.Input.GestureEventArgs
+### System.Windows.Ink.Stroke
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/HorizontalAlignment.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|Stroke                                  |Type           |             |             |
+|StylusPoints                            |MemberAccess   |             |             |
+ 
+### System.Windows.Ink.StrokeCollection
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Ink/Stroke.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|StrokeCollection                        |Type           |             |             |
+|Add                                     |Call           |             |             |
+ 
+### System.Windows.Input.GestureEventArgs
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Ink/StrokeCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3803,9 +3867,25 @@
 |----------------------------------------|---------------|-------------|-------------|
 |MouseEventHandler                       |Type           |             |             |
  
-### System.Windows.Input.Touch
+### System.Windows.Input.StylusPoint
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseEventHandler.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|StylusPoint                             |Type           |             |             |
+ 
+### System.Windows.Input.StylusPointCollection
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/StylusPoint.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|StylusPointCollection                   |Type           |             |             |
+ 
+### System.Windows.Input.Touch
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/StylusPointCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3838,9 +3918,27 @@
 |TouchPoint                              |Type           |             |             |
 |Action                                  |MemberAccess   |             |Always       |
  
-### System.Windows.Interop.Content
+### System.Windows.Input.TouchPointCollection
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchPoint.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|TouchPointCollection                    |Type           |             |             |
+ 
+### System.Windows.Interactivity.Behavior
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchPointCollection.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|Behavior                                |Type           |Always       |             |
+|OnAttached                              |Call           |             |             |
+|OnDetaching                             |Call           |             |             |
+ 
+### System.Windows.Interop.Content
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interactivity/Behavior.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4207,9 +4305,17 @@
 |ImageBrush                              |Type           |             |             |
 |ImageSource                             |MemberAccess   |             |             |
  
-### System.Windows.Media.Imaging.BitmapImage
+### System.Windows.Media.ImageSourceConverter
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ImageBrush.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|ConvertFromString                       |Call           |             |             |
+ 
+### System.Windows.Media.Imaging.BitmapImage
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ImageSourceConverter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4501,9 +4607,18 @@
 |X                                       |MemberAccess   |             |             |
 |Y                                       |MemberAccess   |             |             |
  
-### System.Windows.PropertyChangedCallback
+### System.Windows.PresentationFrameworkCollection
  
 [Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Point.map)
+ 
+|Member Name                             |Kind           |Helper       |Not mapped   |
+|----------------------------------------|---------------|-------------|-------------|
+|PresentationFrameworkCollection         |Type           |             |             |
+|Add                                     |Call           |             |             |
+ 
+### System.Windows.PropertyChangedCallback
+ 
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Ink/StrokeCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4735,6 +4850,7 @@
 |CacheMode                               |MemberAccess   |             |             |
 |AddHandler                              |MemberAccess   |             |             |
 |UseLayoutRounding                       |MemberAccess   |             |             |
+|LayoutUpdated                           |Assign         |             |             |
 |RenderTransformOrigin                   |MemberAccess   |             |             |
 |Visibility                              |MemberAccess   |             |             |
 |RenderSize                              |MemberAccess   |             |             |
@@ -4937,6 +5053,7 @@
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
+|Create                                  |Call           |             |Conditionally|
  
 ### System.Xml.XmlReaderSettings
  
@@ -5157,10 +5274,10 @@
 |BookmarkReached                         |MemberAccess   |             |Always       |
 |SpeechStarted                           |MemberAccess   |             |Always       |
 |CancelAll                               |MemberAccess   |             |Always       |
-|SpeakSsmlAsync                          |MemberAccess   |             |Always       |
+|SpeakSsmlAsync                          |Call           |Conditionally|             |
 |SpeakSsmlFromUriAsync                   |MemberAccess   |             |Always       |
 |Close                                   |MemberAccess   |             |             |
-|SpeakTextAsync                          |Call           |             |             |
+|SpeakTextAsync                          |Call           |Conditionally|             |
 |SetVoice                                |Call           |             |Conditionally|
 |GetVoice                                |Call           |             |Conditionally|
  

@@ -1,7 +1,7 @@
-﻿ 
+ 
 ### Coding4Fun.Phone.Controls.BooleanToVisibilityConverter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.UI.Xaml.Controls/Frame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Phone.Controls.Converters/VisibilityToBooleanConverter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -21,7 +21,7 @@
  
 ### Coding4Fun.Phone.Controls.Converter.StringToVisibilityConverter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Phone.Controls.Converters/BooleanToVisibilityConverter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Phone.Controls.Converters/StringToVisibility.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -31,7 +31,7 @@
  
 ### Coding4Fun.Phone.Controls.ToastPrompt
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Phone.Controls.Converters/StringToVisibility.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/Toast.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -47,7 +47,7 @@
  
 ### Coding4Fun.Toolkit.Controls.AboutPrompt
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/Toast.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/AboutPrompt.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -63,7 +63,7 @@
  
 ### Coding4Fun.Toolkit.Controls.AboutPromptItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/AboutPrompt.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/AboutPromptItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -76,7 +76,7 @@
  
 ### Coding4Fun.Toolkit.Controls.Data.PhoneHelper
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/AboutPromptItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls.Data/Package.map )
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -100,7 +100,7 @@
  
 ### Coding4Fun.Toolkit.Controls.MessagePrompt
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/InputPrompt.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/MessagePrompt.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -116,7 +116,7 @@
  
 ### Coding4Fun.Toolkit.Controls.PopUpEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/MessagePrompt.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/PopUpEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -127,7 +127,7 @@
  
 ### Coding4Fun.Toolkit.Controls.ProgressOverlay
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/PopUpEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/ProgressOverlay.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -146,7 +146,7 @@
  
 ### Microsoft.Devices.DeviceType
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Coding4Fun.Toolkit.Controls/ProgressOverlay.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/DeviceType.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -155,7 +155,7 @@
  
 ### Microsoft.Devices.Environment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/DeviceType.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/Environment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -163,7 +163,7 @@
  
 ### Microsoft.Devices.VibrateController
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/Environment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/VibrateController.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -173,7 +173,7 @@
  
 ### Microsoft.Phone.Controls.AutoCompleteBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Devices/VibrateController.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/AutoCompleteBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -211,7 +211,7 @@
  
 ### Microsoft.Phone.Controls.ContextMenu
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/AutoCompleteBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ContextMenu.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -226,7 +226,7 @@
  
 ### Microsoft.Phone.Controls.DatePicker
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ContextMenu.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/DatePicker.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -245,7 +245,7 @@
  
 ### Microsoft.Phone.Controls.DateTimeValueChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/DatePicker.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TimePickerValueChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -255,7 +255,7 @@
  
 ### Microsoft.Phone.Controls.FlickGestureEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TimePickerValueChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/FlickGestureEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -267,7 +267,7 @@
  
 ### Microsoft.Phone.Controls.GestureEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/FlickGestureEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/GestureEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -280,7 +280,7 @@
  
 ### Microsoft.Phone.Controls.ListPicker
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/GestureEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ListPicker.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -306,7 +306,7 @@
  
 ### Microsoft.Phone.Controls.LongListMultiSelector
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ListPicker.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/LongListMultiSelector.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -336,7 +336,7 @@
  
 ### Microsoft.Phone.Controls.LongListSelector
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/LongListMultiSelector.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/LongListSelector.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -367,14 +367,14 @@
  
 ### Microsoft.Phone.Controls.Maps.ApplicationIdCredentialsProvider
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/LongListSelector.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings/Microsoft.Phone.Controls.Maps/Map.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Microsoft.Phone.Controls.Maps.Core.MapCore
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/Map.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/MapCore.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -382,7 +382,7 @@
  
 ### Microsoft.Phone.Controls.Maps.Map
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/MapCore.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/Map.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -394,7 +394,7 @@
  
 ### Microsoft.Phone.Controls.Maps.MapItemsControl
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/Map.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/MapItemsControl.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -419,7 +419,7 @@
  
 ### Microsoft.Phone.Controls.MenuItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls.Maps/Map.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/MenuItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -432,7 +432,7 @@
  
 ### Microsoft.Phone.Controls.MultiselectList
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/MenuItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/MultiselectList.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -444,7 +444,7 @@
  
 ### Microsoft.Phone.Controls.NavigatingEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/MultiselectList.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigatingEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -460,7 +460,7 @@
  
 ### Microsoft.Phone.Controls.NavigationInTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigatingEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigationThemeTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -470,7 +470,7 @@
  
 ### Microsoft.Phone.Controls.NavigationOutTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigationThemeTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigationOutTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -480,7 +480,7 @@
  
 ### Microsoft.Phone.Controls.NotifyEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NavigationOutTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NotifyEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -489,7 +489,7 @@
  
 ### Microsoft.Phone.Controls.OrientationChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/NotifyEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/OrientationChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -498,7 +498,7 @@
  
 ### Microsoft.Phone.Controls.PageOrientation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/OrientationChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PageOrientation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -510,7 +510,7 @@
  
 ### Microsoft.Phone.Controls.PanoramaItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PageOrientation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PanoramaItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -519,7 +519,7 @@
  
 ### Microsoft.Phone.Controls.PerformanceProgressBar
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PanoramaItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ProgressBar.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -529,7 +529,7 @@
  
 ### Microsoft.Phone.Controls.PhoneApplicationFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ProgressBar.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PhoneApplicationFrame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -541,7 +541,7 @@
  
 ### Microsoft.Phone.Controls.PhoneApplicationPage
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PhoneApplicationFrame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PhoneApplicationPage.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -562,7 +562,7 @@
  
 ### Microsoft.Phone.Controls.Pivot
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PhoneApplicationPage.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/Pivot.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -576,7 +576,7 @@
  
 ### Microsoft.Phone.Controls.PivotItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/Pivot.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PivotItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -586,7 +586,7 @@
  
 ### Microsoft.Phone.Controls.RollTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/PivotItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -603,7 +603,7 @@
  
 ### Microsoft.Phone.Controls.RotateTransitionMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/RotateTransitionMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -618,7 +618,7 @@
  
 ### Microsoft.Phone.Controls.RoundButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/RotateTransitionMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/RoundButton.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -632,7 +632,7 @@
  
 ### Microsoft.Phone.Controls.SlideTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/RoundButton.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SlideTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -641,7 +641,7 @@
  
 ### Microsoft.Phone.Controls.SlideTransitionMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SlideTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SlideTransitionMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -657,7 +657,7 @@
  
 ### Microsoft.Phone.Controls.SupportedPageOrientation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SlideTransitionMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SupportedPageOrientation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -666,7 +666,7 @@
  
 ### Microsoft.Phone.Controls.SwivelTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SupportedPageOrientation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -675,7 +675,7 @@
  
 ### Microsoft.Phone.Controls.SwivelTransitionMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SwivelTransitionMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -688,7 +688,7 @@
  
 ### Microsoft.Phone.Controls.TiltEffect
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/SwivelTransitionMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TiltEffect.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -699,7 +699,7 @@
  
 ### Microsoft.Phone.Controls.TimePicker
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TiltEffect.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TimePicker.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -718,7 +718,7 @@
  
 ### Microsoft.Phone.Controls.ToggleSwitch
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TimePicker.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ToggleSwitch.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -743,7 +743,7 @@
  
 ### Microsoft.Phone.Controls.TransitionFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/ToggleSwitch.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TransitionFrame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -752,7 +752,7 @@
  
 ### Microsoft.Phone.Controls.TransitionService
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TransitionFrame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TransitionCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -762,7 +762,7 @@
  
 ### Microsoft.Phone.Controls.TurnstileFeatherTransition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TransitionCollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -780,7 +780,7 @@
  
 ### Microsoft.Phone.Controls.TurnstileTransitionMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransitionMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -791,7 +791,7 @@
  
 ### Microsoft.Phone.Controls.WebBrowser
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/TurnstileTransitionMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/WebBrowser.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -804,7 +804,7 @@
  
 ### Microsoft.Phone.Controls.WrapPanel
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/WebBrowser.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/WrapPanel.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -818,7 +818,7 @@
  
 ### Microsoft.Phone.Globalization.SortedLocaleGrouping
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Controls/WrapPanel.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Globalization/SortedLocaleGrouping.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -826,7 +826,7 @@
  
 ### Microsoft.Phone.Info.DeviceExtendedProperties
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Globalization/SortedLocaleGrouping.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/DeviceExtendedProperties.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -838,7 +838,7 @@
  
 ### Microsoft.Phone.Info.DeviceStatus
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/DeviceExtendedProperties.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/DeviceStatus.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -853,7 +853,7 @@
  
 ### Microsoft.Phone.Info.UserExtendedProperties
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/DeviceStatus.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/UserExtendedProperties.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -861,7 +861,7 @@
  
 ### Microsoft.Phone.Maps.Controls.Map
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Info/UserExtendedProperties.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/Map.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -890,7 +890,7 @@
  
 ### Microsoft.Phone.Maps.Controls.MapCartographicMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/Map.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapCartographicMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -902,7 +902,7 @@
  
 ### Microsoft.Phone.Maps.Controls.MapColorMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapCartographicMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapColorMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -912,7 +912,7 @@
  
 ### Microsoft.Phone.Maps.Controls.MapLayer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapColorMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapLayer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -924,7 +924,7 @@
  
 ### Microsoft.Phone.Maps.Controls.MapOverlay
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapLayer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapOverlay.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -936,7 +936,7 @@
  
 ### Microsoft.Phone.Maps.MapsApplicationContext
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapOverlay.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapsApplicationContext.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -945,7 +945,7 @@
  
 ### Microsoft.Phone.Maps.Toolkit.MapExtensions
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Controls/MapsApplicationContext.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Toolkit/MapExtensions.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -953,7 +953,7 @@
  
 ### Microsoft.Phone.Maps.Toolkit.Pushpin
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Toolkit/MapExtensions.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Toolkit/Pushpin.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -978,7 +978,7 @@
  
 ### Microsoft.Phone.Marketplace.LicenseInformation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Toolkit/UserLocationMarker.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Maps.Toolkit/LicenseInformation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -987,7 +987,7 @@
  
 ### Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Marketplace/LicenseInformation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Net.NetworkInformation/DeviceNetworkInformation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -996,7 +996,7 @@
  
 ### Microsoft.Phone.Net.NetworkInformation.NetworkInterface
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Net.NetworkInformation/DeviceNetworkInformation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Net.NetworkInformation/NetworkInterface.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1013,7 +1013,7 @@
  
 ### Microsoft.Phone.Scheduler.Alarm
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Net.NetworkInformation/NetworkInterfaceType.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Scheduler/Alarm.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1029,7 +1029,7 @@
  
 ### Microsoft.Phone.Scheduler.ScheduledActionService
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Scheduler/Alarm.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Scheduler/ToastNotificationManager.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1039,7 +1039,7 @@
  
 ### Microsoft.Phone.Shell.ApplicationBar
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Scheduler/ToastNotificationManager.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBar.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1054,7 +1054,7 @@
  
 ### Microsoft.Phone.Shell.ApplicationBarIconButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBar.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarIconButton.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1065,7 +1065,7 @@
  
 ### Microsoft.Phone.Shell.ApplicationBarMenuItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarIconButton.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarMenuItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1074,7 +1074,7 @@
  
 ### Microsoft.Phone.Shell.FlipTileData
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ApplicationBarMenuItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/FlipTileData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1085,7 +1085,7 @@
  
 ### Microsoft.Phone.Shell.IApplicationBar
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/FlipTileData.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IApplicationBar.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1100,7 +1100,7 @@
  
 ### Microsoft.Phone.Shell.IApplicationBarIconButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IApplicationBar.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IApplicationBarIconButton.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1124,7 +1124,7 @@
  
 ### Microsoft.Phone.Shell.IdleDetectionMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IApplicationBarMenuItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IdleDetectionMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1132,7 +1132,7 @@
  
 ### Microsoft.Phone.Shell.LaunchingEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/IdleDetectionMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/LaunchingEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1140,7 +1140,7 @@
  
 ### Microsoft.Phone.Shell.PhoneApplicationService
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/LaunchingEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/PhoneApplicationService.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1158,7 +1158,7 @@
  
 ### Microsoft.Phone.Shell.ProgressIndicator
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/PhoneApplicationService.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/StatusBarProgressIndicator.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1169,7 +1169,7 @@
  
 ### Microsoft.Phone.Shell.ShellTile
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/StatusBarProgressIndicator.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellTile.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1182,7 +1182,7 @@
  
 ### Microsoft.Phone.Shell.ShellTileData
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellTile.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellTileData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1192,7 +1192,7 @@
  
 ### Microsoft.Phone.Shell.ShellToast
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellTileData.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellToast.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1204,7 +1204,7 @@
  
 ### Microsoft.Phone.Shell.StandardTileData
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/ShellToast.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/StandardTileData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1217,7 +1217,7 @@
  
 ### Microsoft.Phone.Shell.SystemTray
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/StandardTileData.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/SystemTray.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1231,7 +1231,7 @@
  
 ### Microsoft.Phone.Tasks.CameraCaptureTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Shell/SystemTray.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/CameraCaptureTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1241,7 +1241,7 @@
  
 ### Microsoft.Phone.Tasks.EmailComposeTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/CameraCaptureTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/EmailComposeTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1252,7 +1252,7 @@
  
 ### Microsoft.Phone.Tasks.MarketplaceContentType
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/EmailComposeTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceContentType.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1261,7 +1261,7 @@
  
 ### Microsoft.Phone.Tasks.MarketplaceDetailTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceContentType.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceDetailTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1269,7 +1269,7 @@
  
 ### Microsoft.Phone.Tasks.MarketplaceReviewTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceDetailTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceReviewTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1277,7 +1277,7 @@
  
 ### Microsoft.Phone.Tasks.MarketplaceSearchTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceReviewTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceSearchTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1285,7 +1285,7 @@
  
 ### Microsoft.Phone.Tasks.PhoneCallTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/MarketplaceSearchTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhoneCallTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1294,7 +1294,7 @@
  
 ### Microsoft.Phone.Tasks.PhotoChooserTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhoneCallTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhotoChooser.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1304,7 +1304,7 @@
  
 ### Microsoft.Phone.Tasks.PhotoResult
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhotoChooser.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhotoResult.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1315,7 +1315,7 @@
  
 ### Microsoft.Phone.Tasks.SaveContactTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/PhotoResult.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/SaveContactTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1323,7 +1323,7 @@
  
 ### Microsoft.Phone.Tasks.ShareLinkTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/SaveContactTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareLinkTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1332,7 +1332,7 @@
  
 ### Microsoft.Phone.Tasks.ShareMediaTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareLinkTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareMediaTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1340,14 +1340,14 @@
  
 ### Microsoft.Phone.Tasks.ShareTaskBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareMediaTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareTaskBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Microsoft.Phone.Tasks.SmsComposeTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/ShareTaskBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/SmsComposeTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1358,7 +1358,7 @@
  
 ### Microsoft.Phone.Tasks.TaskEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/SmsComposeTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/TaskEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1367,7 +1367,7 @@
  
 ### Microsoft.Phone.Tasks.TaskResult
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/TaskEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/TaskResult.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1376,7 +1376,7 @@
  
 ### Microsoft.Phone.Tasks.WebBrowserTask
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/TaskResult.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/WebBrowserTask.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1385,7 +1385,7 @@
  
 ### Microsoft.Phone.UserData.Appointment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.Tasks/WebBrowserTask.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Appointment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1393,7 +1393,7 @@
  
 ### Microsoft.Phone.UserData.Appointments
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Appointment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Appointments.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1403,7 +1403,7 @@
  
 ### Microsoft.Phone.UserData.AppointmentsSearchEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Appointments.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/AppointmentsSearchEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1411,7 +1411,7 @@
  
 ### Microsoft.Phone.UserData.CompleteName
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/AppointmentsSearchEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/CompleteName.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1423,7 +1423,7 @@
  
 ### Microsoft.Phone.UserData.Contact
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/CompleteName.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Contact.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1432,7 +1432,7 @@
  
 ### Microsoft.Phone.UserData.ContactPhoneNumber
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Contact.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/ContactPhoneNumber.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1441,7 +1441,7 @@
  
 ### Microsoft.Phone.UserData.Contacts
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/ContactPhoneNumber.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Contacts.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1451,7 +1451,7 @@
  
 ### Microsoft.Phone.UserData.ContactsSearchEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/Contacts.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/ContactsSearchEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1459,7 +1459,7 @@
  
 ### Microsoft.Phone.UserData.FilterKind
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/ContactsSearchEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/FilterKind.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1470,7 +1470,7 @@
  
 ### Microsoft.Xna.Framework.Audio.SoundEffect
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Phone.UserData/FilterKind.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundEffect.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1491,7 +1491,7 @@
  
 ### Microsoft.Xna.Framework.Audio.SoundEffectInstance
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundEffect.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundEffectInstance.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1514,7 +1514,7 @@
  
 ### Microsoft.Xna.Framework.Audio.SoundState
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundEffectInstance.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundState.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1525,7 +1525,7 @@
  
 ### Microsoft.Xna.Framework.FrameworkDispatcher
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/SoundState.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Audio/FrameworkDispatcher.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1534,7 +1534,7 @@
  
 ### Microsoft.Xna.Framework.GamerServices.Guide
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework/FrameworkDispatcher.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.GamerServices/Guide.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1543,7 +1543,7 @@
  
 ### Microsoft.Xna.Framework.Media.MediaLibrary
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.GamerServices/Guide.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Media/MediaLibrary.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1552,7 +1552,7 @@
  
 ### Microsoft.Xna.Framework.TitleContainer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework.Media/MediaLibrary.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework/TitleContainer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1560,7 +1560,7 @@
  
 ### NavigationListControl.NavigationEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Microsoft.Xna.Framework/TitleContainer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//NavigationListControl/NavigationEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1568,7 +1568,7 @@
  
 ### NavigationListControl.NavigationList
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//NavigationListControl/NavigationEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//NavigationListControl/NavigationList.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1576,42 +1576,42 @@
  
 ### System.CodeDom.Compiler.GeneratedCodeAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//NavigationListControl/NavigationList.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.CodeDom.Compiler/GeneratedCodeAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.DictionaryEntry
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.CodeDom.Compiler/GeneratedCodeAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/DictionaryEntry.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Generic.IDictionary
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/DictionaryEntry.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/IDictionary.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Generic.IEnumerable
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/IDictionary.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/IEnumerable.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Generic.KeyNotFoundException
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/IEnumerable.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/KeyNotFoundException.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Generic.List
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/KeyNotFoundException.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/List.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1619,63 +1619,63 @@
  
 ### System.Collections.ICollection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Generic/List.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/ICollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.IDictionary
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/ICollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IDictionary.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.IEnumerable
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IDictionary.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IEnumerable.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.IEnumerator
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IEnumerable.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IEnumerator.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.IList
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IEnumerator.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IList.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Specialized.INotifyCollectionChanged
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections/IList.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/INotifyCollectionChanged.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Specialized.NotifyCollectionChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/INotifyCollectionChanged.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/NotifyCollectionChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Collections.Specialized.NotifyCollectionChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/NotifyCollectionChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/NotifyCollectionChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.ComponentModel.AsyncCompletedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Collections.Specialized/NotifyCollectionChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/AsyncCompletedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1684,7 +1684,7 @@
  
 ### System.ComponentModel.BackgroundWorker
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/AsyncCompletedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/BackgroundWorker.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1692,7 +1692,7 @@
  
 ### System.ComponentModel.CancelEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/BackgroundWorker.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/CancelEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1700,7 +1700,7 @@
  
 ### System.ComponentModel.CategoryAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/CancelEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/CategoryAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1708,7 +1708,7 @@
  
 ### System.ComponentModel.DefaultValueAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/CategoryAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DefaultValueAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1716,7 +1716,7 @@
  
 ### System.ComponentModel.DesignerProperties
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DefaultValueAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DesignerProperties.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1726,7 +1726,7 @@
  
 ### System.ComponentModel.DoWorkEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DesignerProperties.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DoWorkEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1734,14 +1734,14 @@
  
 ### System.ComponentModel.EditorBrowsableAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/DoWorkEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/EditorBrowsableAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.ComponentModel.INotifyPropertyChanged
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/EditorBrowsableAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/INotifyPropertyChanged.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1749,7 +1749,7 @@
  
 ### System.ComponentModel.PropertyChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/INotifyPropertyChanged.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/PropertyChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1757,7 +1757,7 @@
  
 ### System.ComponentModel.PropertyChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/PropertyChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/PropertyChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1765,7 +1765,7 @@
  
 ### System.ComponentModel.RunWorkerCompletedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/PropertyChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/RunWorkerCompletedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1773,14 +1773,14 @@
  
 ### System.ComponentModel.TypeConverter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/RunWorkerCompletedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/TypeConverter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.DateTime
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ComponentModel/TypeConverter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/DateTime.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1791,7 +1791,7 @@
  
 ### System.Device.Location.GeoCoordinate
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/DateTime.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoCoordinate.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1805,7 +1805,7 @@
  
 ### System.Device.Location.GeoCoordinateWatcher
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoCoordinate.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoCoordinateWatcher.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1816,7 +1816,7 @@
  
 ### System.Device.Location.GeoPosition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoCoordinateWatcher.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPosition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1825,7 +1825,7 @@
  
 ### System.Device.Location.GeoPositionAccuracy
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPosition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionAccuracy.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1835,7 +1835,7 @@
  
 ### System.Device.Location.GeoPositionChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionAccuracy.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1843,7 +1843,7 @@
  
 ### System.Device.Location.GeoPositionStatus
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionStatus.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1855,7 +1855,7 @@
  
 ### System.Device.Location.GeoPositionStatusChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionStatus.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionStatusChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1863,28 +1863,28 @@
  
 ### System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Device.Location/GeoPositionStatusChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics.CodeAnalysis/SuppressMessageAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.ConditionalAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics.CodeAnalysis/SuppressMessageAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/ConditionalAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.Debug
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/ConditionalAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/Debug.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.DebuggableAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/Debug.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggableAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1900,35 +1900,35 @@
  
 ### System.Diagnostics.DebuggerBrowsableAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/Debugger.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerBrowsableAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.DebuggerDisplayAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerBrowsableAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerDisplayAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.DebuggerHiddenAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerDisplayAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerHiddenAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.DebuggerStepThroughAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerHiddenAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerStepThroughAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Diagnostics.StackFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/DebuggerStepThroughAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/StackFrame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1936,7 +1936,7 @@
  
 ### System.Diagnostics.StackTrace
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/StackFrame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/StackTrace.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1945,7 +1945,7 @@
  
 ### System.Environment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Diagnostics/StackTrace.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/Environment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1953,7 +1953,7 @@
  
 ### System.EventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/Environment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/EventHandler_GeoPositionStatusChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1961,7 +1961,7 @@
  
 ### System.Globalization.CultureInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/EventHandler_GeoPositionStatusChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/CultureInfoMapper.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1975,7 +1975,7 @@
  
 ### System.Globalization.DateTimeFormatInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/CultureInfoMapper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/DateTimeFormatInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1983,7 +1983,7 @@
  
 ### System.Globalization.NumberFormatInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/DateTimeFormatInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/NumberFormatInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -1991,7 +1991,7 @@
  
 ### System.IO.BinaryReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Globalization/NumberFormatInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/BinaryReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2008,7 +2008,7 @@
  
 ### System.IO.BinaryWriter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/BinaryReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/BinaryWriter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2019,7 +2019,7 @@
  
 ### System.IO.EndOfStreamException
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/BinaryWriter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/EndOfStreamException.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2027,7 +2027,7 @@
  
 ### System.IO.File
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/EndOfStreamException.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/File.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2035,7 +2035,7 @@
  
 ### System.IO.IsolatedStorage.IsolatedStorageFile
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/File.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO.IsolatedStorage/IsolatedStorageFile.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2052,7 +2052,7 @@
  
 ### System.IO.IsolatedStorage.IsolatedStorageFileStream
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO.IsolatedStorage/IsolatedStorageFile.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO.IsolatedStorage/IsolatedStorageFileStream.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2077,7 +2077,7 @@
  
 ### System.IO.MemoryStream
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO.IsolatedStorage/IsolatedStorageSettingsMapper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/MemoryStream.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2087,7 +2087,7 @@
  
 ### System.IO.Path
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/MemoryStream.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/Path.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2099,7 +2099,7 @@
  
 ### System.IO.Stream
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/Path.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/Stream.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2124,7 +2124,7 @@
  
 ### System.IO.StreamReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/Stream.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StreamReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2133,7 +2133,7 @@
  
 ### System.IO.StreamWriter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StreamReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StreamWriter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2142,7 +2142,7 @@
  
 ### System.IO.StringReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StreamWriter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StringReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2150,7 +2150,7 @@
  
 ### System.IO.StringWriter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StringReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StringWriter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2158,7 +2158,7 @@
  
 ### System.IO.TextReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/StringWriter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/TextReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2172,7 +2172,7 @@
  
 ### System.IO.TextWriter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/TextReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/TextWriter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2185,42 +2185,42 @@
  
 ### System.Linq.Enumerable
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.IO/TextWriter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq/Enumerable.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Linq.Expressions.Expression
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq/Enumerable.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/Expression.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Linq.Expressions.LambdaExpression
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/Expression.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/LambdaExpression.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Linq.Expressions.MemberExpression
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/LambdaExpression.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/MemberExpression.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Linq.Expressions.UnaryExpression
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/MemberExpression.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/UnaryExpression.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Net.DownloadStringCompletedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Linq.Expressions/UnaryExpression.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/DownloadStringCompletedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2229,7 +2229,7 @@
  
 ### System.Net.DownloadStringCompletedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/DownloadStringCompletedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/DownloadStringCompletedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2237,7 +2237,7 @@
  
 ### System.Net.HttpUtility
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/DownloadStringCompletedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpUtility.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2245,7 +2245,7 @@
  
 ### System.Net.HttpWebRequest
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpUtility.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpWebRequest.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2254,7 +2254,7 @@
  
 ### System.Net.HttpWebResponse
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpWebRequest.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpWebResponse.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2262,7 +2262,7 @@
  
 ### System.Net.OpenReadCompletedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/HttpWebResponse.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/OpenReadCompletedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2270,7 +2270,7 @@
  
 ### System.Net.OpenReadCompletedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/OpenReadCompletedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/OpenReadCompletedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2278,7 +2278,7 @@
  
 ### System.Net.WebClient
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/OpenReadCompletedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/WebClient.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2292,7 +2292,7 @@
  
 ### System.Net.WebRequest
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/WebClient.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/WebRequest.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2310,7 +2310,7 @@
  
 ### System.Reflection.Assembly
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Net/WebResponse.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/Assembly.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2322,7 +2322,7 @@
  
 ### System.Reflection.AssemblyCompanyAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/Assembly.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCompanyAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2330,7 +2330,7 @@
  
 ### System.Reflection.AssemblyConfigurationAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCompanyAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyConfigurationAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2338,7 +2338,7 @@
  
 ### System.Reflection.AssemblyCopyrightAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyConfigurationAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCopyrightAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2346,7 +2346,7 @@
  
 ### System.Reflection.AssemblyCultureAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCopyrightAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCultureAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2355,7 +2355,7 @@
  
 ### System.Reflection.AssemblyDescriptionAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyCultureAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyDescriptionAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2363,7 +2363,7 @@
  
 ### System.Reflection.AssemblyFileVersionAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyDescriptionAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyFileVersionAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2372,7 +2372,7 @@
  
 ### System.Reflection.AssemblyName
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyFileVersionAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyName.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2382,7 +2382,7 @@
  
 ### System.Reflection.AssemblyProductAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyName.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyProductAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2390,7 +2390,7 @@
  
 ### System.Reflection.AssemblyTitleAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyProductAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyTitleAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2398,7 +2398,7 @@
  
 ### System.Reflection.AssemblyTrademarkAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyTitleAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyTrademarkAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2406,7 +2406,7 @@
  
 ### System.Reflection.AssemblyVersionAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyTrademarkAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyVersionAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2414,7 +2414,7 @@
  
 ### System.Reflection.ConstructorInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/AssemblyVersionAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/ConstructorInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2422,7 +2422,7 @@
  
 ### System.Reflection.DefaultMemberAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/ConstructorInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/DefaultMemberAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2430,7 +2430,7 @@
  
 ### System.Reflection.EventInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/DefaultMemberAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/EventInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2438,7 +2438,7 @@
  
 ### System.Reflection.FieldInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/EventInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/FieldInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2455,7 +2455,7 @@
  
 ### System.Reflection.IntrospectionExtensions
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/FieldInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/IntrospectionExtensions.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2463,7 +2463,7 @@
  
 ### System.Reflection.MemberInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/IntrospectionExtensions.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MemberInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2475,7 +2475,7 @@
  
 ### System.Reflection.MethodBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MemberInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MethodBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2489,7 +2489,7 @@
  
 ### System.Reflection.MethodInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MethodBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MethodInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2497,7 +2497,7 @@
  
 ### System.Reflection.ParameterInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/MethodInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/ParameterInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2507,7 +2507,7 @@
  
 ### System.Reflection.PropertyInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/ParameterInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/PropertyInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2522,7 +2522,7 @@
  
 ### System.Reflection.RuntimeReflectionExtensions
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/PropertyInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/RuntimeReflectionExtensions.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2530,7 +2530,7 @@
  
 ### System.Reflection.TypeInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/RuntimeReflectionExtensions.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/TypeInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2538,14 +2538,14 @@
  
 ### System.Resources.NeutralResourcesLanguageAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Reflection/TypeInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Resources/NeutralResourcesLanguageAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Resources.ResourceManager
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Resources/NeutralResourcesLanguageAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Resources/ResourceManager.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2553,98 +2553,98 @@
  
 ### System.Runtime.CompilerServices.AsyncStateMachineAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Resources/ResourceManager.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncStateMachineAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.AsyncTaskMethodBuilder
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncStateMachineAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncTaskMethodBuilder.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.AsyncVoidMethodBuilder
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncTaskMethodBuilder.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncVoidMethodBuilder.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.DynamicAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/AsyncVoidMethodBuilder.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/DynamicAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.ExtensionAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/DynamicAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/ExtensionAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.IAsyncStateMachine
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/ExtensionAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/IAsyncStateMachine.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.InternalsVisibleToAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/IAsyncStateMachine.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/InternalsVisibleToAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.RuntimeHelpers
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/InternalsVisibleToAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/RuntimeHelpers.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.CompilerServices.TaskAwaiter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/RuntimeHelpers.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/TaskAwaiter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.InteropServices.ComVisibleAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/TaskAwaiter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.CompilerServices/ComVisibleAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.InteropServices.GuidAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/ComVisibleAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/GuidAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.InteropServices.OutAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/GuidAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/OutAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.InteropServices.StructLayoutAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/OutAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/StructLayoutAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Runtime.Serialization.DataContractAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.InteropServices/StructLayoutAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataContractAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2653,7 +2653,7 @@
  
 ### System.Runtime.Serialization.DataContractSerializer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataContractAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataContractSerializer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2661,7 +2661,7 @@
  
 ### System.Runtime.Serialization.DataMemberAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataContractSerializer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataMemberAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2673,7 +2673,7 @@
  
 ### System.Runtime.Serialization.EnumMemberAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/DataMemberAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/EnumMemberAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2682,7 +2682,7 @@
  
 ### System.Runtime.Serialization.Json.DataContractJsonSerializer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/EnumMemberAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization.Json/DataContractJsonSerializer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2692,7 +2692,7 @@
  
 ### System.Runtime.Serialization.XmlObjectSerializer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization.Json/DataContractJsonSerializer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/XmlObjectSerializer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2702,14 +2702,14 @@
  
 ### System.Runtime.Versioning.TargetFrameworkAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Serialization/XmlObjectSerializer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Versioning/TargetFrameworkAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Security.Cryptography.AesManaged
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Runtime.Versioning/TargetFrameworkAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/AesManaged.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2717,7 +2717,7 @@
  
 ### System.Security.Cryptography.CryptoStream
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/AesManaged.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/CryptoStream.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2725,7 +2725,7 @@
  
 ### System.Security.Cryptography.HashAlgorithm
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/CryptoStream.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/HashAlgorithm.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2733,7 +2733,7 @@
  
 ### System.Security.Cryptography.ProtectedData
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/HashAlgorithm.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/ProtectedData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2742,7 +2742,7 @@
  
 ### System.Security.Cryptography.SHA1Managed
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/ProtectedData.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/SHA1Managed.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2751,7 +2751,7 @@
  
 ### System.Security.Cryptography.SymmetricAlgorithm
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/SHA1Managed.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/SymmetricAlgorithm.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2762,7 +2762,7 @@
  
 ### System.ServiceModel.Syndication.SyndicationFeed
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Security.Cryptography/SymmetricAlgorithm.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ServiceModel.Syndication/SyndicationFeed.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2771,14 +2771,14 @@
  
 ### System.String
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.ServiceModel.Syndication/SyndicationFeed.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/String.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.StringComparison
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/String.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/StringComparison.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2788,7 +2788,7 @@
  
 ### System.Text.Encoding
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/StringComparison.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/Encoding.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2804,70 +2804,70 @@
  
 ### System.Text.RegularExpressions.Capture
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/Encoding.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Capture.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.RegularExpressions.GroupCollection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Capture.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/GroupCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.RegularExpressions.Match
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/GroupCollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Match.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.RegularExpressions.MatchCollection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Match.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/MatchCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.RegularExpressions.Regex
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/MatchCollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Regex.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.StringBuilder
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text.RegularExpressions/Regex.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/StringBuilder.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Text.UTF8Encoding
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/StringBuilder.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/UTF8Encoding.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.AutoResetEvent
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Text/UTF8Encoding.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/AutoResetEvent.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.EventWaitHandle
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/AutoResetEvent.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/EventWaitHandle.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.Interlocked
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/EventWaitHandle.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Interlocked.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2875,14 +2875,14 @@
  
 ### System.Threading.ManualResetEvent
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Interlocked.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ManualResetEvent.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.Monitor
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ManualResetEvent.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Monitor.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2891,14 +2891,14 @@
  
 ### System.Threading.SendOrPostCallback
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Monitor.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/SendOrPostCallback.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.SynchronizationContext
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/SendOrPostCallback.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/SynchronizationContext.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2907,7 +2907,7 @@
  
 ### System.Threading.Tasks.Task
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/SynchronizationContext.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading.Tasks/Task.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2918,7 +2918,7 @@
  
 ### System.Threading.Tasks.TaskFactory
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading.Tasks/Task.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading.Tasks/TaskFactory.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2927,7 +2927,7 @@
  
 ### System.Threading.Thread
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading.Tasks/TaskFactory.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Thread.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2941,7 +2941,7 @@
  
 ### System.Threading.ThreadPool
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Thread.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ThreadPool.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2950,7 +2950,7 @@
  
 ### System.Threading.ThreadStart
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ThreadPool.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ThreadStart.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2958,7 +2958,7 @@
  
 ### System.Threading.Timer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/ThreadStart.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Timer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2968,14 +2968,14 @@
  
 ### System.Threading.TimerCallback
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/Timer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/TimerCallback.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Threading.WaitCallback
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/TimerCallback.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/WaitCallback.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2983,7 +2983,7 @@
  
 ### System.Threading.WaitHandle
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/WaitCallback.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/WaitHandle.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -2991,14 +2991,14 @@
  
 ### System.Uri
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Threading/WaitHandle.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/Uri.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Windows.Application
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System/Uri.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationMapper.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3014,7 +3014,7 @@
  
 ### System.Windows.ApplicationUnhandledExceptionEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationMapper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationUnhandledExceptionEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3024,7 +3024,7 @@
  
 ### System.Windows.BaseButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ApplicationUnhandledExceptionEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ButtonBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3032,7 +3032,7 @@
  
 ### System.Windows.Clipboard
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ButtonBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Clipboard.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3041,7 +3041,7 @@
  
 ### System.Windows.Controls.Border
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Clipboard.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Border.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3050,7 +3050,7 @@
  
 ### System.Windows.Controls.Button
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Border.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Button.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3059,7 +3059,7 @@
  
 ### System.Windows.Controls.Canvas
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Button.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Canvas.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3073,7 +3073,7 @@
  
 ### System.Windows.Controls.CheckBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Canvas.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/CheckBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3081,7 +3081,7 @@
  
 ### System.Windows.Controls.ColumnDefinition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/CheckBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ColumnDefinition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3090,7 +3090,7 @@
  
 ### System.Windows.Controls.ContentControl
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ColumnDefinition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ContentControl.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3101,7 +3101,7 @@
  
 ### System.Windows.Controls.ContentPresenter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ContentControl.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ContentPresenter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3110,7 +3110,7 @@
  
 ### System.Windows.Controls.Control
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ContentPresenter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Control.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3131,7 +3131,7 @@
  
 ### System.Windows.Controls.Frame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Control.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Frame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3145,7 +3145,7 @@
  
 ### System.Windows.Controls.Grid
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Frame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Grid.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3161,7 +3161,7 @@
  
 ### System.Windows.Controls.Image
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Grid.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Image.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3173,7 +3173,7 @@
  
 ### System.Windows.Controls.ItemContainerGenerator
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Image.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ItemContainerGenerator.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3183,7 +3183,7 @@
  
 ### System.Windows.Controls.ItemsControl
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ItemContainerGenerator.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ItemsControl.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3195,7 +3195,7 @@
  
 ### System.Windows.Controls.ListBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ItemsControl.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ListBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3204,7 +3204,7 @@
  
 ### System.Windows.Controls.ListBoxItem
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ListBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ListBoxItem.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3212,7 +3212,7 @@
  
 ### System.Windows.Controls.MediaElement
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ListBoxItem.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/MediaElement.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3222,7 +3222,7 @@
  
 ### System.Windows.Controls.Orientation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/MediaElement.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Orientation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3230,7 +3230,7 @@
  
 ### System.Windows.Controls.Page
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Orientation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Page.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3243,7 +3243,7 @@
  
 ### System.Windows.Controls.Panel
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Page.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Panel.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3253,7 +3253,7 @@
  
 ### System.Windows.Controls.PasswordBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Panel.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/PasswordBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3264,7 +3264,7 @@
  
 ### System.Windows.Controls.Primitives.ButtonBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/PasswordBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/ButtonBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3273,7 +3273,7 @@
  
 ### System.Windows.Controls.Primitives.Popup
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/ButtonBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/Popup.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3285,7 +3285,7 @@
  
 ### System.Windows.Controls.Primitives.RangeBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/Popup.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/RangeBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3296,7 +3296,7 @@
  
 ### System.Windows.Controls.Primitives.Selector
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/RangeBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/Selector.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3308,7 +3308,7 @@
  
 ### System.Windows.Controls.Primitives.ToggleButton
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/Selector.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/ToggleButton.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3319,7 +3319,7 @@
  
 ### System.Windows.Controls.ProgressBar
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls.Primitives/ToggleButton.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ProgressBar.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3328,7 +3328,7 @@
  
 ### System.Windows.Controls.RowDefinition
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ProgressBar.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/RowDefinition.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3337,7 +3337,7 @@
  
 ### System.Windows.Controls.ScrollViewer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/RowDefinition.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ScrollViewer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3349,7 +3349,7 @@
  
 ### System.Windows.Controls.SelectionChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/ScrollViewer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/SelectionChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3359,7 +3359,7 @@
  
 ### System.Windows.Controls.SelectionChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/SelectionChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/SelectionChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3367,7 +3367,7 @@
  
 ### System.Windows.Controls.Slider
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/SelectionChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Slider.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3375,7 +3375,7 @@
  
 ### System.Windows.Controls.StackPanel
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/Slider.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/StackPanel.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3384,7 +3384,7 @@
  
 ### System.Windows.Controls.TextBlock
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/StackPanel.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextBlock.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3397,7 +3397,7 @@
  
 ### System.Windows.Controls.TextBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextBlock.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3413,7 +3413,7 @@
  
 ### System.Windows.Controls.TextChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3421,7 +3421,7 @@
  
 ### System.Windows.Controls.UserControl
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/TextChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/UserControl.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3430,7 +3430,7 @@
  
 ### System.Windows.Data.Binding
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Controls/UserControl.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/Binding.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3443,7 +3443,7 @@
  
 ### System.Windows.Data.BindingMode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/Binding.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/BindingMode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3451,7 +3451,7 @@
  
 ### System.Windows.Data.IValueConverter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/BindingMode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/IValueConverter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3459,7 +3459,7 @@
  
 ### System.Windows.DependencyObject
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Data/IValueConverter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyObject.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3472,7 +3472,7 @@
  
 ### System.Windows.DependencyProperty
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyObject.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyProperty.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3484,7 +3484,7 @@
  
 ### System.Windows.DependencyPropertyChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyProperty.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyPropertyChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3494,7 +3494,7 @@
  
 ### System.Windows.DependencyPropertyChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyPropertyChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyPropertyChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3502,7 +3502,7 @@
  
 ### System.Windows.Deployment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/DependencyPropertyChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Deployment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3510,7 +3510,7 @@
  
 ### System.Windows.Documents.Inline
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Deployment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/Inline.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3519,7 +3519,7 @@
  
 ### System.Windows.Documents.InlineCollection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/Inline.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/InlineCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3528,7 +3528,7 @@
  
 ### System.Windows.Documents.Run
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/InlineCollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/Run.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3537,7 +3537,7 @@
  
 ### System.Windows.Duration
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Documents/Run.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Duration.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3546,7 +3546,7 @@
  
 ### System.Windows.FontStyles
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Duration.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FontStyles.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3554,7 +3554,7 @@
  
 ### System.Windows.FontWeights
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FontStyles.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FontWeights.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3563,7 +3563,7 @@
  
 ### System.Windows.FrameworkElement
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FontWeights.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FrameworkElement.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3598,7 +3598,7 @@
  
 ### System.Windows.GridLength
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/FrameworkElement.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/GridLength.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3606,7 +3606,7 @@
  
 ### System.Windows.GridUnitType
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/GridLength.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/GridUnitType.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3614,7 +3614,7 @@
  
 ### System.Windows.HorizontalAlignment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/GridUnitType.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/HorizontalAlignment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3622,14 +3622,14 @@
  
 ### System.Windows.Input.GestureEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/HorizontalAlignment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/GestureEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Windows.Input.ICommand
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/GestureEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ICommand.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3644,7 +3644,7 @@
  
 ### System.Windows.Input.InputScopeName
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/InputScope.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/InputScopeName.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3652,7 +3652,7 @@
  
 ### System.Windows.Input.InputScopeNameValue
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/InputScopeName.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/InputScopeNameValue.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3695,7 +3695,7 @@
  
 ### System.Windows.Input.Key
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/InputScopeNameValue.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/Key.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3706,7 +3706,7 @@
  
 ### System.Windows.Input.KeyEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/Key.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/KeyEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3714,7 +3714,7 @@
  
 ### System.Windows.Input.KeyEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/KeyEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/KeyEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3722,7 +3722,7 @@
  
 ### System.Windows.Input.ManipulationCompletedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/KeyEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationCompletedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3735,7 +3735,7 @@
  
 ### System.Windows.Input.ManipulationDelta
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationCompletedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationDelta.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3745,7 +3745,7 @@
  
 ### System.Windows.Input.ManipulationDeltaEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationDelta.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationDeltaEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3759,7 +3759,7 @@
  
 ### System.Windows.Input.ManipulationStartedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationDeltaEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationStartedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3770,7 +3770,7 @@
  
 ### System.Windows.Input.ManipulationVelocities
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationStartedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationVelocities.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3780,7 +3780,7 @@
  
 ### System.Windows.Input.MouseButtonEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/ManipulationVelocities.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseButtonEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3789,7 +3789,7 @@
  
 ### System.Windows.Input.MouseButtonEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseButtonEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseButtonEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3797,7 +3797,7 @@
  
 ### System.Windows.Input.MouseEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseButtonEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3805,7 +3805,7 @@
  
 ### System.Windows.Input.Touch
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/MouseEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/Touch.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3813,7 +3813,7 @@
  
 ### System.Windows.Input.TouchFrameEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/Touch.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchFrameEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3823,7 +3823,7 @@
  
 ### System.Windows.Input.TouchFrameEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchFrameEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchFrameEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3831,7 +3831,7 @@
  
 ### System.Windows.Input.TouchPoint
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchFrameEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchPoint.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3840,7 +3840,7 @@
  
 ### System.Windows.Interop.Content
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Input/TouchPoint.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/Content.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3850,7 +3850,7 @@
  
 ### System.Windows.Interop.Settings
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/Content.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/Settings.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3859,7 +3859,7 @@
  
 ### System.Windows.Interop.SilverlightHost
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/Settings.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/SilverlightHost.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3868,7 +3868,7 @@
  
 ### System.Windows.Markup.ContentPropertyAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Interop/SilverlightHost.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/ContentPropertyAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3876,7 +3876,7 @@
  
 ### System.Windows.Markup.XamlReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/ContentPropertyAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/XamlReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3884,7 +3884,7 @@
  
 ### System.Windows.Markup.XmlLanguage
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/XamlReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/XmlLanguage.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3893,7 +3893,7 @@
  
 ### System.Windows.Media.Animation.BackEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Markup/XmlLanguage.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/BackEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3901,7 +3901,7 @@
  
 ### System.Windows.Media.Animation.BounceEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/BackEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/BounceEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3909,7 +3909,7 @@
  
 ### System.Windows.Media.Animation.CircleEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/BounceEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/CircleEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3917,7 +3917,7 @@
  
 ### System.Windows.Media.Animation.CubicEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/CircleEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/CubicEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3925,7 +3925,7 @@
  
 ### System.Windows.Media.Animation.DoubleAnimation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/CubicEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleAnimation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3936,7 +3936,7 @@
  
 ### System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleAnimation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleAnimationUsingKeyFrames.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3945,7 +3945,7 @@
  
 ### System.Windows.Media.Animation.DoubleKeyFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleAnimationUsingKeyFrames.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleKeyFrame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3955,7 +3955,7 @@
  
 ### System.Windows.Media.Animation.EasingDoubleKeyFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/DoubleKeyFrame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/EasingDoubleKeyFrame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3963,7 +3963,7 @@
  
 ### System.Windows.Media.Animation.EasingFunctionBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/EasingDoubleKeyFrame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/EasingFunctionBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3972,7 +3972,7 @@
  
 ### System.Windows.Media.Animation.ElasticEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/EasingFunctionBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/ElasticEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3980,7 +3980,7 @@
  
 ### System.Windows.Media.Animation.ExponentialEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/ElasticEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/ExponentialEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -3989,7 +3989,7 @@
  
 ### System.Windows.Media.Animation.KeyTime
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/ExponentialEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/KeyTime.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4000,7 +4000,7 @@
  
 ### System.Windows.Media.Animation.PowerEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/KeyTime.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/PowerEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4008,7 +4008,7 @@
  
 ### System.Windows.Media.Animation.QuadraticEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/PowerEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuadraticEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4016,7 +4016,7 @@
  
 ### System.Windows.Media.Animation.QuarticEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuadraticEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuarticEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4024,7 +4024,7 @@
  
 ### System.Windows.Media.Animation.QuinticEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuarticEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuinticEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4032,7 +4032,7 @@
  
 ### System.Windows.Media.Animation.SineEase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/QuinticEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/SineEase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4040,7 +4040,7 @@
  
 ### System.Windows.Media.Animation.Storyboard
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/SineEase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/Storyboard.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4057,7 +4057,7 @@
  
 ### System.Windows.Media.Animation.Timeline
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/Storyboard.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/Timeline.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4069,7 +4069,7 @@
  
 ### System.Windows.Media.BitmapCache
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Animation/Timeline.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/BitmapCache.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4078,7 +4078,7 @@
  
 ### System.Windows.Media.Brush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/BitmapCache.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Brush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4087,7 +4087,7 @@
  
 ### System.Windows.Media.Color
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Brush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Color.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4100,7 +4100,7 @@
  
 ### System.Windows.Media.Colors
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Color.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Colors.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4113,7 +4113,7 @@
  
 ### System.Windows.Media.CompositeTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Colors.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/CompositeTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4130,7 +4130,7 @@
  
 ### System.Windows.Media.CompositionTarget
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/CompositeTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/CompositionTarget.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4138,7 +4138,7 @@
  
 ### System.Windows.Media.EllipseGeometry
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/CompositionTarget.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/EllipseGeometry.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4147,7 +4147,7 @@
  
 ### System.Windows.Media.FontFamily
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/EllipseGeometry.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/FontFamily.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4155,7 +4155,7 @@
  
 ### System.Windows.Media.GeneralTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/FontFamily.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GeneralTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4165,7 +4165,7 @@
  
 ### System.Windows.Media.GeometryGroup
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GeneralTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GeometryGroup.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4173,7 +4173,7 @@
  
 ### System.Windows.Media.GradientBrush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GeometryGroup.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientBrush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4182,7 +4182,7 @@
  
 ### System.Windows.Media.GradientStop
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientBrush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientStop.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4192,7 +4192,7 @@
  
 ### System.Windows.Media.GradientStopCollection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientStop.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientStopCollection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4200,7 +4200,7 @@
  
 ### System.Windows.Media.ImageBrush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/GradientStopCollection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ImageBrush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4209,7 +4209,7 @@
  
 ### System.Windows.Media.Imaging.BitmapImage
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ImageBrush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/BitmapImage.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4220,7 +4220,7 @@
  
 ### System.Windows.Media.Imaging.BitmapSource
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/BitmapImage.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/BitmapSource.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4231,7 +4231,7 @@
  
 ### System.Windows.Media.Imaging.Extensions
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/BitmapSource.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/Extensions.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4240,7 +4240,7 @@
  
 ### System.Windows.Media.Imaging.WriteableBitmap
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/Extensions.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/WriteableBitmap.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4251,7 +4251,7 @@
  
 ### System.Windows.Media.LinearGradientBrush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media.Imaging/WriteableBitmap.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/LinearGradientBrush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4261,7 +4261,7 @@
  
 ### System.Windows.Media.PlaneProjection
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/LinearGradientBrush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/PlaneProjection.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4279,7 +4279,7 @@
  
 ### System.Windows.Media.RectangleGeometry
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/PlaneProjection.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/RectangleGeometry.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4288,7 +4288,7 @@
  
 ### System.Windows.Media.RotateTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/RectangleGeometry.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/RotateTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4299,7 +4299,7 @@
  
 ### System.Windows.Media.ScaleTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/RotateTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ScaleTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4309,7 +4309,7 @@
  
 ### System.Windows.Media.SkewTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/ScaleTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/SkewTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4317,7 +4317,7 @@
  
 ### System.Windows.Media.SolidColorBrush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/SkewTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/SolidColorBrush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4326,7 +4326,7 @@
  
 ### System.Windows.Media.Stretch
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/SolidColorBrush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Stretch.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4334,7 +4334,7 @@
  
 ### System.Windows.Media.TileBrush
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/Stretch.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TileBrush.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4343,7 +4343,7 @@
  
 ### System.Windows.Media.TransformGroup
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TileBrush.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TransformGroup.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4352,7 +4352,7 @@
  
 ### System.Windows.Media.TranslateTransform
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TransformGroup.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TranslateTransform.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4362,7 +4362,7 @@
  
 ### System.Windows.Media.VisualTreeHelper
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/TranslateTransform.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/VisualTreeHelper.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4374,7 +4374,7 @@
  
 ### System.Windows.MessageBox
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Media/VisualTreeHelper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/MessageBox.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4382,7 +4382,7 @@
  
 ### System.Windows.MessageBoxResult
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/MessageBox.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/MessageBoxResult.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4392,7 +4392,7 @@
  
 ### System.Windows.Navigation.JournalEntry
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/MessageBoxResult.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/JournalEntry.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4401,7 +4401,7 @@
  
 ### System.Windows.Navigation.LoadCompletedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/JournalEntry.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/LoadCompletedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4409,7 +4409,7 @@
  
 ### System.Windows.Navigation.NavigatedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/LoadCompletedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4417,7 +4417,7 @@
  
 ### System.Windows.Navigation.NavigatingCancelEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingCancelEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4427,7 +4427,7 @@
  
 ### System.Windows.Navigation.NavigatingCancelEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingCancelEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingCancelEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4435,7 +4435,7 @@
  
 ### System.Windows.Navigation.NavigatingEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingCancelEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4444,7 +4444,7 @@
  
 ### System.Windows.Navigation.NavigationContext
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigatingEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationContext.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4452,7 +4452,7 @@
  
 ### System.Windows.Navigation.NavigationEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationContext.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4463,7 +4463,7 @@
  
 ### System.Windows.Navigation.NavigationFailedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationFailedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4471,7 +4471,7 @@
  
 ### System.Windows.Navigation.NavigationService
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationFailedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationService.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4485,7 +4485,7 @@
  
 ### System.Windows.Navigation.UriMapperBase
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/NavigationService.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/UriMapperBase.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4493,7 +4493,7 @@
  
 ### System.Windows.Point
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Navigation/UriMapperBase.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Point.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4503,7 +4503,7 @@
  
 ### System.Windows.PropertyChangedCallback
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Point.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyChangedCallback.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4511,7 +4511,7 @@
  
 ### System.Windows.PropertyMetadata
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyChangedCallback.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyMetadata.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4519,7 +4519,7 @@
  
 ### System.Windows.PropertyPath
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyMetadata.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyPath.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4527,7 +4527,7 @@
  
 ### System.Windows.Rect
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/PropertyPath.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Rect.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4542,7 +4542,7 @@
  
 ### System.Windows.ResourceDictionary
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Rect.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ResourceDictionary.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4551,7 +4551,7 @@
  
 ### System.Windows.Resources.StreamResourceInfo
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/ResourceDictionary.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Resources/StreamResourceInfo.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4560,7 +4560,7 @@
  
 ### System.Windows.RoutedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Resources/StreamResourceInfo.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/RoutedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4569,7 +4569,7 @@
  
 ### System.Windows.RoutedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/RoutedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/RoutedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4578,7 +4578,7 @@
  
 ### System.Windows.Shapes.Ellipse
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/RoutedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Ellipse.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4586,7 +4586,7 @@
  
 ### System.Windows.Shapes.Path
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Ellipse.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Path.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4594,7 +4594,7 @@
  
 ### System.Windows.Shapes.Polygon
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Path.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Polygon.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4602,7 +4602,7 @@
  
 ### System.Windows.Shapes.Rectangle
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Polygon.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Rectangle.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4610,7 +4610,7 @@
  
 ### System.Windows.Shapes.Shape
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Rectangle.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Shape.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4622,7 +4622,7 @@
  
 ### System.Windows.Size
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Shapes/Shape.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Size.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4632,7 +4632,7 @@
  
 ### System.Windows.SizeChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Size.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/SizeChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4641,7 +4641,7 @@
  
 ### System.Windows.SizeChangedEventHandler
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/SizeChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/SizeChangedEventHandler.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4650,7 +4650,7 @@
  
 ### System.Windows.TemplatePartAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/SizeChangedEventHandler.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TemplatePartAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4658,7 +4658,7 @@
  
 ### System.Windows.TemplateVisualStateAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TemplatePartAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TemplateVisualStateAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4666,7 +4666,7 @@
  
 ### System.Windows.TextWrapping
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TemplateVisualStateAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TextWrapping.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4674,7 +4674,7 @@
  
 ### System.Windows.Thickness
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/TextWrapping.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Thickness.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4686,7 +4686,7 @@
  
 ### System.Windows.Threading.Dispatcher
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/Thickness.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Threading/Dispatcher.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4696,7 +4696,7 @@
  
 ### System.Windows.Threading.DispatcherTimer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Threading/Dispatcher.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Threading/DispatcherTimer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4709,7 +4709,7 @@
  
 ### System.Windows.UIElement
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows.Threading/DispatcherTimer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/UIElement.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4759,7 +4759,7 @@
  
 ### System.Windows.VerticalAlignment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/UIElement.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VerticalAlignment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4767,7 +4767,7 @@
  
 ### System.Windows.Visibility
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VerticalAlignment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisibilityMapper.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4775,7 +4775,7 @@
  
 ### System.Windows.VisualState
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisibilityMapper.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualState.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4785,7 +4785,7 @@
  
 ### System.Windows.VisualStateChangedEventArgs
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualState.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateChangedEventArgs.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4794,7 +4794,7 @@
  
 ### System.Windows.VisualStateGroup
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateChangedEventArgs.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateGroup.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4804,7 +4804,7 @@
  
 ### System.Windows.VisualStateManager
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateGroup.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateManager.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4814,133 +4814,133 @@
  
 ### System.Xml.Linq.XAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Windows/VisualStateManager.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XCData
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XCData.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XComment
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XCData.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XComment.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XContainer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XComment.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XContainer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XDeclaration
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XContainer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XDeclaration.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XDocument
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XDeclaration.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XDocument.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XElement
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XDocument.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XElement.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XName
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XElement.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XName.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XNamespace
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XName.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XNamespace.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XNode
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XNamespace.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XNode.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XObject
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XNode.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XObject.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XProcessingInstruction
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XObject.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XProcessingInstruction.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Linq.XText
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XProcessingInstruction.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XText.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.NameTable
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Linq/XText.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/NameTable.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.Serialization.XmlSerializer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/NameTable.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Serialization/XmlSerializer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.XmlConvert
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml.Serialization/XmlSerializer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlConvert.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.XmlNamespaceManager
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlConvert.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlNamespaceManager.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.XmlReader
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlNamespaceManager.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlReader.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.XmlReaderSettings
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlReader.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlReaderSettings.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4948,21 +4948,21 @@
  
 ### System.Xml.XmlWriter
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlReaderSettings.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlWriter.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### System.Xml.XmlXapResolver
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlWriter.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlXapResolver.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.ApplicationModel.Package
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//System.Xml/XmlXapResolver.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.ApplicationModel/Package.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4970,7 +4970,7 @@
  
 ### Windows.ApplicationModel.Store.CurrentApp
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.ApplicationModel/Package.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.ApplicationModel.Store/CurrentApp.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4979,7 +4979,7 @@
  
 ### Windows.Devices.Geolocation.Geocoordinate
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.ApplicationModel.Store/CurrentApp.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Devices.Geolocation/Geocoordinate.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4988,7 +4988,7 @@
  
 ### Windows.Devices.Geolocation.GeocoordinateExtensions
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Devices.Geolocation/Geocoordinate.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Devices.Geolocation/GeocoordinateExtensions.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -4996,56 +4996,56 @@
  
 ### Windows.Foundation.Metadata.DefaultAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Devices.Geolocation/GeocoordinateExtensions.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/DefaultAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.DefaultOverloadAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/DefaultAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/DefaultOverloadAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.ExclusiveToAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/DefaultOverloadAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/ExclusiveToAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.GuidAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/ExclusiveToAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/GuidAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.MarshalingBehaviorAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/GuidAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/MarshalingBehaviorAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.ThreadingAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/MarshalingBehaviorAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/ThreadingAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Foundation.Metadata.VersionAttribute
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/ThreadingAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/VersionAttribute.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
  
 ### Windows.Phone.Controls.TransitionFrame
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Foundation.Metadata/VersionAttribute.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.UI.Xaml.Controls/Frame.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5053,7 +5053,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechGrammarSet
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.UI.Xaml.Controls/Frame.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechGrammarSet.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5062,7 +5062,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognitionConfidence
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechGrammarSet.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionConfidence.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5070,7 +5070,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognitionResult
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionConfidence.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionResult.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5079,7 +5079,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognitionUIResult
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionResult.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionUIResult.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5089,7 +5089,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognitionUIStatus
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionUIResult.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionResultStatus.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5101,7 +5101,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognizer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognitionResultStatus.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5111,7 +5111,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognizerSettings
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerSettings.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5120,7 +5120,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognizerUI
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerSettings.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerUI.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5130,7 +5130,7 @@
  
 ### Windows.Phone.Speech.Recognition.SpeechRecognizerUISettings
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerUI.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerUISettings.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5140,7 +5140,7 @@
  
 ### Windows.Phone.Speech.Synthesis.InstalledVoices
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Recognition/SpeechRecognizerUISettings.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/InstalledVoices.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5149,7 +5149,7 @@
  
 ### Windows.Phone.Speech.Synthesis.SpeechSynthesizer
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/InstalledVoices.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/SpeechSynthesizer.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5166,7 +5166,7 @@
  
 ### Windows.Phone.Speech.Synthesis.VoiceGender
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/SpeechSynthesizer.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/VoiceGender.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5176,7 +5176,7 @@
  
 ### Windows.Phone.Speech.Synthesis.VoiceInformation
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/VoiceGender.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/VoiceInformation.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5184,7 +5184,7 @@
  
 ### Windows.Phone.Speech.VoiceCommands.VoiceCommandService
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.Synthesis/VoiceInformation.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.VoiceCommands/VoiceCommandService.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5194,7 +5194,7 @@
  
 ### Windows.Phone.Speech.VoiceCommands.VoiceCommandSet
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.VoiceCommands/VoiceCommandService.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.VoiceCommands/VoiceCommandSet.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5203,7 +5203,7 @@
  
 ### Windows.Phone.Storage.SharedAccess.SharedStorageAccessManager
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Speech.VoiceCommands/VoiceCommandSet.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Storage.SharedAccess/SharedStorageAccessManager.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
@@ -5213,7 +5213,7 @@
  
 ### Windows.System.Launcher
  
-[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.Phone.Storage.SharedAccess/SharedStorageAccessManager.map)
+[Mapping file](https://github.com/MobilizeNet/UWPConversionMappings/blob/master/Mappings/CodeMappings//Windows.System/Launcher.map)
  
 |Member Name                             |Kind           |Helper       |Not mapped   |
 |----------------------------------------|---------------|-------------|-------------|
